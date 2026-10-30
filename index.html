@@ -3,197 +3,217 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>John Secuya · Virtual Assistant</title>
-<meta name="description" content="John Secuya — Virtual Assistant. Admin support, inbox & calendar management, data entry and social media for busy founders and teams.">
+<title>John Roderick Secuya · Senior AI Creative Specialist</title>
+<meta name="description" content="John Roderick Secuya — Senior AI Creative Specialist. AI UGC, VSLs, cinematic drama ads, podcast ads, song ads and animated product creatives for Meta, TikTok and YouTube Shorts.">
 <meta name="theme-color" content="#000000">
+<meta property="og:title" content="John Roderick Secuya · Senior AI Creative Specialist">
+<meta property="og:description" content="AI video ads built to stop the scroll. UGC, VSLs, cinematic drama, podcast and song ads.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;700;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
   :root{
-    --bg:#ffffff; --fg:#000000; --muted:#6b6b6b; --line:#000000; --soft:#f2f2f2;
+    --bg:#fff; --fg:#000; --muted:#6b6b6b; --soft:#f2f2f2;
     --sans:"Inter Tight",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
     --mono:"JetBrains Mono",ui-monospace,Menlo,monospace;
-    --b:1px solid var(--line);
+    --b:1px solid #000;
   }
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
   body{background:var(--bg);color:var(--fg);font-family:var(--sans);line-height:1.5;-webkit-font-smoothing:antialiased}
   a{color:inherit;text-decoration:none}
   img{max-width:100%;display:block}
-  .wrap{max-width:1280px;margin:0 auto;border-left:var(--b);border-right:var(--b)}
+  .wrap{max-width:1320px;margin:0 auto;border-left:var(--b);border-right:var(--b)}
   .mono{font-family:var(--mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase}
+  .muted{color:var(--muted)}
   .skip{position:absolute;left:-999px;top:0;background:#000;color:#fff;padding:8px 12px;z-index:100}
   .skip:focus{left:8px;top:8px}
 
+  /* grid system: 1px black gaps = clean grid lines everywhere */
+  .g{display:grid;gap:1px;background:#000}
+  .g > *{background:#fff}
+
   /* NAV */
-  header{position:sticky;top:0;z-index:50;background:var(--bg);border-bottom:var(--b)}
-  .nav{display:grid;grid-template-columns:auto 1fr auto;align-items:stretch;max-width:1280px;margin:0 auto;border-left:var(--b);border-right:var(--b)}
-  .brand{display:flex;align-items:center;gap:12px;padding:14px 20px;border-right:var(--b)}
-  .brand .mark{width:34px;height:34px;background:#000;color:#fff;display:grid;place-items:center;font-weight:900;font-size:14px}
-  .brand b{font-weight:700;font-size:15px;display:block;line-height:1.1}
-  .brand span{color:var(--muted)}
+  header{position:sticky;top:0;z-index:50;background:#fff;border-bottom:var(--b)}
+  .nav{display:grid;grid-template-columns:auto 1fr auto;max-width:1320px;margin:0 auto;border-left:var(--b);border-right:var(--b);position:relative}
+  .brand{display:flex;align-items:center;gap:12px;padding:12px 20px;border-right:var(--b)}
+  .brand .mark{width:36px;height:36px;background:#000;color:#fff;display:grid;place-items:center;font-weight:900;font-size:14px}
+  .brand b{font-weight:700;font-size:15px;display:block;line-height:1.15}
   .links{display:flex;justify-content:flex-end}
-  .links a{display:flex;align-items:center;padding:0 20px;border-left:var(--b);transition:.2s}
+  .links a{display:flex;align-items:center;padding:0 18px;border-left:var(--b);transition:.2s}
   .links a:hover{background:#000;color:#fff}
-  .nav .cta{display:flex;align-items:center;padding:0 22px;background:#000;color:#fff;border-left:var(--b)}
+  .nav .cta{display:flex;align-items:center;padding:0 22px;background:#000;color:#fff;border-left:var(--b);transition:.2s}
   .nav .cta:hover{background:#fff;color:#000}
   .toggle{display:none;background:none;border:0;border-left:var(--b);padding:0 20px;cursor:pointer;font:inherit}
 
-  /* SECTIONS */
   section{border-bottom:var(--b)}
-  .sec-head{display:grid;grid-template-columns:220px 1fr;border-bottom:var(--b)}
-  .sec-head .idx{padding:28px 20px;border-right:var(--b)}
-  .sec-head h2{padding:28px 24px;font-size:clamp(28px,4vw,52px);font-weight:900;line-height:1;letter-spacing:-.03em}
+  .sec-head{display:grid;grid-template-columns:240px 1fr;border-bottom:var(--b)}
+  .sec-head .idx{padding:30px 20px;border-right:var(--b)}
+  .sec-head h2{padding:26px 24px;font-size:clamp(30px,4.2vw,58px);font-weight:900;line-height:1;letter-spacing:-.035em}
 
   /* HERO */
-  .hero{display:grid;grid-template-columns:1.6fr 1fr}
-  .hero-main{padding:64px 24px 40px;border-right:var(--b);display:flex;flex-direction:column;justify-content:space-between;min-height:540px}
-  .hero h1{font-size:clamp(48px,8.5vw,124px);font-weight:900;line-height:.9;letter-spacing:-.05em}
-  .hero h1 em{font-style:normal;background:#000;color:#fff;padding:0 .12em;white-space:nowrap}
-  .hero p.lead{max-width:520px;font-size:19px;margin-top:28px}
-  .btns{display:flex;flex-wrap:wrap;gap:0;margin-top:36px}
-  .btn{display:inline-flex;align-items:center;gap:10px;padding:16px 22px;border:var(--b);font-weight:500;transition:.2s}
-  .btn + .btn{border-left:0}
+  .hero{display:grid;grid-template-columns:1.55fr 1fr}
+  .hero-main{padding:56px 24px 40px;border-right:var(--b);display:flex;flex-direction:column;justify-content:space-between;gap:40px}
+  .hero h1{font-size:clamp(52px,8.8vw,132px);font-weight:900;line-height:.88;letter-spacing:-.055em;margin-top:22px}
+  .hero h1 em{font-style:normal;background:#000;color:#fff;padding:0 .1em;white-space:nowrap}
+  .hero .role{margin-top:26px;font-size:20px;font-weight:700}
+  .hero p.lead{max-width:560px;font-size:18px;margin-top:10px}
+  .btns{display:flex;flex-wrap:wrap;margin-top:30px}
+  .btn{display:inline-flex;align-items:center;gap:10px;padding:16px 22px;border:var(--b);font-weight:500;transition:.2s;background:#fff;cursor:pointer;font:inherit;font-weight:500}
+  .btn + .btn{margin-left:-1px}
   .btn.dark{background:#000;color:#fff}
   .btn:hover{background:#000;color:#fff}
   .btn.dark:hover{background:#fff;color:#000}
-  .hero-side{display:grid;grid-template-rows:1fr auto}
-  .portrait{border-bottom:var(--b);background:
-      repeating-linear-gradient(45deg,#000 0 1px,transparent 1px 12px),var(--soft);
-      display:grid;place-items:center;min-height:300px;position:relative;overflow:hidden}
-  .portrait img{width:100%;height:100%;object-fit:cover;filter:grayscale(1);position:absolute;inset:0}
-  .portrait .ph{background:#fff;border:var(--b);padding:8px 12px}
-  .stats{display:grid;grid-template-columns:repeat(3,1fr)}
-  .stat{padding:20px;border-right:var(--b)}
-  .stat:last-child{border-right:0}
-  .stat b{display:block;font-size:34px;font-weight:900;letter-spacing:-.03em}
-  .ticker{display:grid;grid-template-columns:repeat(4,1fr);border-top:var(--b)}
-  .ticker div{padding:16px 20px;border-right:var(--b)}
-  .ticker div:last-child{border-right:0}
+  .pipeline{display:grid;grid-template-columns:repeat(4,1fr);border:var(--b)}
+  .pipeline div{padding:12px 14px;border-right:var(--b)}
+  .pipeline div:last-child{border-right:0}
+  .pipeline b{display:block;font-size:15px;margin-top:2px}
 
-  /* SERVICES */
-  .grid{display:grid}
-  .services{grid-template-columns:repeat(3,1fr)}
-  .card{padding:28px 24px;border-right:var(--b);border-bottom:var(--b);min-height:260px;display:flex;flex-direction:column;gap:14px;transition:.25s}
-  .services .card:nth-child(3n){border-right:0}
-  .services .card:nth-last-child(-n+3){border-bottom:0}
+  .hero-side{display:grid;grid-template-rows:1fr auto}
+  .feature{position:relative;min-height:380px;border-bottom:var(--b);background:#000;color:#fff;overflow:hidden;cursor:pointer;display:flex;flex-direction:column;justify-content:space-between;padding:20px}
+  .feature::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(45deg,rgba(255,255,255,.14) 0 1px,transparent 1px 14px)}
+  .feature img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:grayscale(1);opacity:.7}
+  .feature > *{position:relative}
+  .feature .play{width:78px;height:78px;border:1px solid #fff;border-radius:50%;display:grid;place-items:center;align-self:center;font-size:22px;transition:.25s;background:rgba(0,0,0,.4)}
+  .feature:hover .play{background:#fff;color:#000;transform:scale(1.06)}
+  .feature h3{font-size:28px;font-weight:900;letter-spacing:-.03em;line-height:1}
+  .stats{grid-template-columns:repeat(3,1fr)}
+  .stat{padding:18px 20px}
+  .stat b{display:block;font-size:36px;font-weight:900;letter-spacing:-.04em;line-height:1.05}
+
+  .marquee{overflow:hidden;border-bottom:var(--b);background:#000;color:#fff;white-space:nowrap}
+  .marquee .track{display:inline-flex;gap:40px;padding:14px 0;animation:scroll 32s linear infinite}
+  .marquee span{display:inline-flex;gap:40px}
+  @keyframes scroll{to{transform:translateX(-50%)}}
+
+  /* SPECIALIZATIONS */
+  .specs{grid-template-columns:repeat(4,1fr)}
+  .card{padding:26px 22px;min-height:250px;display:flex;flex-direction:column;gap:12px;transition:.25s}
   .card:hover{background:#000;color:#fff}
   .card:hover .muted{color:#bdbdbd}
-  .card h3{font-size:24px;font-weight:700;letter-spacing:-.02em;margin-top:auto}
-  .muted{color:var(--muted)}
+  .card h3{font-size:23px;font-weight:700;letter-spacing:-.02em;margin-top:auto;line-height:1.1}
 
   /* WORK */
   .filters{display:flex;flex-wrap:wrap;border-bottom:var(--b)}
   .filters button{background:none;border:0;border-right:var(--b);padding:16px 20px;font:inherit;cursor:pointer}
   .filters button.active,.filters button:hover{background:#000;color:#fff}
-  .work{grid-template-columns:repeat(3,1fr)}
-  .item{border-right:var(--b);border-bottom:var(--b);display:flex;flex-direction:column}
-  .item:nth-child(3n){border-right:0}
-  .thumb{aspect-ratio:4/3;border-bottom:var(--b);background:var(--soft);position:relative;overflow:hidden;display:grid;place-items:center}
-  .thumb img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:grayscale(1);transition:.4s}
-  .item:hover .thumb img{filter:none;transform:scale(1.03)}
-  .thumb .ph{background:#fff;border:var(--b);padding:6px 10px}
-  .thumb.p1{background:repeating-linear-gradient(0deg,#000 0 1px,transparent 1px 18px),var(--soft)}
-  .thumb.p2{background:radial-gradient(#000 1px,transparent 1.5px) 0 0/14px 14px,var(--soft)}
-  .thumb.p3{background:repeating-linear-gradient(90deg,#000 0 1px,transparent 1px 18px),var(--soft)}
-  .thumb.p4{background:repeating-linear-gradient(-45deg,#000 0 1px,transparent 1px 14px),var(--soft)}
-  .item .body{padding:20px 22px 24px;display:flex;flex-direction:column;gap:8px}
-  .item .tag{display:flex;justify-content:space-between}
-  .item h3{font-size:20px;font-weight:700;letter-spacing:-.02em}
+  .work{grid-template-columns:repeat(4,1fr)}
+  .item{display:flex;flex-direction:column;cursor:pointer}
   .item.hide{display:none}
+  .thumb{aspect-ratio:9/14;border-bottom:var(--b);background:var(--soft);position:relative;overflow:hidden;display:grid;place-items:center}
+  .thumb img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:grayscale(1);transition:.45s}
+  .item:hover .thumb img{filter:none;transform:scale(1.04)}
+  .thumb .play{position:relative;width:58px;height:58px;border-radius:50%;background:#fff;border:var(--b);display:grid;place-items:center;transition:.25s}
+  .item:hover .thumb .play{background:#000;color:#fff}
+  .thumb .rt{position:absolute;right:10px;bottom:10px;background:#000;color:#fff;padding:3px 8px}
+  .thumb .cat{position:absolute;left:10px;top:10px;background:#fff;border:var(--b);padding:3px 8px}
+  .p1{background:repeating-linear-gradient(0deg,#000 0 1px,transparent 1px 18px),var(--soft)}
+  .p2{background:radial-gradient(#000 1px,transparent 1.6px) 0 0/14px 14px,var(--soft)}
+  .p3{background:repeating-linear-gradient(90deg,#000 0 1px,transparent 1px 18px),var(--soft)}
+  .p4{background:repeating-linear-gradient(-45deg,#000 0 1px,transparent 1px 14px),var(--soft)}
+  .item .body{padding:16px 18px 20px;display:flex;flex-direction:column;gap:6px;flex:1}
+  .item h3{font-size:18px;font-weight:700;letter-spacing:-.02em;line-height:1.2}
+  .item p{font-size:14px}
+  .more{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;padding:24px;border-top:var(--b)}
+  .more h3{font-size:26px;font-weight:900;letter-spacing:-.03em}
+
+  /* EXPERTISE */
+  .expert{grid-template-columns:repeat(3,1fr)}
+  .col{padding:26px 24px}
+  .col h3{font-size:22px;font-weight:700;letter-spacing:-.02em;margin:10px 0 16px}
+  .col ul{list-style:none}
+  .col li{padding:10px 0;border-top:var(--b);display:flex;gap:12px}
+  .col li::before{content:"→"}
 
   /* TOOLS */
-  .tools{grid-template-columns:repeat(6,1fr)}
-  .tool{aspect-ratio:1/1;border-right:var(--b);border-bottom:var(--b);display:flex;flex-direction:column;justify-content:space-between;padding:16px;transition:.2s}
-  .tool:nth-child(6n){border-right:0}
-  .tool:nth-last-child(-n+6){border-bottom:0}
-  .tool:hover{background:#000;color:#fff}
-  .tool b{font-size:18px;font-weight:700;letter-spacing:-.01em}
+  .stack{grid-template-columns:repeat(5,1fr)}
+  .tgroup{padding:22px 20px;display:flex;flex-direction:column;gap:14px}
+  .chips{display:flex;flex-wrap:wrap;gap:6px}
+  .chip{border:var(--b);padding:7px 12px;font-weight:500;font-size:15px;transition:.2s}
+  .chip:hover{background:#000;color:#fff}
 
   /* PROCESS */
   .process{grid-template-columns:repeat(4,1fr)}
-  .step{padding:28px 22px 32px;border-right:var(--b);display:flex;flex-direction:column;gap:12px}
-  .step:last-child{border-right:0}
-  .step .num{font-size:64px;font-weight:900;line-height:1;letter-spacing:-.05em}
+  .step{padding:26px 22px 30px;display:flex;flex-direction:column;gap:10px}
+  .step .num{font-size:68px;font-weight:900;line-height:1;letter-spacing:-.06em}
   .step h3{font-size:20px;font-weight:700}
   .pill{align-self:flex-start;border:var(--b);padding:4px 10px;margin-top:auto}
 
   /* ABOUT */
-  .about{display:grid;grid-template-columns:1fr 1fr}
-  .about .txt{padding:40px 24px;border-right:var(--b);font-size:19px;display:flex;flex-direction:column;gap:18px}
-  .about .facts{display:grid;grid-template-columns:1fr 1fr}
-  .fact{padding:24px 20px;border-right:var(--b);border-bottom:var(--b)}
-  .fact:nth-child(2n){border-right:0}
-  .fact:nth-last-child(-n+2){border-bottom:0}
-  .fact b{display:block;font-size:20px;margin-top:6px}
-
-  /* TESTIMONIALS */
-  .quotes{grid-template-columns:repeat(3,1fr)}
-  .quote{padding:28px 24px;border-right:var(--b);display:flex;flex-direction:column;gap:20px}
-  .quote:last-child{border-right:0}
-  .quote p{font-size:18px}
-  .quote .who{margin-top:auto;display:flex;align-items:center;gap:12px}
-  .quote .av{width:40px;height:40px;background:#000;color:#fff;display:grid;place-items:center;font-weight:700}
+  .about{display:grid;grid-template-columns:1.2fr 1fr}
+  .about .txt{padding:36px 24px;border-right:var(--b);font-size:19px;display:flex;flex-direction:column;gap:18px}
+  .about .side{display:grid;grid-template-rows:auto 1fr}
+  .exp{padding:24px;border-bottom:var(--b)}
+  .exp b{display:block;font-size:22px;letter-spacing:-.02em;margin-top:6px}
+  .facts{grid-template-columns:1fr 1fr}
+  .fact{padding:22px 20px}
+  .fact b{display:block;font-size:19px;margin-top:6px;line-height:1.2}
 
   /* CONTACT */
   .contact{display:grid;grid-template-columns:1.4fr 1fr;background:#000;color:#fff}
   .contact .big{padding:56px 24px;border-right:1px solid #fff}
-  .contact h2{font-size:clamp(40px,7vw,96px);font-weight:900;line-height:.92;letter-spacing:-.05em}
-  .contact .big p{max-width:480px;margin-top:22px;color:#cfcfcf;font-size:18px}
-  .contact .btn{border-color:#fff}
+  .contact h2{font-size:clamp(44px,7.4vw,104px);font-weight:900;line-height:.9;letter-spacing:-.055em}
+  .contact .big p{max-width:500px;margin-top:22px;color:#cfcfcf;font-size:18px}
+  .contact .btn{border-color:#fff;background:#000;color:#fff}
   .contact .btn.light{background:#fff;color:#000}
-  .contact .btn.light:hover{background:#000;color:#fff}
   .contact .btn:hover{background:#fff;color:#000}
+  .contact .btn.light:hover{background:#000;color:#fff}
   .clinks{display:flex;flex-direction:column}
-  .clinks a{display:flex;justify-content:space-between;align-items:center;padding:22px 24px;border-bottom:1px solid #fff;font-size:20px;font-weight:500;transition:.2s}
+  .clinks a{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:20px 24px;border-bottom:1px solid #fff;font-size:19px;font-weight:500;transition:.2s;flex:1}
   .clinks a:last-child{border-bottom:0}
+  .clinks a small{display:block;font-family:var(--mono);font-size:12px;color:#9a9a9a;font-weight:400;text-transform:none;letter-spacing:0}
   .clinks a:hover{background:#fff;color:#000}
+  .clinks a:hover small{color:#555}
 
   footer .wrap{display:flex;justify-content:space-between;padding:20px;flex-wrap:wrap;gap:8px}
 
-  /* reveal */
+  /* MODAL */
+  .modal{position:fixed;inset:0;background:rgba(0,0,0,.92);z-index:200;display:none;align-items:center;justify-content:center;padding:20px}
+  .modal.open{display:flex}
+  .mbox{background:#000;border:1px solid #fff;color:#fff;width:min(440px,100%);display:flex;flex-direction:column}
+  .mbar{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #fff}
+  .mbar span{padding:12px 14px}
+  .mbar button{background:#fff;color:#000;border:0;padding:12px 16px;cursor:pointer;font:inherit}
+  .mframe{aspect-ratio:9/16;max-height:72vh;width:100%;background:#111}
+  .mframe iframe,.mframe video{width:100%;height:100%;border:0;display:block}
+  .mfoot{padding:12px 14px;border-top:1px solid #fff}
+
   .rv{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease}
   .rv.in{opacity:1;transform:none}
-  @media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+  @media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}.marquee .track{animation:none}html{scroll-behavior:auto}}
 
-  /* RESPONSIVE */
+  @media (max-width:1080px){
+    .specs,.work{grid-template-columns:repeat(3,1fr)}
+    .stack{grid-template-columns:repeat(3,1fr)}
+  }
   @media (max-width:960px){
-    .links{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;background:#fff;border-bottom:var(--b)}
+    .links{display:none;position:absolute;top:100%;left:-1px;right:-1px;flex-direction:column;background:#fff;border:var(--b);border-top:0}
     .links.open{display:flex}
     .links a{padding:16px 20px;border-left:0;border-top:var(--b)}
+    .links a:first-child{border-top:0}
     .toggle{display:block}
-    .nav{grid-template-columns:1fr auto auto}
     .nav .cta{display:none}
     .hero,.about,.contact{grid-template-columns:1fr}
-    .hero-main,.about .txt,.contact .big{border-right:0;border-bottom:var(--b)}
-    .contact .big{border-bottom:1px solid #fff}
-    .hero-main{min-height:auto}
+    .hero-main,.about .txt{border-right:0;border-bottom:var(--b)}
+    .contact .big{border-right:0;border-bottom:1px solid #fff}
     .sec-head{grid-template-columns:1fr}
     .sec-head .idx{border-right:0;border-bottom:var(--b);padding:14px 20px}
-    .services,.work,.quotes{grid-template-columns:1fr 1fr}
-    .process{grid-template-columns:1fr 1fr}
-    .tools{grid-template-columns:repeat(3,1fr)}
-    .services .card,.item,.tool,.step,.quote{border-right:var(--b);border-bottom:var(--b)}
-    .services .card:nth-child(2n),.item:nth-child(2n),.step:nth-child(2n),.quote:nth-child(2n){border-right:0}
-    .services .card:nth-child(3n),.item:nth-child(3n){border-right:var(--b)}
-    .services .card:nth-child(2n),.item:nth-child(2n){border-right:0}
-    .tool:nth-child(6n){border-right:var(--b)}
-    .tool:nth-child(3n){border-right:0}
-    .ticker{grid-template-columns:1fr 1fr}
-    .ticker div:nth-child(2){border-right:0}
-    .ticker div:nth-child(-n+2){border-bottom:var(--b)}
+    .specs,.work,.process,.expert{grid-template-columns:1fr 1fr}
+    .stack{grid-template-columns:1fr 1fr}
   }
   @media (max-width:600px){
-    .services,.work,.quotes,.process{grid-template-columns:1fr}
-    .services .card,.item,.step,.quote{border-right:0 !important}
-    .tools{grid-template-columns:1fr 1fr}
-    .tool:nth-child(3n){border-right:var(--b)}
-    .tool:nth-child(2n){border-right:0}
-    .about .facts{grid-template-columns:1fr 1fr}
-    .btn + .btn{border-left:var(--b)}
-    .btns{gap:8px}
     .brand span{display:none}
+    .specs,.process,.expert,.stack{grid-template-columns:1fr}
+    .work{grid-template-columns:1fr 1fr}
+    .item .body{padding:12px}
+    .item h3{font-size:15px}
+    .item p{display:none}
+    .pipeline{grid-template-columns:1fr 1fr}
+    .pipeline div:nth-child(2){border-right:0}
+    .pipeline div:nth-child(-n+2){border-bottom:var(--b)}
+    .card{min-height:180px}
+    .btns{gap:8px}.btn + .btn{margin-left:0}
+    .stat b{font-size:28px}
   }
 </style>
 </head>
@@ -204,17 +224,17 @@
   <nav class="nav" aria-label="Main">
     <a class="brand" href="#top">
       <div class="mark">JS</div>
-      <div><b>John Secuya</b><span class="mono">Virtual Assistant</span></div>
+      <div><b>John Roderick Secuya</b><span class="mono muted">AI Creative Specialist</span></div>
     </a>
     <div class="links" id="links">
-      <a href="#services" class="mono">Services</a>
       <a href="#work" class="mono">Work</a>
+      <a href="#specializations" class="mono">Specializations</a>
       <a href="#tools" class="mono">Tools</a>
       <a href="#process" class="mono">Process</a>
       <a href="#about" class="mono">About</a>
     </div>
     <button class="toggle mono" id="toggle" aria-expanded="false" aria-controls="links">Menu</button>
-    <a class="cta mono" href="#contact">Hire me ↗</a>
+    <a class="cta mono" href="#contact">Work with me ↗</a>
   </nav>
 </header>
 
@@ -225,120 +245,141 @@
   <section class="hero">
     <div class="hero-main">
       <div>
-        <p class="mono muted">● Available for new clients — 2026</p>
-        <h1 style="margin-top:20px">You run the business. <em>I run</em> the busywork.</h1>
-        <p class="lead">Hi, I'm <b>John Secuya</b>, a virtual assistant helping founders, coaches and small teams get hours back every week with organized inboxes, clean calendars, tidy data and on-time follow-ups.</p>
+        <p class="mono muted">● Available for freelance projects</p>
+        <h1>AI ads built to <em>stop</em> the scroll.</h1>
+        <p class="role">John Roderick Secuya · Senior AI Creative Specialist</p>
+        <p class="lead muted">AI UGC, VSLs, cinematic drama ads, podcast ads, song ads and animated product creatives for e-commerce, beauty, fashion and health &amp; wellness brands, made for Meta, TikTok and YouTube Shorts.</p>
         <div class="btns">
-          <a class="btn dark" href="#work">View my work →</a>
-          <a class="btn" href="#contact">Email me</a>
-          <a class="btn" href="#" target="_blank" rel="noopener">Resume ↗</a>
+          <a class="btn dark" href="#work">Watch my work →</a>
+          <a class="btn" href="mailto:johnsecuya18@gmail.com">Email me</a>
+          <a class="btn" href="https://johnsecuya.my.canva.site/johncreativeworks" target="_blank" rel="noopener">Full portfolio ↗</a>
         </div>
+      </div>
+      <div class="pipeline">
+        <div><span class="mono muted">01</span><b>Script</b></div>
+        <div><span class="mono muted">02</span><b>Generate</b></div>
+        <div><span class="mono muted">03</span><b>Edit</b></div>
+        <div><span class="mono muted">04</span><b>Iterate</b></div>
       </div>
     </div>
     <div class="hero-side">
-      <div class="portrait">
-        <!-- Replace with your photo: <img src="images/profile.jpg" alt="John Secuya"> -->
-        <span class="ph mono">Your photo here</span>
+      <!-- FEATURED VIDEO: set data-video to a Google Drive / YouTube link; add <img src="images/featured.jpg" alt=""> for a cover -->
+      <div class="feature" data-video="" data-title="Supplement Ad · 2M views">
+        <span class="mono">Featured / Supplement ad</span>
+        <div class="play" aria-hidden="true">▶</div>
+        <div><h3>2M views on Instagram.</h3><p class="mono" style="margin-top:8px;color:#cfcfcf">Click to watch</p></div>
       </div>
-      <div class="stats">
-        <div class="stat"><b>3+</b><span class="mono muted">Years exp.</span></div>
-        <div class="stat"><b>20+</b><span class="mono muted">Clients</span></div>
-        <div class="stat"><b>24h</b><span class="mono muted">Reply time</span></div>
+      <div class="g stats">
+        <div class="stat"><b>2M</b><span class="mono muted">Views, one ad</span></div>
+        <div class="stat"><b>2 yrs</b><span class="mono muted">AI production</span></div>
+        <div class="stat"><b>EN/ES</b><span class="mono muted">Bilingual content</span></div>
       </div>
     </div>
   </section>
-  <div class="ticker mono">
-    <div>01 — Organize</div><div>02 — Automate</div><div>03 — Deliver</div><div>04 — Report</div>
-  </div>
 
-  <!-- SERVICES -->
-  <section id="services">
-    <div class="sec-head rv"><div class="idx mono">( 01 ) Services</div><h2>What I can take off your plate.</h2></div>
-    <div class="grid services">
-      <article class="card rv"><span class="mono">01</span><h3>Admin Support</h3><p class="muted">Document prep, file organization, research, travel booking and the daily tasks that eat your time.</p></article>
-      <article class="card rv"><span class="mono">02</span><h3>Inbox &amp; Calendar</h3><p class="muted">Inbox zero systems, email drafting and replies, meeting scheduling and reminders across time zones.</p></article>
-      <article class="card rv"><span class="mono">03</span><h3>Data Entry &amp; Sheets</h3><p class="muted">Accurate data entry, CRM updates, clean spreadsheets, trackers and simple dashboards.</p></article>
-      <article class="card rv"><span class="mono">04</span><h3>Social Media</h3><p class="muted">Content calendars, post scheduling, Canva graphics, captions and community replies.</p></article>
-      <article class="card rv"><span class="mono">05</span><h3>Customer Support</h3><p class="muted">Ticket and chat handling, order follow-ups and friendly, on-brand responses.</p></article>
-      <article class="card rv"><span class="mono">06</span><h3>Project Coordination</h3><p class="muted">Task boards, deadline tracking, team follow-ups and weekly progress reports.</p></article>
+  <div class="marquee mono" aria-hidden="true">
+    <div class="track">
+      <span>AI UGC ✦ VSLs ✦ Cinematic Drama ✦ Podcast Ads ✦ Song Ads ✦ 3D Animation ✦ Product Videos ✦ Talking Avatars ✦</span>
+      <span>AI UGC ✦ VSLs ✦ Cinematic Drama ✦ Podcast Ads ✦ Song Ads ✦ 3D Animation ✦ Product Videos ✦ Talking Avatars ✦</span>
     </div>
-  </section>
+  </div>
 
   <!-- WORK -->
   <section id="work">
-    <div class="sec-head rv"><div class="idx mono">( 02 ) Work</div><h2>Real work. Real results.</h2></div>
-    <div class="filters mono" role="tablist">
+    <div class="sec-head rv"><div class="idx mono">( 01 ) Selected work</div><h2>Real ads. Ready to watch.</h2></div>
+    <div class="filters mono">
       <button class="active" data-f="all">All</button>
-      <button data-f="admin">Admin</button>
-      <button data-f="data">Data &amp; Sheets</button>
-      <button data-f="social">Social Media</button>
-      <button data-f="support">Support</button>
+      <button data-f="ugc">AI UGC</button>
+      <button data-f="vsl">VSL &amp; DTC</button>
+      <button data-f="drama">Cinematic drama</button>
+      <button data-f="anim">Animation</button>
+      <button data-f="product">Product &amp; song ads</button>
     </div>
-    <div class="grid work" id="workgrid">
-      <!-- To add a screenshot: put <img src="images/work1.jpg" alt="..."> inside .thumb -->
-      <article class="item" data-c="admin"><div class="thumb p1"><span class="ph mono">Screenshot</span></div><div class="body"><div class="tag mono muted"><span>Admin</span><span>2026</span></div><h3>Inbox Zero System</h3><p class="muted">Set up labels, filters and templates. Cut daily email time from 2 hours to 30 minutes.</p></div></article>
-      <article class="item" data-c="data"><div class="thumb p2"><span class="ph mono">Screenshot</span></div><div class="body"><div class="tag mono muted"><span>Data &amp; Sheets</span><span>2026</span></div><h3>Sales Lead Tracker</h3><p class="muted">Built a Google Sheets tracker with dropdowns, status colors and an auto-updating summary.</p></div></article>
-      <article class="item" data-c="social"><div class="thumb p3"><span class="ph mono">Screenshot</span></div><div class="body"><div class="tag mono muted"><span>Social Media</span><span>2025</span></div><h3>30-Day Content Calendar</h3><p class="muted">Planned, designed in Canva and scheduled a month of posts for a small business page.</p></div></article>
-      <article class="item" data-c="admin"><div class="thumb p4"><span class="ph mono">Screenshot</span></div><div class="body"><div class="tag mono muted"><span>Admin</span><span>2025</span></div><h3>Calendar Management</h3><p class="muted">Managed scheduling for a busy founder across three time zones with zero double-bookings.</p></div></article>
-      <article class="item" data-c="support"><div class="thumb p1"><span class="ph mono">Screenshot</span></div><div class="body"><div class="tag mono muted"><span>Support</span><span>2025</span></div><h3>Customer Reply Templates</h3><p class="muted">Wrote a library of 25 email and chat replies that sped up response time.</p></div></article>
-      <article class="item" data-c="data"><div class="thumb p2"><span class="ph mono">Screenshot</span></div><div class="body"><div class="tag mono muted"><span>Data &amp; Sheets</span><span>2025</span></div><h3>CRM Clean-up</h3><p class="muted">Cleaned and de-duplicated 1,200+ contacts and organized them into segments.</p></div></article>
+    <!-- For each video: set data-video="LINK" and add <img src="images/xxx.jpg" alt=""> inside .thumb -->
+    <div class="g work" id="workgrid">
+      <article class="item" data-c="ugc" data-video="" data-title="Realistic AI UGC · Skincare"><div class="thumb p1"><span class="cat mono">AI UGC</span><span class="play">▶</span><span class="rt mono">9:16</span></div><div class="body"><span class="mono muted">Skincare · English</span><h3>Realistic AI UGC Ad</h3><p class="muted">Photorealistic creator-style testimonial with consistent character, product handling and lip-synced dialogue.</p></div></article>
+      <article class="item" data-c="vsl" data-video="" data-title="Supplement VSL"><div class="thumb p2"><span class="cat mono">VSL</span><span class="play">▶</span><span class="rt mono">9:16</span></div><div class="body"><span class="mono muted">Health &amp; wellness</span><h3>Supplement VSL · 2M views</h3><p class="muted">Direct-response video sales letter that reached 2 million views on Instagram.</p></div></article>
+      <article class="item" data-c="drama" data-video="" data-title="Cinematic Drama Ad"><div class="thumb p3"><span class="cat mono">Drama</span><span class="play">▶</span><span class="rt mono">9:16</span></div><div class="body"><span class="mono muted">Paid campaign</span><h3>Cinematic AI Drama Ad</h3><p class="muted">Story-driven drama creative used in paid advertising campaigns.</p></div></article>
+      <article class="item" data-c="ugc" data-video="" data-title="Spanish UGC · LatAm"><div class="thumb p4"><span class="cat mono">AI UGC</span><span class="play">▶</span><span class="rt mono">9:16</span></div><div class="body"><span class="mono muted">Latin American Spanish</span><h3>Localized Spanish UGC</h3><p class="muted">Latin American Spanish creator ad with AI voice and synchronized dialogue.</p></div></article>
+      <article class="item" data-c="vsl" data-video="" data-title="AI Podcast Ad"><div class="thumb p1"><span class="cat mono">Podcast</span><span class="play">▶</span><span class="rt mono">9:16</span></div><div class="body"><span class="mono muted">Testimonial format</span><h3>AI Podcast Ad</h3><p class="muted">Two-host podcast-style ad with natural conversation, voices and lip sync.</p></div></article>
+      <article class="item" data-c="anim" data-video="" data-title="3D / Claymation Ad"><div class="thumb p2"><span class="cat mono">Animation</span><span class="play">▶</span><span class="rt mono">9:16</span></div><div class="body"><span class="mono muted">3D · Claymation</span><h3>Animated Product Story</h3><p class="muted">3D animated and claymation-style characters telling a product story.</p></div></article>
+      <article class="item" data-c="product" data-video="" data-title="AI Song Ad"><div class="thumb p3"><span class="cat mono">Song ad</span><span class="play">▶</span><span class="rt mono">9:16</span></div><div class="body"><span class="mono muted">Music · Brand</span><h3>AI Song Ad</h3><p class="muted">Catchy branded jingle with performing AI characters and on-beat edits.</p></div></article>
+      <article class="item" data-c="product" data-video="" data-title="Product Demonstration"><div class="thumb p4"><span class="cat mono">Product</span><span class="play">▶</span><span class="rt mono">9:16</span></div><div class="body"><span class="mono muted">Beauty · Packaging</span><h3>AI Product Demo</h3><p class="muted">Accurate product handling built from bottle, packaging and applicator references.</p></div></article>
+    </div>
+    <div class="more">
+      <div><span class="mono muted">Want the complete set?</span><h3>See every video in my full portfolio.</h3></div>
+      <a class="btn dark" href="https://johnsecuya.my.canva.site/johncreativeworks" target="_blank" rel="noopener">Open full portfolio ↗</a>
+    </div>
+  </section>
+
+  <!-- SPECIALIZATIONS -->
+  <section id="specializations">
+    <div class="sec-head rv"><div class="idx mono">( 02 ) Specializations</div><h2>One creative partner. Every ad format.</h2></div>
+    <div class="g specs">
+      <article class="card"><span class="mono">01</span><h3>Realistic AI UGC</h3><p class="muted">Creator-style ads with photorealistic people, real product handling and natural delivery.</p></article>
+      <article class="card"><span class="mono">02</span><h3>Video Sales Letters</h3><p class="muted">Direct-response VSLs that hook fast, build the story and drive the click.</p></article>
+      <article class="card"><span class="mono">03</span><h3>Cinematic Drama Ads</h3><p class="muted">Short, emotional story ads with consistent characters, scenes and wardrobe.</p></article>
+      <article class="card"><span class="mono">04</span><h3>Podcast &amp; Testimonial Ads</h3><p class="muted">Conversational formats with AI voices, expressive performance and lip sync.</p></article>
+      <article class="card"><span class="mono">05</span><h3>AI Song Ads</h3><p class="muted">Branded songs and jingles performed by AI characters, edited to the beat.</p></article>
+      <article class="card"><span class="mono">06</span><h3>3D Animation &amp; Claymation</h3><p class="muted">Animated mascots and stylized product worlds that stand out in the feed.</p></article>
+      <article class="card"><span class="mono">07</span><h3>Product Videos</h3><p class="muted">Accurate AI product visualization and demos from your real packaging.</p></article>
+      <article class="card"><span class="mono">08</span><h3>Talking Avatars</h3><p class="muted">AI influencers and spokespeople in English and Latin American Spanish.</p></article>
+    </div>
+  </section>
+
+  <!-- EXPERTISE -->
+  <section id="expertise">
+    <div class="sec-head rv"><div class="idx mono">( 03 ) Core expertise</div><h2>From prompt to final edit.</h2></div>
+    <div class="g expert">
+      <div class="col"><span class="mono muted">A</span><h3>AI Content Creation</h3><ul>
+        <li>Advanced prompt engineering</li><li>AI image &amp; video generation</li><li>AI voice integration &amp; lip sync</li><li>Character &amp; scene consistency</li><li>Master prompt library development</li></ul></div>
+      <div class="col"><span class="mono muted">B</span><h3>Commercial Creative</h3><ul>
+        <li>Direct-response video ads</li><li>AI product visualization</li><li>Product demonstrations</li><li>Visual storytelling</li><li>Creative direction</li></ul></div>
+      <div class="col"><span class="mono muted">C</span><h3>Production Workflow</h3><ul>
+        <li>Script breakdown &amp; storyboarding</li><li>Shot planning &amp; camera direction</li><li>Image-to-video workflows</li><li>A-roll &amp; B-roll editing</li><li>Hook variations &amp; iteration</li></ul></div>
     </div>
   </section>
 
   <!-- TOOLS -->
   <section id="tools">
-    <div class="sec-head rv"><div class="idx mono">( 03 ) Tools</div><h2>Tools I work with every day.</h2></div>
-    <div class="grid tools">
-      <div class="tool"><span class="mono muted">01</span><b>Google Workspace</b></div>
-      <div class="tool"><span class="mono muted">02</span><b>Microsoft 365</b></div>
-      <div class="tool"><span class="mono muted">03</span><b>Canva</b></div>
-      <div class="tool"><span class="mono muted">04</span><b>Trello</b></div>
-      <div class="tool"><span class="mono muted">05</span><b>Notion</b></div>
-      <div class="tool"><span class="mono muted">06</span><b>Slack</b></div>
-      <div class="tool"><span class="mono muted">07</span><b>Asana</b></div>
-      <div class="tool"><span class="mono muted">08</span><b>Calendly</b></div>
-      <div class="tool"><span class="mono muted">09</span><b>Zoom</b></div>
-      <div class="tool"><span class="mono muted">10</span><b>Meta Business Suite</b></div>
-      <div class="tool"><span class="mono muted">11</span><b>HubSpot</b></div>
-      <div class="tool"><span class="mono muted">12</span><b>ChatGPT / Claude</b></div>
+    <div class="sec-head rv"><div class="idx mono">( 04 ) Tool stack</div><h2>The tools behind the work.</h2></div>
+    <div class="g stack">
+      <div class="tgroup"><span class="mono muted">AI video generation</span><div class="chips"><span class="chip">WAN</span><span class="chip">Kling</span><span class="chip">Higgsfield</span><span class="chip">Runway</span><span class="chip">Seedance</span><span class="chip">HeyGen</span></div></div>
+      <div class="tgroup"><span class="mono muted">AI image generation</span><div class="chips"><span class="chip">GPT Image</span><span class="chip">Nano Banana</span><span class="chip">Seedream</span><span class="chip">Soul</span></div></div>
+      <div class="tgroup"><span class="mono muted">Video editing</span><div class="chips"><span class="chip">CapCut Pro</span></div></div>
+      <div class="tgroup"><span class="mono muted">Production platforms</span><div class="chips"><span class="chip">Figma Weavy</span><span class="chip">Sunra.ai</span><span class="chip">Kie.ai</span><span class="chip">ArgoLink</span></div></div>
+      <div class="tgroup"><span class="mono muted">AI productivity</span><div class="chips"><span class="chip">ChatGPT</span><span class="chip">Claude</span></div></div>
     </div>
   </section>
 
   <!-- PROCESS -->
   <section id="process">
-    <div class="sec-head rv"><div class="idx mono">( 04 ) Process</div><h2>A clear path from first call to done.</h2></div>
-    <div class="grid process">
-      <div class="step rv"><span class="num">01</span><h3>Discovery call</h3><p class="muted">We talk about your tasks, tools and what's taking up most of your time.</p><span class="pill mono">Understand</span></div>
-      <div class="step rv"><span class="num">02</span><h3>Set up systems</h3><p class="muted">I get access, learn your workflow and organize everything I'll be handling.</p><span class="pill mono">Organize</span></div>
-      <div class="step rv"><span class="num">03</span><h3>Daily execution</h3><p class="muted">I handle the work on schedule and keep you updated through your preferred channel.</p><span class="pill mono">Deliver</span></div>
-      <div class="step rv"><span class="num">04</span><h3>Weekly report</h3><p class="muted">You get a short summary of what got done, what's next and what can be improved.</p><span class="pill mono">Improve</span></div>
+    <div class="sec-head rv"><div class="idx mono">( 05 ) Process</div><h2>A clear path from brief to delivery.</h2></div>
+    <div class="g process">
+      <div class="step"><span class="num">01</span><h3>Break down the script</h3><p class="muted">I turn your brief or script into scenes, shots, hooks and camera direction.</p><span class="pill mono">Direction</span></div>
+      <div class="step"><span class="num">02</span><h3>Build the references</h3><p class="muted">Characters, wardrobe, locations and product references locked in for consistency.</p><span class="pill mono">Consistency</span></div>
+      <div class="step"><span class="num">03</span><h3>Generate &amp; edit</h3><p class="muted">AI video generation, voice, lip sync, then editing with sound and captions.</p><span class="pill mono">Production</span></div>
+      <div class="step"><span class="num">04</span><h3>Hooks &amp; revisions</h3><p class="muted">Alternate hooks and revisions based on your feedback and campaign results.</p><span class="pill mono">Iteration</span></div>
     </div>
   </section>
 
   <!-- ABOUT -->
   <section id="about">
-    <div class="sec-head rv"><div class="idx mono">( 05 ) About</div><h2>Reliable. Organized. Always on time.</h2></div>
+    <div class="sec-head rv"><div class="idx mono">( 06 ) About</div><h2>AI speed. Direct-response instincts.</h2></div>
     <div class="about">
-      <div class="txt rv">
-        <p>I'm John, a Philippines-based virtual assistant who loves turning messy workflows into simple systems. I'm detail-oriented, quick to learn new tools, and I communicate clearly so you never have to wonder where things stand.</p>
-        <p class="muted">When I'm not managing inboxes and spreadsheets, I'm learning new automation tools to help my clients work smarter.</p>
+      <div class="txt">
+        <p>I'm John, a Senior AI Creative Specialist with 2 years of experience making AI-powered ads for e-commerce, beauty, fashion and health &amp; wellness brands.</p>
+        <p class="muted">I combine direct-response storytelling with realistic AI visuals, and handle the whole pipeline myself, from script breakdown and references through generation, voice, lip sync, editing, sound and captions. I produce content in English and Latin American Spanish, and one of my supplement videos reached 2 million views on Instagram.</p>
       </div>
-      <div class="facts">
-        <div class="fact"><span class="mono muted">Based in</span><b>Philippines</b></div>
-        <div class="fact"><span class="mono muted">Time zone</span><b>GMT+8, flexible</b></div>
-        <div class="fact"><span class="mono muted">Availability</span><b>Full-time / Part-time</b></div>
-        <div class="fact"><span class="mono muted">Languages</span><b>English, Filipino</b></div>
+      <div class="side">
+        <div class="exp"><span class="mono muted">Experience · 2024 – Present</span><b>Senior AI Creative Specialist &amp; AI Content Producer</b><span class="muted">Freelance</span></div>
+        <div class="g facts">
+          <div class="fact"><span class="mono muted">Based in</span><b>Philippines</b></div>
+          <div class="fact"><span class="mono muted">Languages</span><b>English &amp; LatAm Spanish content</b></div>
+          <div class="fact"><span class="mono muted">Platforms</span><b>Meta, TikTok, YouTube Shorts</b></div>
+          <div class="fact"><span class="mono muted">Industries</span><b>E-com, beauty, fashion, wellness</b></div>
+        </div>
       </div>
-    </div>
-  </section>
-
-  <!-- TESTIMONIALS -->
-  <section id="testimonials">
-    <div class="sec-head rv"><div class="idx mono">( 06 ) Clients</div><h2>What clients say.</h2></div>
-    <div class="grid quotes">
-      <div class="quote rv"><span class="mono">“</span><p>Replace this with a real testimonial from a client or employer. Keep it short and specific.</p><div class="who"><div class="av">A</div><div><b>Client Name</b><div class="mono muted">Role, Company</div></div></div></div>
-      <div class="quote rv"><span class="mono">“</span><p>Replace this with a real testimonial. A result like "saved me 10 hours a week" works best.</p><div class="who"><div class="av">B</div><div><b>Client Name</b><div class="mono muted">Role, Company</div></div></div></div>
-      <div class="quote rv"><span class="mono">“</span><p>Replace this with a real testimonial, or delete this section if you don't have any yet.</p><div class="who"><div class="av">C</div><div><b>Client Name</b><div class="mono muted">Role, Company</div></div></div></div>
     </div>
   </section>
 
@@ -346,19 +387,18 @@
   <section id="contact" class="contact">
     <div class="big">
       <p class="mono" style="color:#cfcfcf">( 07 ) Contact</p>
-      <h2 style="margin-top:18px">Need an extra pair of hands?</h2>
-      <p>Tell me what you need help with and I'll reply within 24 hours.</p>
+      <h2 style="margin-top:18px">Have a brief? Let's make it move.</h2>
+      <p>Open to AI UGC, VSLs, drama ads and full ad production for brands and agencies.</p>
       <div class="btns">
-        <a class="btn light" href="mailto:youremail@example.com">Send an email ↗</a>
-        <a class="btn" href="#" target="_blank" rel="noopener">Book a call ↗</a>
+        <a class="btn light" href="mailto:johnsecuya18@gmail.com">Send an email ↗</a>
+        <a class="btn" href="resume.pdf" target="_blank" rel="noopener">Download resume ↗</a>
       </div>
     </div>
     <div class="clinks">
-      <a href="mailto:youremail@example.com"><span>Email</span><span>↗</span></a>
-      <a href="#" target="_blank" rel="noopener"><span>LinkedIn</span><span>↗</span></a>
-      <a href="#" target="_blank" rel="noopener"><span>Upwork</span><span>↗</span></a>
-      <a href="#" target="_blank" rel="noopener"><span>OnlineJobs.ph</span><span>↗</span></a>
-      <a href="#" target="_blank" rel="noopener"><span>Resume (PDF)</span><span>↗</span></a>
+      <a href="mailto:johnsecuya18@gmail.com"><span>Email<small>johnsecuya18@gmail.com</small></span><span>↗</span></a>
+      <a href="https://wa.me/639770559761" target="_blank" rel="noopener"><span>WhatsApp<small>+63 977 055 9761</small></span><span>↗</span></a>
+      <a href="https://discord.com/users/yuan04723" target="_blank" rel="noopener"><span>Discord<small>yuan04723</small></span><span>↗</span></a>
+      <a href="https://johnsecuya.my.canva.site/johncreativeworks" target="_blank" rel="noopener"><span>Full video portfolio<small>Canva</small></span><span>↗</span></a>
     </div>
   </section>
 
@@ -366,20 +406,53 @@
 </main>
 
 <footer>
-  <div class="wrap mono"><span>© <span id="yr">2026</span> John Secuya · Virtual Assistant</span><a href="#top">Back to top ↑</a></div>
+  <div class="wrap mono"><span>© <span id="yr">2026</span> John Roderick Secuya · Senior AI Creative Specialist</span><a href="#top">Back to top ↑</a></div>
 </footer>
 
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-label="Portfolio video">
+  <div class="mbox">
+    <div class="mbar"><span class="mono" id="mtitle">Portfolio video</span><button class="mono" id="mclose">Close ✕</button></div>
+    <div class="mframe" id="mframe"></div>
+    <div class="mfoot mono"><a id="mlink" href="#" target="_blank" rel="noopener">Open in new tab ↗</a></div>
+  </div>
+</div>
+
 <script>
-  // mobile menu
+  const PORTFOLIO="https://johnsecuya.my.canva.site/johncreativeworks";
+  // menu
   const t=document.getElementById('toggle'),l=document.getElementById('links');
   t.addEventListener('click',()=>{const o=l.classList.toggle('open');t.setAttribute('aria-expanded',o);t.textContent=o?'Close':'Menu'});
   l.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{l.classList.remove('open');t.setAttribute('aria-expanded',false);t.textContent='Menu'}));
-  // work filters
+  // filters
   document.querySelectorAll('.filters button').forEach(b=>b.addEventListener('click',()=>{
     document.querySelectorAll('.filters button').forEach(x=>x.classList.remove('active'));b.classList.add('active');
     const f=b.dataset.f;document.querySelectorAll('#workgrid .item').forEach(i=>i.classList.toggle('hide',f!=='all'&&i.dataset.c!==f));
   }));
-  // reveal on scroll
+  // video modal: supports Google Drive, YouTube and direct .mp4 links
+  function embed(u){
+    let m;
+    if(m=u.match(/drive\.google\.com\/file\/d\/([^/]+)/))return {type:'iframe',src:`https://drive.google.com/file/d/${m[1]}/preview`};
+    if(m=u.match(/(?:youtu\.be\/|v=|shorts\/)([\w-]{11})/))return {type:'iframe',src:`https://www.youtube.com/embed/${m[1]}?autoplay=1`};
+    if(/\.(mp4|webm|mov)(\?|$)/i.test(u))return {type:'video',src:u};
+    return null;
+  }
+  const modal=document.getElementById('modal'),mf=document.getElementById('mframe');
+  function openVideo(el){
+    const u=el.dataset.video;
+    if(!u){window.open(PORTFOLIO,'_blank','noopener');return}
+    const e=embed(u);
+    if(!e){window.open(u,'_blank','noopener');return}
+    mf.innerHTML=e.type==='video'?`<video src="${e.src}" controls autoplay playsinline></video>`:`<iframe src="${e.src}" allow="autoplay; fullscreen" allowfullscreen></iframe>`;
+    document.getElementById('mtitle').textContent=el.dataset.title||'Portfolio video';
+    document.getElementById('mlink').href=u;
+    modal.classList.add('open');
+  }
+  function closeVideo(){modal.classList.remove('open');mf.innerHTML=''}
+  document.querySelectorAll('[data-video]').forEach(el=>{el.setAttribute('tabindex','0');el.addEventListener('click',()=>openVideo(el));el.addEventListener('keydown',e=>{if(e.key==='Enter')openVideo(el)})});
+  document.getElementById('mclose').addEventListener('click',closeVideo);
+  modal.addEventListener('click',e=>{if(e.target===modal)closeVideo()});
+  document.addEventListener('keydown',e=>{if(e.key==='Escape')closeVideo()});
+  // reveal
   const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
   document.querySelectorAll('.rv').forEach(el=>io.observe(el));
   document.getElementById('yr').textContent=new Date().getFullYear();
