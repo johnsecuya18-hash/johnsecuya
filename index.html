@@ -370,6 +370,12 @@
   .thumb.p2{background:radial-gradient(rgba(244,241,234,.2) 1px,transparent 1.6px) 0 0/14px 14px,#1a1a1a}
   .thumb.p3{background:repeating-linear-gradient(90deg,rgba(244,241,234,.12) 0 1px,transparent 1px 18px),#1a1a1a}
   .thumb.p4{background:repeating-linear-gradient(-45deg,rgba(244,241,234,.12) 0 1px,transparent 1px 14px),#1a1a1a}
+  .about{grid-template-columns:.8fr 1.2fr 1fr}
+  .about .photo{position:relative;border-right:var(--b);overflow:hidden;min-height:360px;background:var(--ink)}
+  .about .photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 20%;transition:.5s}
+  .about .photo:hover img{transform:scale(1.03)}
+  .about .photo .tag{position:absolute;left:12px;bottom:12px;background:var(--lime);color:var(--ink);padding:5px 10px}
+  @media (max-width:960px){.about{grid-template-columns:1fr}.about .photo{border-right:0;border-bottom:var(--b);min-height:0;aspect-ratio:1/1}}
 </style>
 </head>
 <body>
@@ -655,6 +661,7 @@
   <section id="about">
     <div class="sec-head rv"><div class="idx mono">( 06 ) About</div><h2>AI speed. Direct-response instincts.</h2></div>
     <div class="about">
+      <div class="photo"><img src="images/profile.jpg" alt="John Roderick Secuya, Senior AI Creative Specialist"><span class="tag mono">John Roderick Secuya</span></div>
       <div class="txt">
         <p>I'm John, a Senior AI Creative Specialist with 2 years of experience making AI-powered ads for e-commerce, beauty, fashion and health &amp; wellness brands.</p>
         <p class="muted">I combine direct-response storytelling with realistic AI visuals, and handle the whole pipeline myself, from script breakdown and references through generation, voice, lip sync, editing, sound and captions. I produce content in English and Latin American Spanish, and my top-performing ad has passed 3 million views.</p>
