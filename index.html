@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>John Roderick Secuya · Senior AI Creative Specialist</title>
 <meta name="description" content="John Roderick Secuya — Senior AI Creative Specialist. AI UGC, VSLs, cinematic drama ads, podcast ads, song ads and animated product creatives for Meta, TikTok and YouTube Shorts.">
-<meta name="theme-color" content="#000000">
+<meta name="theme-color" content="#111111">
 <meta property="og:title" content="John Roderick Secuya · Senior AI Creative Specialist">
 <meta property="og:description" content="AI video ads built to stop the scroll. UGC, VSLs, cinematic drama, podcast and song ads.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -243,6 +243,79 @@
   /* cross markers on section corners */
   .sec-head{position:relative}
   .sec-head::after{content:"+";position:absolute;right:10px;top:6px;font-family:var(--mono);font-size:14px;color:#000;opacity:.6}
+
+  /* ===== PALETTE 1: charcoal / cream / lime ===== */
+  :root{--ink:#111111;--cream:#F4F1EA;--lime:#D4FF3A;--b:1px solid #111111;--muted:#6b675e;--soft:#e9e5db}
+  body{background-color:var(--cream);color:var(--ink);background-image:
+      linear-gradient(rgba(17,17,17,.07) 1px,transparent 1px),
+      linear-gradient(90deg,rgba(17,17,17,.07) 1px,transparent 1px)}
+  ::selection{background:var(--lime);color:var(--ink)}
+  header,.filters,footer{background-color:var(--cream)}
+  .g{background:var(--ink)}
+  .g > *{background:var(--cream)}
+  .g.work{background:var(--cream)}
+  .g.work > .item{box-shadow:0 0 0 1px var(--ink)}
+  .brand .mark{background:var(--ink);color:var(--lime)}
+  .nav .cta{background:var(--lime);color:var(--ink)}
+  .nav .cta:hover{background:var(--ink);color:var(--lime)}
+  .links a:hover{background:var(--ink);color:var(--lime)}
+
+  /* dark hero */
+  .hero-main{background-color:var(--ink);color:var(--cream);border-right:1px solid rgba(244,241,234,.2);background-image:
+      linear-gradient(rgba(244,241,234,.06) 1px,transparent 1px),
+      linear-gradient(90deg,rgba(244,241,234,.06) 1px,transparent 1px);background-size:32px 32px}
+  .hero-main .muted{color:#a9a69d}
+  .hero h1 em{background:var(--lime);color:var(--ink)}
+  .hero .btn,.hero .btn:not(.dark):not(.light){background:transparent;color:var(--cream);border-color:var(--cream)}
+  .hero .btn:hover{background:var(--cream);color:var(--ink)}
+  .hero .btn.dark{background:var(--lime);color:var(--ink);border-color:var(--lime)}
+  .hero .btn.dark:hover{background:var(--cream);border-color:var(--cream)}
+  .pipeline{border-color:rgba(244,241,234,.35)}
+  .pipeline div,.hero .pipeline div{background:transparent;border-color:rgba(244,241,234,.35)}
+  .pipeline .muted{color:var(--lime)}
+  .feature{background:var(--ink)}
+  .feature:hover .play{background:var(--lime);color:var(--ink);border-color:var(--lime)}
+  .g.stats{background:rgba(244,241,234,.22)}
+  .g.stats > .stat{background:var(--ink);color:var(--cream)}
+  .stat b{color:var(--lime)}
+  .stat .muted{color:#a9a69d}
+  .hero-side{background:var(--ink)}
+
+  /* lime banner */
+  .marquee{background:var(--lime);color:var(--ink)}
+
+  /* light sections */
+  .btn:not(.dark):not(.light){background-color:var(--cream)}
+  .btn.dark{background:var(--ink);color:var(--cream)}
+  .btn.dark:hover{background:var(--lime);color:var(--ink)}
+  .btn:hover{background:var(--ink);color:var(--cream)}
+  .filters button.active,.filters button:hover{background:var(--ink);color:var(--lime)}
+  .card:hover{background:var(--ink) !important;color:var(--cream)}
+  .card:hover .mono{color:var(--lime)}
+  .thumb{background:var(--soft)}
+  .thumb .cat{background:var(--cream)}
+  .item[data-best="1"] .thumb .cat{background:var(--lime);border-color:var(--ink)}
+  .thumb .play{background:var(--cream)}
+  .item:hover .thumb .play{background:var(--lime);color:var(--ink)}
+  .thumb .rt{background:var(--ink);color:var(--cream)}
+  .chip:hover{background:var(--ink);color:var(--lime)}
+  .step:hover .num{color:var(--ink);text-shadow:3px 3px 0 var(--lime)}
+  .col li::before{color:var(--ink)}
+  .sec-head::after{color:var(--ink)}
+
+  /* dark contact */
+  .contact{background-color:var(--ink);color:var(--cream)}
+  .contact .big{border-right-color:rgba(244,241,234,.25)}
+  .contact .big p{color:#bdb9ae}
+  .contact .big .mono{color:var(--lime) !important}
+  .contact .btn,.contact .btn:not(.light){background:transparent;color:var(--cream);border-color:var(--cream)}
+  .contact .btn:hover{background:var(--cream);color:var(--ink)}
+  .contact .btn.light{background:var(--lime);color:var(--ink);border-color:var(--lime)}
+  .contact .btn.light:hover{background:var(--cream);border-color:var(--cream)}
+  .clinks a{border-bottom-color:rgba(244,241,234,.25)}
+  .clinks a:hover{background:var(--lime);color:var(--ink)}
+  .clinks a:hover small{color:#3a3a2a}
+  @media (max-width:960px){.contact .big{border-bottom-color:rgba(244,241,234,.25)}.hero-main{border-bottom:1px solid rgba(244,241,234,.2)}}
 </style>
 </head>
 <body>
