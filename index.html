@@ -407,6 +407,15 @@
   .meet-txt .lead{font-size:clamp(19px,1.9vw,26px);color:#bdb9ae;max-width:640px;line-height:1.4}
   .meet-txt .small{margin-top:16px;color:var(--muted);max-width:620px;font-size:16px}
   @media (max-width:960px){.meet{grid-template-columns:1fr}.meet-photo{border-right:0;border-bottom:var(--b);padding:36px 20px}.meet-photo .pcard{max-width:280px}.meet-txt{padding:36px 20px}}
+  .systems{grid-template-columns:1fr 1fr}
+  .sys{padding:32px 28px;display:flex;flex-direction:column;gap:14px}
+  .sys .sys-n{color:var(--lime)}
+  .sys h3{font-size:clamp(24px,2.6vw,36px);font-weight:900;letter-spacing:-.03em;line-height:1.05}
+  .sys .chips{margin-top:6px}
+  .sys-strip{grid-template-columns:repeat(3,1fr);border-top:var(--b)}
+  .sys-strip > div{padding:20px 28px}
+  .sys-strip b{display:block;font-size:30px;font-weight:900;letter-spacing:-.03em;color:var(--lime)}
+  @media (max-width:960px){.systems,.sys-strip{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -423,6 +432,7 @@
       <a href="#specializations" class="mono">Specializations</a>
       <a href="#tools" class="mono">Tools</a>
       <a href="#process" class="mono">Process</a>
+      <a href="#systems" class="mono">Systems</a>
       <a href="#about" class="mono">About</a>
       <a href="#meet" class="mono">Meet John</a>
     </div>
@@ -689,9 +699,33 @@
     </div>
   </section>
 
+  <!-- SYSTEMS -->
+  <section id="systems">
+    <div class="sec-head rv"><div class="idx mono">( 06 ) Systems</div><h2>Built on systems, not luck.</h2></div>
+    <div class="g systems">
+      <div class="sys">
+        <span class="mono sys-n">A / Prompt library</span>
+        <h3>A master prompt for every video style.</h3>
+        <p class="muted">I've built and tested a master prompt for each style I produce. Every new project starts from a proven base, so characters stay consistent, the look stays on-brand and turnaround stays fast.</p>
+        <div class="chips"><span class="chip">AI Drama</span><span class="chip">Claymation</span><span class="chip">Pixar 3D</span><span class="chip">Song Ads</span><span class="chip">AI UGC</span><span class="chip">Skeleton Explainers</span><span class="chip">Podcasts</span><span class="chip">VSLs</span><span class="chip">Supplement Ads</span><span class="chip">Street Interviews</span><span class="chip">Brand Intros</span><span class="chip">Local Services</span></div>
+      </div>
+      <div class="sys">
+        <span class="mono sys-n">B / Claude skills</span>
+        <h3>Claude skills, ready for MCP.</h3>
+        <p class="muted">I package my workflows as custom Claude skills that turn a brief into scripts, scene plans and generation prompts. They're ready to plug into MCP-connected tools, so production runs as a repeatable pipeline instead of starting from scratch.</p>
+        <div class="chips"><span class="chip">Claude skills</span><span class="chip">MCP-ready</span><span class="chip">Brief → script</span><span class="chip">Scene plans</span><span class="chip">Generation prompts</span></div>
+      </div>
+    </div>
+    <div class="g sys-strip">
+      <div><b>12</b><span class="mono muted">Styles with a master prompt</span></div>
+      <div><b>1 brief</b><span class="mono muted">→ script, scenes and prompts</span></div>
+      <div><b>MCP</b><span class="mono muted">Ready to connect to your tools</span></div>
+    </div>
+  </section>
+
   <!-- ABOUT -->
   <section id="about">
-    <div class="sec-head rv"><div class="idx mono">( 06 ) About</div><h2>AI speed. Direct-response instincts.</h2></div>
+    <div class="sec-head rv"><div class="idx mono">( 07 ) About</div><h2>AI speed. Direct-response instincts.</h2></div>
     <div class="about">
       <div class="txt">
         <p>I'm John, a Senior AI Creative Specialist with 2 years of experience making AI-powered ads for e-commerce, beauty, fashion and health &amp; wellness brands.</p>
@@ -712,7 +746,7 @@
   <!-- MEET JOHN -->
   <section id="meet" class="meet">
     <div class="meet-photo rv">
-      <div class="pcard"><img src="images/profile.jpg" alt="John Roderick Secuya"><span class="plabel mono">JRS / AI CREATIVE</span><span class="pnum">07</span></div>
+      <div class="pcard"><img src="images/profile.jpg" alt="John Roderick Secuya"><span class="plabel mono">JRS / AI CREATIVE</span><span class="pnum">08</span></div>
     </div>
     <div class="meet-txt rv">
       <span class="kicker mono">Meet John</span>
@@ -726,7 +760,7 @@
   <!-- CONTACT -->
   <section id="contact" class="contact">
     <div class="big">
-      <p class="mono" style="color:#cfcfcf">( 08 ) Contact</p>
+      <p class="mono" style="color:#cfcfcf">( 09 ) Contact</p>
       <h2 style="margin-top:18px">Have a brief? Let's make it move.</h2>
       <p>Open to AI UGC, VSLs, drama ads and full ad production for brands and agencies.</p>
       <a class="bigmail" href="mailto:johnsecuya18@gmail.com">johnsecuya18@gmail.com</a>
