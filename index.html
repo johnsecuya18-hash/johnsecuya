@@ -417,6 +417,30 @@
   .sys-strip b{display:block;font-size:30px;font-weight:900;letter-spacing:-.03em;color:var(--lime)}
   @media (max-width:960px){.systems,.sys-strip{grid-template-columns:1fr}}
   .toggle{color:var(--cream)}
+
+  /* ===== CLEAN TOP NAV (like reference) ===== */
+  header{background:rgba(17,17,17,.82);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid rgba(244,241,234,.08)}
+  .nav{border-left:0;border-right:0;max-width:1320px;padding:18px 24px;align-items:center}
+  .brand{border-right:0;padding:0;gap:14px}
+  .brand .mark{width:auto;height:auto;background:none;color:var(--cream);font-family:var(--mono);font-size:12px;font-weight:700;letter-spacing:.08em;padding-right:14px;border-right:1px solid rgba(244,241,234,.3)}
+  .brand .bname b{display:block;font-size:17px;font-weight:900;letter-spacing:-.02em;line-height:1.1}
+  .brand .bname .mono{font-size:10px;color:var(--muted);letter-spacing:.12em}
+  .links{gap:6px;align-items:center}
+  .links a{border-left:0;padding:8px 14px;font-family:var(--sans);font-size:15px;font-weight:700;letter-spacing:-.01em;text-transform:none;color:var(--cream);background:none !important;position:relative}
+  .links a::after{content:"";position:absolute;left:14px;right:14px;bottom:2px;height:2px;background:var(--lime);transform:scaleX(0);transform-origin:left;transition:transform .25s}
+  .links a:hover{color:var(--lime) !important}
+  .links a:hover::after{transform:scaleX(1)}
+  .nav .cta{display:none}
+  .toggle{border-left:0;color:var(--cream)}
+  @media (max-width:960px){
+    .nav{padding:14px 20px}
+    .links{background:var(--ink);border:0;border-top:1px solid rgba(244,241,234,.12);top:100%;gap:0}
+    .links a{padding:16px 20px;border-top:1px solid rgba(244,241,234,.08)}
+    .links a::after{display:none}
+    .links{align-items:stretch;left:0;right:0}
+    .links a{justify-content:flex-start}
+  }
+  @media (max-width:600px){.brand .bname{display:block}.brand .bname .mono{display:none}.brand .bname b{font-size:15px}}
 </style>
 </head>
 <body>
@@ -424,10 +448,7 @@
 
 <header>
   <nav class="nav" aria-label="Main">
-    <a class="brand" href="#top">
-      <div class="mark">JS</div>
-      <div><b>John Roderick Secuya</b><span class="mono muted">AI Creative Specialist</span></div>
-    </a>
+    <a class="brand" href="#top"><span class="mark">JRS</span><span class="bname"><b>John Roderick Secuya</b><span class="mono">AI / Creative</span></span></a>
     <div class="links" id="links">
       <a href="#work" class="mono">Work</a>
       <a href="#specializations" class="mono">Specializations</a>
@@ -436,6 +457,7 @@
       <a href="#systems" class="mono">Systems</a>
       <a href="#about" class="mono">About</a>
       <a href="#meet" class="mono">Meet John</a>
+      <a href="#contact" class="mono">Contact</a>
     </div>
     <button class="toggle mono" id="toggle" aria-expanded="false" aria-controls="links">Menu</button>
     <a class="cta mono" href="#contact">Work with me ↗</a>
