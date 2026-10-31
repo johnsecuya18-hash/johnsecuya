@@ -224,6 +224,25 @@
     .btns{gap:8px}.btn + .btn{margin-left:0}
     .stat b{font-size:28px}
   }
+
+  /* GRID BACKGROUND */
+  body{background-color:#fff;background-image:
+      linear-gradient(rgba(0,0,0,.075) 1px,transparent 1px),
+      linear-gradient(90deg,rgba(0,0,0,.075) 1px,transparent 1px);
+    background-size:32px 32px;background-position:-1px -1px}
+  header,.filters{background-color:#fff}
+  .hero-main,.sec-head,.about .txt,.more,.exp,.pipeline{background:transparent}
+  .pipeline div,.btn:not(.dark):not(.light){background-color:#fff}
+  .sec-head .idx,.sec-head h2{background:transparent}
+  .contact{background-color:#000;background-image:
+      linear-gradient(rgba(255,255,255,.09) 1px,transparent 1px),
+      linear-gradient(90deg,rgba(255,255,255,.09) 1px,transparent 1px);
+    background-size:32px 32px}
+  .contact .btn:not(.light){background-color:#000}
+  .hero h1,.sec-head h2{text-shadow:0 0 0 #fff}
+  /* cross markers on section corners */
+  .sec-head{position:relative}
+  .sec-head::after{content:"+";position:absolute;right:10px;top:6px;font-family:var(--mono);font-size:14px;color:#000;opacity:.6}
 </style>
 </head>
 <body>
