@@ -417,6 +417,26 @@
   .sys-strip b{display:block;font-size:30px;font-weight:900;letter-spacing:-.03em;color:var(--lime)}
   @media (max-width:960px){.systems,.sys-strip{grid-template-columns:1fr}}
   .toggle{color:var(--cream)}
+  .spot{display:grid;grid-template-columns:.75fr 1.25fr}
+  .spot-video{position:relative;aspect-ratio:9/14;max-height:640px;width:100%;background:#1a1a1a;border-right:var(--b);overflow:hidden;cursor:pointer;display:grid;place-items:center}
+  .spot-video::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(45deg,rgba(244,241,234,.08) 0 1px,transparent 1px 14px)}
+  .spot-video img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:.5s}
+  .spot-video:hover img{transform:scale(1.03)}
+  .spot-video .play{position:relative;width:84px;height:84px;border-radius:50%;background:var(--lime);color:var(--ink);display:grid;place-items:center;font-size:24px;transition:.25s}
+  .spot-video:hover .play{transform:scale(1.08)}
+  .spot-tag{position:absolute;left:14px;top:14px;background:var(--ink);color:var(--lime);padding:5px 10px;border:1px solid var(--lime)}
+  .spot-click{position:absolute;left:14px;bottom:14px;color:var(--cream);background:rgba(17,17,17,.7);padding:4px 8px}
+  .spot-txt{padding:48px 40px;display:flex;flex-direction:column;justify-content:center}
+  .spot-txt .kicker{display:flex;align-items:center;gap:12px;color:var(--cream)}
+  .spot-txt .kicker::before{content:"";width:28px;height:2px;background:var(--lime)}
+  .spot-txt h2{font-size:clamp(52px,7.5vw,112px);font-weight:900;line-height:.9;letter-spacing:-.055em;margin:18px 0 20px;color:var(--lime)}
+  .spot-txt h2 span{color:var(--cream)}
+  .spot-txt .lead{font-size:clamp(18px,1.7vw,22px);color:#bdb9ae;max-width:620px;line-height:1.45}
+  .spot-stats{grid-template-columns:repeat(3,1fr);margin-top:28px;border:var(--b)}
+  .spot-stats > div{padding:16px 18px}
+  .spot-stats b{display:block;font-size:24px;font-weight:900;letter-spacing:-.02em}
+  @media (max-width:960px){.spot{grid-template-columns:1fr}.spot-video{border-right:0;border-bottom:var(--b);max-height:none;aspect-ratio:4/5}.spot-txt{padding:32px 20px}.spot-stats{grid-template-columns:1fr 1fr 1fr}}
+  @media (max-width:600px){.spot-stats b{font-size:18px}}
 </style>
 </head>
 <body>
@@ -489,6 +509,27 @@
     </div>
   </div>
 
+  <!-- SPOTLIGHT -->
+  <section id="spotlight" class="spot">
+    <div class="spot-video rv" data-video="https://drive.google.com/file/d/1Bz_Bi8OwMbON1n3rd47hErUe5cMRXXna/view" data-title="The Cabin · $70,589 ad spend">
+      <img src="https://drive.google.com/thumbnail?id=1Bz_Bi8OwMbON1n3rd47hErUe5cMRXXna&amp;sz=w720" onerror="this.remove()" alt="The Cabin ad">
+      <span class="spot-tag mono">Spotlight / VSL</span>
+      <span class="play" aria-hidden="true">▶</span>
+      <span class="spot-click mono">Click to watch</span>
+    </div>
+    <div class="spot-txt rv">
+      <span class="kicker mono">Spotlight</span>
+      <h2>$70,589<br><span>spent on one ad.</span></h2>
+      <p class="lead">"The Cabin" (Greek version, iteration 6). This creative was scaled to over $70K in ad spend, proof it holds up when the budget goes up.</p>
+      <div class="g spot-stats">
+        <div><b>$70,589</b><span class="mono muted">Ad spend</span></div>
+        <div><b>Greek</b><span class="mono muted">Localized version</span></div>
+        <div><b>ITR 6</b><span class="mono muted">Iteration tested</span></div>
+      </div>
+      <div class="btns"><button class="btn dark" type="button" data-video="https://drive.google.com/file/d/1Bz_Bi8OwMbON1n3rd47hErUe5cMRXXna/view" data-title="The Cabin · $70,589 ad spend">Watch the ad ▶</button><a class="btn" href="#contact">Get an ad like this</a></div>
+    </div>
+  </section>
+
   <!-- WORK -->
   <section id="work">
     <div class="sec-head rv"><div class="idx mono">( 01 ) Selected work</div><h2>Real ads. Ready to watch.</h2></div>
@@ -504,6 +545,7 @@
     </div>
     <!-- To make a card play here: set data-video to a Google Drive / YouTube / .mp4 link. Empty = opens the Canva portfolio. -->
     <div class="g work" id="workgrid">
+      <article class="item" data-best="1" data-c="vsl" data-video="https://drive.google.com/file/d/1Bz_Bi8OwMbON1n3rd47hErUe5cMRXXna/view" data-title="The Cabin · $70,589 ad spend"><div class="thumb p1"><img src="https://drive.google.com/thumbnail?id=1Bz_Bi8OwMbON1n3rd47hErUe5cMRXXna&amp;sz=w720" onerror="this.remove()" alt="The Cabin ad" loading="lazy"><span class="cat mono">$70K+ ad spend</span><span class="play">▶</span><span class="rt mono">VSL</span></div><div class="body"><span class="mono muted">Greek · Iteration 6</span><h3>The Cabin · $70,589 Spend</h3><p class="muted">Scaled creative with over $70K in ad spend behind it.</p></div></article>
       <article class="item" data-best="1" data-c="vsl" data-video="https://drive.google.com/file/d/1garZX07ZpRBDaRAi2X_IufmP0wvJ6_8q/view" data-title="Top performer · 3M views"><div class="thumb"><img src="images/supplement-magnesium.jpg" alt="Top performing ad, 3 million views" loading="lazy"><span class="cat mono">3M views · Supplement</span><span class="play">▶</span><span class="rt mono">9:16</span></div><div class="body"><span class="mono muted">English · Top performer</span><h3>Supplement Ad · 3M Views</h3><p class="muted">Magnesium supplement creative that passed 3 million views.</p></div></article>
       <article class="item" data-best="1" data-c="drama" data-video="https://drive.google.com/file/d/18qVklzjgLkeCoFXCMbkBbwzomfScDTLB/view" data-title="Bed Date"><div class="thumb"><img src="https://drive.google.com/thumbnail?id=18qVklzjgLkeCoFXCMbkBbwzomfScDTLB&amp;sz=w720" onerror="this.onerror=null;this.src='images/drama-out-loud.jpg'" alt="Bed Date" loading="lazy"><span class="cat mono">AI Drama</span><span class="play">▶</span><span class="rt mono">9:16</span></div><div class="body"><span class="mono muted">English</span><h3>Bed Date</h3><p class="muted">Cinematic relationship drama with consistent characters and an emotional hook.</p></div></article>
       <article class="item" data-best="1" data-c="anim" data-video="https://drive.google.com/file/d/11a3DtpYtFi2JPRGLDJI-G0XvCIM3B0Zq/view" data-title="Claymation Explainer"><div class="thumb"><img src="https://drive.google.com/thumbnail?id=11a3DtpYtFi2JPRGLDJI-G0XvCIM3B0Zq&amp;sz=w720" onerror="this.onerror=null;this.src='images/claymation-botox-1.jpg'" alt="Claymation Explainer" loading="lazy"><span class="cat mono">Claymation</span><span class="play">▶</span><span class="rt mono">9:16</span></div><div class="body"><span class="mono muted">Spanish</span><h3>Claymation Explainer</h3><p class="muted">Handcrafted clay-style animation explaining a beauty topic in Spanish.</p></div></article>
