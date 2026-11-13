@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>John Roderick Secuya · AI Video Ads That Sell</title>
+<meta name="description" content="AI video production and creative direction for brands and e-commerce agencies. AI UGC, drama, Pixar-style, song ads and VSLs that sell.">
+<meta name="theme-color" content="#0b0913">
+<meta property="og:title" content="John Roderick Secuya · AI ads that sell">
+<meta property="og:description" content="$70K+ ad spend on one creative. 3M+ views on another. AI UGC, drama, Pixar-style and VSL ads.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,800&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0b0913; --bg2:#120f1d; --card:#15121f; --card2:#1b1728;
+    --line:rgba(226,218,255,.10); --line2:rgba(226,218,255,.18);
+    --fg:#f4f1ff; --muted:#a59fbb; --dim:#6f6987;
+    --violet:#a78bfa; --lilac:#d4c8ff; --pink:#f0abfc;
+    --sans:"Inter Tight",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+    --serif:"Instrument Serif",Georgia,serif;
+    --mono:"JetBrains Mono",ui-monospace,Menlo,monospace;
+    --r:20px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--fg);font-family:var(--sans);line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  a{color:inherit;text-decoration:none}
+  img{display:block;max-width:100%}
+  button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+  ::selection{background:var(--violet);color:#0b0913}
+  .wrap{width:min(1240px,92vw);margin:0 auto}
+  .eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--lilac);display:inline-flex;align-items:center;gap:10px}
+  .eyebrow::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--violet);box-shadow:0 0 12px var(--violet)}
+  em.s{font-family:var(--serif);font-style:italic;font-weight:400;letter-spacing:-.01em;background:linear-gradient(100deg,var(--lilac),var(--pink) 60%,var(--violet));-webkit-background-clip:text;background-clip:text;color:transparent;padding-right:.06em}
+  .muted{color:var(--muted)}
+  h2.h{font-size:clamp(36px,5.2vw,68px);font-weight:800;line-height:1.02;letter-spacing:-.035em;margin:16px 0 14px;max-width:900px}
+  h2.h em.s{font-size:1.08em}
+  .intro{color:var(--muted);font-size:18px;max-width:620px}
+  section{padding:120px 0;position:relative}
+
+  /* glow background */
+  .glow{position:absolute;pointer-events:none;border-radius:50%;filter:blur(90px);opacity:.55}
+
+  /* buttons */
+  .btn{display:inline-flex;align-items:center;gap:10px;padding:15px 24px;border-radius:999px;font-weight:600;font-size:15px;transition:transform .2s,background .2s,border-color .2s,color .2s;white-space:nowrap}
+  .btn-w{background:var(--fg);color:#0b0913}
+  .btn-w:hover{transform:translateY(-2px);background:#fff;box-shadow:0 10px 30px rgba(167,139,250,.35)}
+  .btn-g{border:1px solid var(--line2);color:var(--fg)}
+  .btn-g:hover{border-color:var(--lilac);background:rgba(167,139,250,.08)}
+
+  /* NAV */
+  header{position:sticky;top:0;z-index:50;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);background:rgba(11,9,19,.72);border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:72px}
+  .logo{font-weight:900;letter-spacing:.16em;font-size:14px;display:flex;align-items:center;gap:10px}
+  .logo i{width:10px;height:10px;border-radius:50%;background:linear-gradient(135deg,var(--violet),var(--pink));display:inline-block}
+  .links{display:flex;gap:30px;font-size:15px;color:var(--muted)}
+  .links a:hover{color:var(--fg)}
+  .nav .btn{padding:10px 18px;font-size:14px}
+  .menu{display:none;width:42px;height:42px;border:1px solid var(--line2);border-radius:999px}
+  .menu span{display:block;width:16px;height:1.5px;background:var(--fg);margin:4px auto}
+
+  /* HERO */
+  .hero{padding:110px 0 70px;text-align:center;overflow:hidden}
+  .hero h1{font-size:clamp(46px,8.2vw,112px);font-weight:800;line-height:.98;letter-spacing:-.045em;margin:22px auto 22px;max-width:1050px}
+  .hero h1 em.s{font-size:1.06em;display:inline-block}
+  .hero .sub{font-size:clamp(17px,1.6vw,20px);color:var(--muted);max-width:640px;margin:0 auto}
+  .hero .ctas{display:flex;gap:12px;justify-content:center;margin-top:36px;flex-wrap:wrap}
+  .trust{margin-top:30px;display:flex;justify-content:center;gap:10px 22px;flex-wrap:wrap;font-size:14px;color:var(--muted)}
+  .trust b{color:var(--fg);font-weight:700}
+  .trust span{display:inline-flex;align-items:center;gap:8px}
+  .trust span+span::before{content:"";width:4px;height:4px;border-radius:50%;background:var(--dim);margin-right:12px}
+  .reel{margin-top:70px;position:relative;-webkit-mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent);mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent)}
+  .reel-track{display:flex;gap:18px;width:max-content;animation:slide 60s linear infinite}
+  .reel:hover .reel-track{animation-play-state:paused}
+  @keyframes slide{to{transform:translateX(-50%)}}
+  .reel .pc{width:210px;flex:none}
+  .reel .pc:nth-child(odd){transform:translateY(18px)}
+
+  /* poster card */
+  .pc{position:relative;border-radius:var(--r);overflow:hidden;background:var(--card);border:1px solid var(--line);cursor:pointer;aspect-ratio:9/16;isolation:isolate;transition:transform .35s cubic-bezier(.2,.7,.2,1),border-color .3s,box-shadow .35s}
+  .pc:hover{transform:translateY(-6px);border-color:var(--line2);box-shadow:0 24px 50px -20px rgba(167,139,250,.45)}
+  .pc.wide{aspect-ratio:16/9}
+  .pc .ph{position:absolute;inset:0;background:radial-gradient(120% 80% at 20% 10%,#2a2142,transparent 60%),radial-gradient(120% 80% at 90% 100%,#1f1733,transparent 60%),var(--card)}
+  .pc .ph::after{content:"▶";position:absolute;inset:0;display:grid;place-items:center;color:rgba(212,200,255,.18);font-size:46px}
+  .pc img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .6s}
+  .pc:hover img{transform:scale(1.05)}
+  .pc .shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,9,19,.0) 40%,rgba(11,9,19,.92));z-index:1}
+  .pc .badge{position:absolute;top:12px;left:12px;z-index:2;font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;background:rgba(11,9,19,.7);backdrop-filter:blur(6px);border:1px solid var(--line2);padding:5px 9px;border-radius:999px}
+  .pc .badge.hot{background:var(--fg);color:#0b0913;border-color:var(--fg)}
+  .pc .play{position:absolute;top:50%;left:50%;width:56px;height:56px;margin:-28px 0 0 -28px;border-radius:50%;background:rgba(244,241,255,.92);color:#0b0913;display:grid;place-items:center;font-size:16px;z-index:2;transform:scale(.85);opacity:0;transition:.3s}
+  .pc:hover .play{opacity:1;transform:scale(1)}
+  .pc .cap{position:absolute;left:14px;right:14px;bottom:14px;z-index:2}
+  .pc .cap small{font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--lilac)}
+  .pc .cap b{display:block;font-size:15px;font-weight:700;line-height:1.25;margin-top:4px}
+
+  /* LIBRARY */
+  .tabs{display:flex;gap:8px;flex-wrap:wrap;margin:36px 0 28px}
+  .tab{padding:10px 16px;border-radius:999px;border:1px solid var(--line2);font-size:14px;color:var(--muted);transition:.2s}
+  .tab:hover{color:var(--fg);border-color:var(--lilac)}
+  .tab.on{background:var(--fg);color:#0b0913;border-color:var(--fg);font-weight:600}
+  .tab i{font-style:normal;opacity:.6;margin-left:4px;font-size:12px}
+  .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;grid-auto-flow:dense}
+  .grid .pc.wide{grid-column:span 2}
+  .more{display:flex;justify-content:center;margin-top:34px}
+
+  /* RESULTS */
+  .results{display:grid;grid-template-columns:1.25fr 1fr;gap:18px;margin-top:48px}
+  .rc{background:linear-gradient(180deg,var(--card2),var(--card));border:1px solid var(--line);border-radius:28px;padding:30px;position:relative;overflow:hidden}
+  .rc .big{font-size:clamp(54px,7vw,96px);font-weight:800;letter-spacing:-.05em;line-height:.95}
+  .rc .lbl{color:var(--muted);margin-top:10px;font-size:16px;max-width:420px}
+  .rc .lbl b{color:var(--fg)}
+  .receipt{margin-top:26px;border:1px solid var(--line2);border-radius:16px;padding:12px;background:rgba(0,0,0,.25)}
+  .receipt .rl{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--lilac);display:flex;justify-content:space-between;margin-bottom:10px}
+  .receipt img{border-radius:10px;width:100%}
+  .rc-a{display:grid;grid-template-columns:1fr 240px;gap:26px;align-items:center;height:100%}
+  .rc-a .pc{width:100%}
+  .rc-b{display:flex;flex-direction:column;justify-content:space-between;gap:24px}
+  .rc-b .pc{aspect-ratio:auto;height:300px}
+  .chipline{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+  .chipline span{font-size:13px;padding:6px 12px;border-radius:999px;border:1px solid var(--line2);color:var(--lilac)}
+  .mini{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:18px}
+  .mini div{border:1px solid var(--line);border-radius:22px;padding:22px 24px;background:var(--card)}
+  .mini b{display:block;font-size:34px;font-weight:800;letter-spacing:-.04em}
+  .mini span{color:var(--muted);font-size:14px}
+
+  /* PROCESS */
+  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:48px}
+  .st{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:22px;display:flex;flex-direction:column;gap:16px;min-height:380px}
+  .st .n{font-family:var(--mono);font-size:12px;color:var(--lilac);display:flex;justify-content:space-between}
+  .st .n em{font-style:normal;color:var(--dim)}
+  .st h3{font-size:22px;font-weight:700;letter-spacing:-.02em}
+  .st p{color:var(--muted);font-size:14.5px}
+  .mock{margin-top:auto;border:1px solid var(--line2);border-radius:16px;background:var(--bg2);padding:14px;font-size:13px;display:flex;flex-direction:column;gap:8px}
+  .bub{padding:9px 12px;border-radius:14px;max-width:88%;line-height:1.35}
+  .bub.l{background:#241d36;align-self:flex-start;border-bottom-left-radius:4px}
+  .bub.r{background:var(--fg);color:#0b0913;align-self:flex-end;border-bottom-right-radius:4px}
+  .bub small{display:block;font-family:var(--mono);font-size:10px;opacity:.6;margin-bottom:2px}
+  .tags{display:flex;flex-wrap:wrap;gap:6px}
+  .tags span{padding:5px 10px;border-radius:999px;background:#241d36;font-size:12px}
+  .tags span.v{background:rgba(167,139,250,.18);color:var(--lilac)}
+  .tl{display:flex;flex-direction:column;gap:6px}
+  .tl div{height:26px;border-radius:7px;display:flex;align-items:center;padding:0 10px;font-family:var(--mono);font-size:11px}
+  .tl .a{background:#2a2238;color:var(--dim);text-decoration:line-through;width:70%}
+  .tl .b{background:linear-gradient(90deg,var(--violet),var(--pink));color:#0b0913;width:92%}
+  .tl .c{background:#3a2f55;width:80%}
+  .frame{position:relative;border-radius:10px;height:92px;background:linear-gradient(135deg,#2b2240,#1a1528)}
+  .frame .pin{position:absolute;left:30%;top:28%;width:12px;height:12px;border-radius:50%;background:var(--pink);box-shadow:0 0 0 4px rgba(240,171,252,.25)}
+  .frame .cm{position:absolute;left:38%;top:12%;background:var(--fg);color:#0b0913;font-size:11.5px;padding:6px 9px;border-radius:10px;max-width:58%}
+  .tool{font-family:var(--mono);font-size:11px;color:var(--dim)}
+
+  /* SYSTEMS */
+  .sys{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:48px}
+  .sc{border:1px solid var(--line);border-radius:26px;padding:30px;background:linear-gradient(180deg,var(--card2),var(--card));display:flex;flex-direction:column;gap:14px}
+  .sc .k{font-family:var(--mono);font-size:12px;color:var(--lilac);letter-spacing:.1em;text-transform:uppercase}
+  .sc h3{font-size:clamp(26px,2.8vw,36px);font-weight:800;letter-spacing:-.03em;line-height:1.05}
+  .sc p{color:var(--muted)}
+  .sc .chipline span{color:var(--fg)}
+
+  /* ABOUT */
+  .about{display:grid;grid-template-columns:.8fr 1.3fr;gap:56px;align-items:center;margin-top:10px}
+  .ph-card{position:relative;border-radius:26px;overflow:hidden;border:1px solid var(--line2);aspect-ratio:4/5;background:var(--card)}
+  .ph-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 20%}
+  .ph-card::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(11,9,19,.85))}
+  .ph-card .nm{position:absolute;left:18px;bottom:16px;z-index:1}
+  .ph-card .nm b{display:block;font-size:20px}
+  .ph-card .nm span{font-family:var(--mono);font-size:11px;color:var(--lilac);letter-spacing:.1em;text-transform:uppercase}
+  .about p.lead{font-size:clamp(19px,1.9vw,24px);color:#cfc9e6;line-height:1.45;margin-top:4px}
+  .about p.lead+p{color:var(--muted);margin-top:16px}
+  .facts{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:28px}
+  .facts div{border:1px solid var(--line);border-radius:16px;padding:14px 16px;background:var(--card)}
+  .facts small{font-family:var(--mono);font-size:10.5px;color:var(--dim);letter-spacing:.1em;text-transform:uppercase}
+  .facts b{display:block;font-size:16px;margin-top:3px}
+  .tools{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+  .tools span{font-size:13px;padding:7px 12px;border-radius:999px;border:1px solid var(--line2);color:var(--muted)}
+
+  /* CTA */
+  .cta{text-align:center;padding:140px 0 120px;overflow:hidden}
+  .cta h2{font-size:clamp(44px,7.4vw,104px);font-weight:800;letter-spacing:-.045em;line-height:1;max-width:1000px;margin:18px auto 20px}
+  .cta .ctas{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:34px}
+  .contacts{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:44px}
+  .contacts a{border:1px solid var(--line);border-radius:16px;padding:14px 18px;text-align:left;min-width:200px;background:var(--card);transition:.2s}
+  .contacts a:hover{border-color:var(--lilac)}
+  .contacts small{display:block;font-family:var(--mono);font-size:10.5px;color:var(--dim);letter-spacing:.1em;text-transform:uppercase}
+  footer{border-top:1px solid var(--line);padding:28px 0;color:var(--dim);font-size:13px}
+  footer .wrap{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+
+  /* MODAL */
+  .modal{position:fixed;inset:0;background:rgba(6,5,12,.88);backdrop-filter:blur(8px);z-index:100;display:none;align-items:center;justify-content:center;padding:20px}
+  .modal.open{display:flex}
+  .mbox{width:min(430px,100%);background:var(--card);border:1px solid var(--line2);border-radius:22px;overflow:hidden}
+  .mbox.wide{width:min(920px,100%)}
+  .mhead{display:flex;justify-content:space-between;align-items:center;padding:12px 16px;font-size:14px;font-weight:600;gap:10px}
+  .mhead button{width:34px;height:34px;border-radius:50%;border:1px solid var(--line2);flex:none}
+  .mframe{aspect-ratio:9/16;max-height:76vh;width:100%;background:#000}
+  .mbox.wide .mframe{aspect-ratio:16/9}
+  .mframe iframe{width:100%;height:100%;border:0}
+
+  /* reveal */
+  .rv{opacity:0;transform:translateY(22px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1)}
+  .rv.in{opacity:1;transform:none}
+  @media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}.reel-track{animation:none}html{scroll-behavior:auto}}
+
+  @media (max-width:1100px){.grid{grid-template-columns:repeat(3,1fr)}.steps{grid-template-columns:1fr 1fr}}
+  @media (max-width:900px){
+    .links,.nav .btn{display:none}.menu{display:block}
+    .links.open{display:flex;position:absolute;top:72px;left:0;right:0;flex-direction:column;gap:0;background:rgba(11,9,19,.97);border-bottom:1px solid var(--line);padding:8px 4vw 16px}
+    .links.open a{padding:14px 0;border-bottom:1px solid var(--line);color:var(--fg)}
+    .grid{grid-template-columns:repeat(3,1fr)}
+    .results,.sys,.about{grid-template-columns:1fr}
+    .rc-a{grid-template-columns:1fr}
+    .rc-a .pc{max-width:260px}
+    .mini{grid-template-columns:1fr 1fr 1fr}
+    section{padding:90px 0}
+    .about .ph-card{max-width:380px}
+  }
+  @media (max-width:600px){
+    .grid{grid-template-columns:1fr 1fr;gap:10px}
+    .steps{grid-template-columns:1fr}
+    .st{min-height:0}
+    .mini{grid-template-columns:1fr}
+    .reel .pc{width:150px}
+    .pc .cap b{font-size:13px}
+    .facts{grid-template-columns:1fr}
+    .contacts a{min-width:0;flex:1 1 45%}
+    .trust{flex-direction:column;align-items:center;gap:6px}
+    .trust span+span::before{display:none}
+  }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="#top"><i></i>JOHN SECUYA</a>
+    <nav class="links" id="links">
+      <a href="#work">Work</a><a href="#results">Results</a><a href="#process">Process</a><a href="#systems">Systems</a><a href="#about">About</a>
+    </nav>
+    <a class="btn btn-w" href="#contact">Work with me →</a>
+    <button class="menu" id="menu" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+  </div>
+</header>
+
+<main id="top">
+  <!-- HERO -->
+  <section class="hero">
+    <div class="glow" style="width:680px;height:680px;left:50%;top:-260px;margin-left:-340px;background:radial-gradient(circle,#5b3fd0,transparent 65%)"></div>
+    <div class="glow" style="width:420px;height:420px;right:-120px;top:120px;background:radial-gradient(circle,#b0418f,transparent 65%);opacity:.35"></div>
+    <div class="wrap" style="position:relative">
+      <span class="eyebrow rv">John Roderick Secuya · Senior AI Creative Specialist</span>
+      <h1 class="rv">Turn your product into AI ads <em class="s">that sell.</em></h1>
+      <p class="sub rv">Creative direction and AI video production for brands and e-commerce agencies. UGC, drama, Pixar-style, song ads and VSLs, delivered test-ready.</p>
+      <div class="ctas rv"><a class="btn btn-w" href="#contact">Work with me →</a><a class="btn btn-g" href="#work">See the work</a></div>
+      <div class="trust rv"><span><b>$70K+</b> ad spend on one creative</span><span><b>3M+</b> views on another</span><span><b>English &amp; Spanish</b> ads</span></div>
+    </div>
+    <div class="reel rv"><div class="reel-track" id="reel"></div></div>
+  </section>
+
+  <!-- LIBRARY -->
+  <section id="work">
+    <div class="wrap">
+      <span class="eyebrow rv">The creative library</span>
+      <h2 class="h rv">I make a lot of ads. Here are a few <em class="s">favourites.</em></h2>
+      <p class="intro rv">Browse by style. Tap any ad to play it with sound.</p>
+      <div class="tabs" id="tabs"></div>
+      <div class="grid" id="grid"></div>
+      <div class="more"><button class="btn btn-g" id="moreBtn">Load more ads ↓</button></div>
+    </div>
+  </section>
+
+  <!-- RESULTS -->
+  <section id="results">
+    <div class="glow" style="width:520px;height:520px;left:-200px;top:80px;background:radial-gradient(circle,#4c34b8,transparent 65%);opacity:.35"></div>
+    <div class="wrap" style="position:relative">
+      <span class="eyebrow rv">Results</span>
+      <h2 class="h rv">3M+ views. <em class="s">$70K+</em> in ad spend.</h2>
+      <p class="intro rv">Real numbers from real ad accounts. The receipt sits right next to it.</p>
+      <div class="results">
+        <div class="rc rv">
+          <div class="rc-a">
+            <div>
+              <div class="big">$70,589</div>
+              <p class="lbl">Ad spend behind <b>one creative</b>: "The Cabin", the Greek version, iteration 6. Scaled past $70K, proof it holds up when the budget goes up.</p>
+              <div class="receipt"><div class="rl"><span>Receipt · ad spend report</span><span>Editor: John</span></div><img src="images/proof-cabin-spend.png" alt="Ad report: the cabin greek itr, EB0_1294_ITR-6_VID, John, $70,589"></div>
+            </div>
+            <div class="pc" data-id="1Bz_Bi8OwMbON1n3rd47hErUe5cMRXXna" data-title="The Cabin · $70,589 ad spend"><div class="ph"></div><img src="https://drive.google.com/thumbnail?id=1Bz_Bi8OwMbON1n3rd47hErUe5cMRXXna&amp;sz=w720" onerror="this.remove()" alt=""><div class="shade"></div><span class="badge hot">Top ad</span><span class="play">▶</span><div class="cap"><small>VSL · Greek</small><b>The Cabin</b></div></div>
+          </div>
+        </div>
+        <div class="rc rc-b rv">
+          <div>
+            <div class="big">3M+</div>
+            <p class="lbl">Views on <b>one UGC supplement ad</b> for a magnesium brand. Realistic AI talent, real product handling.</p>
+          </div>
+          <div class="pc" data-id="1garZX07ZpRBDaRAi2X_IufmP0wvJ6_8q" data-title="Supplement Ad · 3M+ views"><div class="ph"></div><img src="images/supplement-magnesium.jpg" alt=""><div class="shade"></div><span class="badge hot">3M+ views</span><span class="play">▶</span><div class="cap"><small>UGC · Supplement</small><b>Magnesium Supplement Ad</b></div></div>
+        </div>
+      </div>
+      <div class="mini">
+        <div class="rv"><b id="countAds">128</b><span>ads in the library</span></div>
+        <div class="rv"><b>12</b><span>ad styles, each with a master prompt</span></div>
+        <div class="rv"><b>2</b><span>languages: English and Latin American Spanish</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section id="process">
+    <div class="wrap">
+      <span class="eyebrow rv">How it works</span>
+      <h2 class="h rv">You send the brief. <em class="s">I handle everything else.</em></h2>
+      <div class="steps">
+        <div class="st rv">
+          <div class="n"><span>01</span><em>Brief + comms</em></div>
+          <h3>Brief + comms</h3>
+          <p>Send the product, angle and a reference ad. I break it into scripts, hooks and a scene plan.</p>
+          <div class="mock">
+            <div class="bub l"><small>Your brand</small>Need 3 hooks for our collagen launch. Ref ad attached.</div>
+            <div class="bub r"><small>John</small>On it. Scripts and scene plan by tomorrow.</div>
+          </div>
+          <span class="tool">WhatsApp · Discord · Email</span>
+        </div>
+        <div class="st rv">
+          <div class="n"><span>02</span><em>Direction + generation</em></div>
+          <h3>Direction + generation</h3>
+          <p>Characters, voices and locations are locked first, then every scene is generated shot by shot.</p>
+          <div class="mock">
+            <div class="tags"><span class="v">Character</span><span class="v">Voice</span><span class="v">Location</span><span class="v">Product</span></div>
+            <div class="tags"><span>Kling</span><span>Seedance</span><span>Higgsfield</span><span>WAN</span><span>HeyGen</span></div>
+          </div>
+          <span class="tool">Master prompt library</span>
+        </div>
+        <div class="st rv">
+          <div class="n"><span>03</span><em>Edit + hooks</em></div>
+          <h3>Edit + hooks</h3>
+          <p>Cut for pace, captioned and sound-designed, with multiple hooks so you can test what wins.</p>
+          <div class="mock tl"><div class="a">HOOK A · cut</div><div class="b">HOOK B · winner</div><div class="c">HOOK C</div></div>
+          <span class="tool">CapCut Pro</span>
+        </div>
+        <div class="st rv">
+          <div class="n"><span>04</span><em>Review</em></div>
+          <h3>Review</h3>
+          <p>Leave notes on any frame. Revisions come back fast as V2, V3, until it's ready to launch.</p>
+          <div class="mock"><div class="frame"><span class="pin"></span><span class="cm">00:04 · make the product bigger</span></div><div class="bub r" style="max-width:70%"><small>John</small>Fixed in V2 ✓</div></div>
+          <span class="tool">Google Drive · Frame review</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SYSTEMS -->
+  <section id="systems">
+    <div class="wrap">
+      <span class="eyebrow rv">Systems</span>
+      <h2 class="h rv">Built on systems, <em class="s">not luck.</em></h2>
+      <div class="sys">
+        <div class="sc rv">
+          <span class="k">A · Prompt library</span>
+          <h3>A master prompt for every video style.</h3>
+          <p>Every project starts from a tested base, so characters stay consistent, the look stays on-brand and turnaround stays fast.</p>
+          <div class="chipline"><span>AI Drama</span><span>Claymation</span><span>Pixar 3D</span><span>Song Ads</span><span>AI UGC</span><span>Skeleton Explainers</span><span>Podcasts</span><span>VSLs</span><span>Supplement Ads</span><span>Street Interviews</span><span>Brand Intros</span><span>Local Services</span></div>
+        </div>
+        <div class="sc rv">
+          <span class="k">B · Claude skills</span>
+          <h3>Claude skills, ready for MCP.</h3>
+          <p>My workflows are packaged as custom Claude skills that turn a brief into scripts, scene plans and generation prompts, ready to plug into MCP-connected tools as a repeatable pipeline.</p>
+          <div class="chipline"><span>Claude skills</span><span>MCP-ready</span><span>Brief → script</span><span>Scene plans</span><span>Generation prompts</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="wrap">
+      <div class="about">
+        <div class="ph-card rv"><img src="images/profile.jpg" alt="John Roderick Secuya"><div class="nm"><b>John Roderick Secuya</b><span>Senior AI Creative Specialist</span></div></div>
+        <div class="rv">
+          <span class="eyebrow">About</span>
+          <h2 class="h">Real person. <em class="s">AI-powered output.</em></h2>
+          <p class="lead">I'm John, a Senior AI Creative Specialist from the Philippines making AI-powered ads for e-commerce, beauty, fashion and health &amp; wellness brands.</p>
+          <p>I handle the whole pipeline myself, from script breakdown and references to generation, voice, lip sync, editing, sound and captions, so you get one accountable creative partner and ads built to test.</p>
+          <div class="facts">
+            <div><small>Based in</small><b>Philippines · GMT+8</b></div>
+            <div><small>Languages</small><b>English &amp; LatAm Spanish ads</b></div>
+            <div><small>Platforms</small><b>Meta, TikTok, YouTube Shorts</b></div>
+            <div><small>Experience</small><b>2024 – present, freelance</b></div>
+          </div>
+          <div class="tools"><span>Kling</span><span>Seedance</span><span>Higgsfield</span><span>WAN</span><span>Runway</span><span>HeyGen</span><span>GPT Image</span><span>Nano Banana</span><span>Seedream</span><span>CapCut Pro</span><span>Claude</span><span>ChatGPT</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta" id="contact">
+    <div class="glow" style="width:760px;height:760px;left:50%;top:-120px;margin-left:-380px;background:radial-gradient(circle,#4f36c4,transparent 65%);opacity:.45"></div>
+    <div class="wrap" style="position:relative">
+      <span class="eyebrow rv">Let's work</span>
+      <h2 class="rv">Got a product? <em class="s">I'll bring the sales.</em></h2>
+      <p class="intro rv" style="margin:0 auto">Open to AI UGC, VSLs, drama ads and full ad production for brands and agencies.</p>
+      <div class="ctas rv"><a class="btn btn-w" href="mailto:johnsecuya18@gmail.com">Email me →</a><a class="btn btn-g" href="https://wa.me/639770559761" target="_blank" rel="noopener">Message on WhatsApp</a></div>
+      <div class="contacts rv">
+        <a href="mailto:johnsecuya18@gmail.com"><small>Email</small>johnsecuya18@gmail.com</a>
+        <a href="https://wa.me/639770559761" target="_blank" rel="noopener"><small>WhatsApp</small>+63 977 055 9761</a>
+        <a href="https://discord.com/users/yuan04723" target="_blank" rel="noopener"><small>Discord</small>yuan04723</a>
+        <a href="resume.pdf" target="_blank" rel="noopener"><small>Resume</small>Download PDF ↗</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer><div class="wrap"><span>© <span id="yr">2026</span> John Roderick Secuya · Senior AI Creative Specialist</span><a href="https://drive.google.com/drive/folders/11Tq3K1C1LvILClAtYhhQo6u-c_OX-eq8" target="_blank" rel="noopener">Full portfolio on Google Drive ↗</a></div></footer>
+
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-label="Video player">
+  <div class="mbox" id="mbox"><div class="mhead"><span id="mtitle">Video</span><button id="mclose" aria-label="Close">✕</button></div><div class="mframe" id="mframe"></div></div>
+</div>
+
+<script>
+const VIDEOS=[{"id":"1Bz_Bi8OwMbON1n3rd47hErUe5cMRXXna","c":"vsl","best":true,"wide":false,"title":"The Cabin · $70,589 Spend","cat":"$70K+ ad spend","meta":"Greek · Iteration 6","img":""},{"id":"1garZX07ZpRBDaRAi2X_IufmP0wvJ6_8q","c":"vsl","best":true,"wide":false,"title":"Supplement Ad · 3M Views","cat":"3M views · Supplement","meta":"English · Top performer","img":"images/supplement-magnesium.jpg"},{"id":"18qVklzjgLkeCoFXCMbkBbwzomfScDTLB","c":"drama","best":true,"wide":false,"title":"Bed Date","cat":"AI Drama","meta":"English","img":""},{"id":"11a3DtpYtFi2JPRGLDJI-G0XvCIM3B0Zq","c":"anim","best":true,"wide":false,"title":"Claymation Explainer","cat":"Claymation","meta":"Spanish","img":""},{"id":"1vnkSXt41f0v6A0SYAjzUoEN04TeZqw2t","c":"anim","best":true,"wide":false,"title":"Pixar-Style Story Ad","cat":"Pixar 3D","meta":"Spanish","img":""},{"id":"1UYD1LYxiI2D_ntUKcifR-x_tVXR9WzZX","c":"song","best":true,"wide":false,"title":"Pixar-Style Song Ad","cat":"Song ad","meta":"English","img":"images/song-beach.jpg"},{"id":"1Dz9il5tssahSWujCjbQS52r_ARororqm","c":"ugc","best":true,"wide":false,"title":"Realistic AI UGC Ad","cat":"AI UGC","meta":"English","img":"images/ugc-gym-2.jpg"},{"id":"11_mVrSPvVkpQ-L2RzVY9_2NkOBtnscxG","c":"anim","best":true,"wide":false,"title":"Skeleton Explainer","cat":"Skeleton","meta":"English","img":"images/skeleton-coffee.jpg"},{"id":"1puwB7fQA8YV-CPtBAbn0-IgOgXwExyVJ","c":"ugc","best":true,"wide":false,"title":"AI Podcast Ad","cat":"Podcast","meta":"English","img":"images/podcast.jpg"},{"id":"1WMGBJP9JANMjvPob_dqEat9LXTP6z5vS","c":"vsl","best":true,"wide":false,"title":"Video Sales Letter","cat":"VSL","meta":"English","img":""},{"id":"1YLVFcsVbXjf0FzAhb5e4VoWLA5C-HbMj","c":"vsl","best":true,"wide":false,"title":"UGC Supplement Ad","cat":"Supplement","meta":"English","img":""},{"id":"10TeKW9QgQjx_X0lhaMlqYu90J_Zbofsv","c":"ugc","best":true,"wide":false,"title":"AI Street Interview","cat":"Street interview","meta":"English","img":""},{"id":"1jhDm8t-9EKt1b6yeSTerwww-vOg3FQ77","c":"ugc","best":false,"wide":false,"title":"UGC: Post-Workout","cat":"AI UGC","meta":"English","img":"images/ugc-gym.jpg"},{"id":"16qzaN1TX6CQyqlbH6eE_65enNx5Br0f4","c":"anim","best":false,"wide":false,"title":"Pixar-Style Mascot Ad","cat":"Pixar 3D","meta":"English","img":"images/pixar-salt.jpg"},{"id":"1VZ7tDvAFX7eNNKcpC0tqif0uUDiyhvmV","c":"vsl","best":false,"wide":false,"title":"Supplement Ad: Street Interview","cat":"Supplement","meta":"English","img":"images/supplement-mall.jpg"},{"id":"1In6RvnrliMdZltFy4oRsR2HjqH6UEjyH","c":"song","best":false,"wide":false,"title":"Pixar-Style Song Video 01","cat":"Song ad","meta":"English","img":"images/song-seoul.jpg"},{"id":"13RC9-NpelwbXPTwwme_yW_eFWp2mJHNK","c":"ugc","best":false,"wide":false,"title":"Spanish UGC Testimonial","cat":"AI UGC","meta":"LatAm Spanish","img":"images/ugc-car-es.jpg"},{"id":"1xxCs6c-55_ruLPpDVxeM4a4OgAN6ENVd","c":"anim","best":false,"wide":false,"title":"Pixar-Style Health Ad","cat":"Pixar 3D","meta":"English","img":"images/pixar-mirror.jpg"},{"id":"1sZw3f1O5ML1h-hFnNWZ0AsSeT9hCBsd-","c":"song","best":false,"wide":false,"title":"Spanish Song Story Ad","cat":"Song ad","meta":"LatAm Spanish","img":"images/song-husband-es.jpg"},{"id":"1brEJdu2mW8Z2hZGrSs_vW3P3sJpo_9ol","c":"ugc","best":false,"wide":false,"title":"UGC: Audience Q&A","cat":"AI UGC","meta":"English","img":"images/ugc-audience.jpg"},{"id":"1lx5V8PM566iMdPl602I3ZaZYowUt0_RC","c":"ugc","best":false,"wide":false,"title":"UGC: Wellness Trend","cat":"AI UGC","meta":"English","img":"images/ugc-lymphatic.jpg"},{"id":"11iWHR-DPZeAuWfbZyeSEn7Nlk04BrY2i","c":"ugc","best":false,"wide":false,"title":"Swedish UGC Ad","cat":"AI UGC","meta":"Swedish","img":"images/ugc-swedish.jpg"},{"id":"1Qow6e12YFWuN02bwgWrT4q444psS5Sa_","c":"ugc","best":false,"wide":false,"title":"UGC: Before & After","cat":"AI UGC","meta":"English","img":"images/ugc-puffy-face.jpg"},{"id":"15chy9eSZUkuQVO9JopNla9rQWHXrf5P-","c":"vsl","best":false,"wide":false,"title":"Spanish VSL","cat":"VSL","meta":"LatAm Spanish","img":"images/vsl-mirror-es.jpg"},{"id":"1yQToTHzp6UHzt4-uVwHrEJ44mU_MFZgw","c":"vsl","best":false,"wide":false,"title":"Supplement Ad: Beach Interview","cat":"Supplement","meta":"English","img":"images/supplement-beach.jpg"},{"id":"16PL_lERlYJ9zA0xJw55iVWH3zfEydPRY","c":"vsl","best":false,"wide":false,"title":"Supplement Ad: Couple Interview","cat":"Supplement","meta":"English","img":"images/supplement-lake.jpg"},{"id":"1uMsTRxwxmaq2YIK5hN2QquenEUSjeVne","c":"vsl","best":false,"wide":false,"title":"Supplement Ad: Herbal Expert","cat":"Supplement","meta":"English","img":"images/supplement-tea.jpg"},{"id":"1v3w5SnOKC1-1CDH2xt1wwss4V-ZfLh16","c":"brand","best":false,"wide":true,"title":"Plumbing Brand Intro","cat":"YouTube intro","meta":"Brand video","img":"images/yt-plumbing-intro.jpg"},{"id":"1x4Gn2dO4L5F_NDsXpJvmtD9-I7LgeE8i","c":"brand","best":false,"wide":true,"title":"Plumbing Brand Outro","cat":"YouTube outro","meta":"Brand video","img":"images/yt-plumbing-outro.jpg"},{"id":"1Gh0OztYNGwuJxqyq7itIBD9ZAXkBPb0l","c":"brand","best":false,"wide":true,"title":"Tech-Style Logo Intro","cat":"YouTube intro","meta":"Brand video","img":"images/yt-sogood-intro.jpg"},{"id":"1AygpOc5cZXBViXgnemd6phGddZuDUNeI","c":"brand","best":false,"wide":true,"title":"Tech-Style Logo Outro","cat":"YouTube outro","meta":"Brand video","img":"images/yt-sogood-outro.jpg"},{"id":"17yBrPBGZNzPk6iAh3zFFi5ZY9WpliNw_","c":"brand","best":false,"wide":true,"title":"HVAC Brand Intro","cat":"YouTube intro","meta":"Brand video","img":"images/yt-hvac-intro.jpg"},{"id":"1-K3zVlb49RgDYRSSUJJ5C2PZGclBKL0U","c":"brand","best":false,"wide":true,"title":"HVAC Brand Outro","cat":"YouTube outro","meta":"Brand video","img":"images/yt-hvac-outro.jpg"},{"id":"15wMyDxn_z6bkVb---4Cq1gAxGhsiXsbY","c":"brand","best":false,"wide":true,"title":"Local Plumbing Promo","cat":"Local services","meta":"Brand video","img":"images/local-plumbing.jpg"},{"id":"1HPpPdV_zPusJoyRUCHnuVhFhB7xXf9Je","c":"brand","best":false,"wide":true,"title":"Local Plumbing Promo 02","cat":"Local services","meta":"Brand video","img":"images/local-plumbing-2.jpg"},{"id":"1pSEwOJXXXLW1An1nfWN8BdbKQ_SrD83B","c":"brand","best":false,"wide":true,"title":"Roofing Explainer Video","cat":"Local services","meta":"Brand video","img":"images/local-roofing.jpg"},{"id":"1iK1QL8GrSlotkx3vLD_rt5P_aYchOuwa","c":"brand","best":false,"wide":true,"title":"Local Business Promo","cat":"Local services","meta":"Brand video","img":"images/local-sogood.jpg"},{"id":"10hwFLZMQYgEQRfb-Xod86LfpX9F23cXh","c":"anim","best":false,"wide":false,"title":"Claymation Short","cat":"Claymation","meta":"AI video","img":""},{"id":"17KYy65UCuhBb7SK6DGFUjc-OMapms3Hr","c":"drama","best":false,"wide":false,"title":"AI Drama Film 01","cat":"AI Drama","meta":"AI video","img":""},{"id":"1y8VZzb7iBYuMv6uByW0R5X3xo4sm0NJh","c":"drama","best":false,"wide":false,"title":"AI Drama Film 02","cat":"AI Drama","meta":"AI video","img":""},{"id":"1CkJglcR7asmzDRi222e8PS4zKOspConx","c":"drama","best":false,"wide":false,"title":"AI Drama Film 03","cat":"AI Drama","meta":"AI video","img":""},{"id":"1G_77Zv_QKUlvnpPwS7RyUW23p-Oeb8qn","c":"drama","best":false,"wide":false,"title":"AI Drama Film 04","cat":"AI Drama","meta":"AI video","img":""},{"id":"1X7iqtFFy-00xBzB3_IIit5tMXem0K0hm","c":"drama","best":false,"wide":false,"title":"Drama: Letting Go","cat":"AI Drama","meta":"English","img":""},{"id":"1cmHSPCmhbGEIYNGTsXVrXLoQpo3jc0xh","c":"drama","best":false,"wide":false,"title":"Drama: The Airport","cat":"AI Drama","meta":"English","img":""},{"id":"1AQEvYLWnYHtSPyaMkk4cSg0pNw_B48Cz","c":"vsl","best":false,"wide":false,"title":"High-Performing VSL","cat":"High performer","meta":"Top performer","img":""},{"id":"1tgObTQzYtetebh6vJu3k3fGjpBILBViL","c":"brand","best":false,"wide":true,"title":"Brand Intro 01","cat":"YouTube intro","meta":"Brand video","img":""},{"id":"1cLH1hVvOHMZXxWup0kMg4xwOET_HLaAa","c":"brand","best":false,"wide":true,"title":"Brand Outro 01","cat":"YouTube outro","meta":"Brand video","img":""},{"id":"1qfQzZ5UOsDx60IB2va_xOfQiYVnfvKsM","c":"brand","best":false,"wide":true,"title":"Brand Intro 02","cat":"YouTube intro","meta":"Brand video","img":""},{"id":"1G5hm7sVT7K2rt6VZ_RqMqdxeY2wDc9L5","c":"brand","best":false,"wide":true,"title":"Brand Intro 03","cat":"YouTube intro","meta":"Brand video","img":""},{"id":"1wtJ2goGix6IcqH4ed4VHPydOTOLqsbet","c":"brand","best":false,"wide":true,"title":"Brand Intro 04","cat":"YouTube intro","meta":"Brand video","img":""},{"id":"16dZMF0WXaqfaLHKXhMIk8jTxR_hI95rb","c":"brand","best":false,"wide":true,"title":"Brand Intro 05","cat":"YouTube intro","meta":"Brand video","img":""},{"id":"1IUMY35NjN4FLtNGZlVjqzOyCyT5yYEVt","c":"brand","best":false,"wide":true,"title":"Brand Intro 06","cat":"YouTube intro","meta":"Brand video","img":""},{"id":"12w3BPt_Ego10etI0eVc8VR03sYxBCF6f","c":"brand","best":false,"wide":true,"title":"Brand Intro 07","cat":"YouTube intro","meta":"Brand video","img":""},{"id":"1ary0GaOu98OAuJsGifwaucZda_ddqq-y","c":"brand","best":false,"wide":true,"title":"Brand Intro 08","cat":"YouTube intro","meta":"Brand video","img":""},{"id":"1uXy6IGV6Rp404aNLUEQnyzt5CC2G5CW5","c":"brand","best":false,"wide":true,"title":"Brand Intro 09","cat":"YouTube intro","meta":"Brand video","img":""},{"id":"1__N04sKZe8z2EdTggsEtQAfQ3VbpwTDG","c":"brand","best":false,"wide":true,"title":"Brand Outro 02","cat":"YouTube outro","meta":"Brand video","img":""},{"id":"1pVCmZOQoEHWLxiUHT_9-hqwoCG4MpjTM","c":"brand","best":false,"wide":true,"title":"Brand Outro 03","cat":"YouTube outro","meta":"Brand video","img":""},{"id":"1tAlxWKgJkoB5L5-RkY35JJgfytkI7fM4","c":"brand","best":false,"wide":true,"title":"Brand Outro 04","cat":"YouTube outro","meta":"Brand video","img":""},{"id":"1STGioZa7LWfs3V3Bf7lAbnAsWbKRjR9C","c":"brand","best":false,"wide":true,"title":"Brand Outro 05","cat":"YouTube outro","meta":"Brand video","img":""},{"id":"1QSiPFyyJQIQxSO5Kl5mZu0Hu3uqeSaet","c":"brand","best":false,"wide":true,"title":"Brand Outro 06","cat":"YouTube outro","meta":"Brand video","img":""},{"id":"1M57wQl3RECZGcMrWS_pDIyJlc26IKekH","c":"brand","best":false,"wide":true,"title":"Brand Outro 07","cat":"YouTube outro","meta":"Brand video","img":""},{"id":"1iTjEFtpiGaB02zsiLoxiaxJ0Y3DnSkYl","c":"brand","best":false,"wide":true,"title":"Brand Outro 08","cat":"YouTube outro","meta":"Brand video","img":""},{"id":"1CNDjfq-t7WL6CB1rDTNdD2roVNLEhW_v","c":"brand","best":false,"wide":true,"title":"Brand Outro 09","cat":"YouTube outro","meta":"Brand video","img":""},{"id":"19K3ieoaoj6-aekmGnwJuDb2cB0-EskES","c":"brand","best":false,"wide":true,"title":"Brand Outro 10","cat":"YouTube outro","meta":"Brand video","img":""},{"id":"18vY5lxj7xi80dTW2x3EUNy81ZvT0OFtm","c":"brand","best":false,"wide":true,"title":"Local Business Promo 01","cat":"Local services","meta":"Brand video","img":""},{"id":"1kl9m7x2T5wklBFntyufQP929J6EBDZO9","c":"brand","best":false,"wide":true,"title":"Local Business Promo 02","cat":"Local services","meta":"Brand video","img":""},{"id":"1mFewYx-a4SRcBa2tqqcHYUb3DxVX7rbP","c":"brand","best":false,"wide":true,"title":"Pest Control Explainer","cat":"Local services","meta":"Brand video","img":""},{"id":"18LrOcWWQaoh-AujoumJb0gKnqMHYRZnN","c":"brand","best":false,"wide":true,"title":"Tutoring Explainer","cat":"Local services","meta":"Brand video","img":""},{"id":"19a0DG5ym_FdRg2Xnz7FWhjW5ryF8dIoM","c":"brand","best":false,"wide":true,"title":"Roof Repair Explainer","cat":"Local services","meta":"Brand video","img":""},{"id":"1ZZMYs-l9nrzSlREIXe-32JWmJ_NpytYT","c":"brand","best":false,"wide":true,"title":"Home Repair Explainer","cat":"Local services","meta":"Brand video","img":""},{"id":"1JtmujXYXQ8IRJ3Dx7PwHkjN2dAyYcmo-","c":"brand","best":false,"wide":true,"title":"Roofing Liability Explainer","cat":"Local services","meta":"Brand video","img":""},{"id":"1Kqrt4MGwO1VHRvqKPR4BAlR76QvI_L0U","c":"brand","best":false,"wide":true,"title":"Local Business Promo 03","cat":"Local services","meta":"Brand video","img":""},{"id":"1VYBtGXjprtczEXABdWGE4CXfJiK743Ue","c":"anim","best":false,"wide":false,"title":"Pixar-Style Short 01","cat":"Pixar 3D","meta":"AI video","img":""},{"id":"13Kbpe7JM6JAQNeab2T0ZpJv7A22eVPmh","c":"anim","best":false,"wide":false,"title":"Pixar-Style Short 02","cat":"Pixar 3D","meta":"AI video","img":""},{"id":"1tKHEscg24zRqD-IYVqulTyq2WxYTLGpk","c":"ugc","best":false,"wide":false,"title":"AI Podcast Ad 02","cat":"Podcast","meta":"AI video","img":""},{"id":"10bdiq8bamrxy8o8wE0Q-z2z8Hml1BdSI","c":"song","best":false,"wide":false,"title":"AI Song Ad","cat":"Song ad","meta":"AI video","img":""},{"id":"1R2aI_To8tEJdYDSvtAXnUwsfGgNqyERQ","c":"song","best":false,"wide":false,"title":"Spanish Song Ad: It Happens","cat":"Song ad","meta":"Spanish","img":""},{"id":"1X5xty9axROLGM6BXRhexiiP6ymVn_NpR","c":"song","best":false,"wide":false,"title":"Spanish Song Ad: Mistakes","cat":"Song ad","meta":"Spanish","img":""},{"id":"1Cl2wctb3kkzD1HoV0Cc2KOI0kO6cxsld","c":"vsl","best":false,"wide":false,"title":"UGC Supplement Ad 01","cat":"Supplement","meta":"Female creator","img":""},{"id":"1Fd2fTaT3n02yuOfqITwAcYI4xEqFLuLn","c":"vsl","best":false,"wide":false,"title":"UGC Supplement Ad 02","cat":"Supplement","meta":"Female creator","img":""},{"id":"1DutQlpTiFhTPqrYKAQ-PaXXaqtZEY0KJ","c":"vsl","best":false,"wide":false,"title":"UGC Supplement Ad 03","cat":"Supplement","meta":"Female creator","img":""},{"id":"1zTSs23133U8_PfCEwQwbz-auVVqtUWsn","c":"vsl","best":false,"wide":false,"title":"UGC Supplement Ad 04","cat":"Supplement","meta":"Female creator","img":""},{"id":"1JF6uVCNe06lhyl8o0SpMAbeSaQh4Qo6S","c":"vsl","best":false,"wide":false,"title":"UGC Supplement Ad 05","cat":"Supplement","meta":"Female creator","img":""},{"id":"13_Eka5wYaiAHN2nkVIqASFwhgyOODezc","c":"vsl","best":false,"wide":false,"title":"UGC Supplement Ad 06","cat":"Supplement","meta":"Female creator","img":""},{"id":"1mJe4clHJ03niXUQ9VwnBqSifELsy4vEC","c":"vsl","best":false,"wide":false,"title":"UGC Supplement Ad 07","cat":"Supplement","meta":"Female creator","img":""},{"id":"17i6qN7bm17_uneSoEYCtPe5jUYhC9pOa","c":"vsl","best":false,"wide":false,"title":"UGC Supplement Ad 08","cat":"Supplement","meta":"Female creator","img":""},{"id":"1OeejLAFpkLS7zXmn9ubYb51P0RpX-3v-","c":"vsl","best":false,"wide":false,"title":"UGC Supplement Ad 09","cat":"Supplement","meta":"Female creator","img":""},{"id":"1Doi9Jvnqc8fYe7xpGE82TgHFfSbeA8Pb","c":"vsl","best":false,"wide":false,"title":"UGC Supplement Ad 10","cat":"Supplement","meta":"Female creator","img":""},{"id":"1zcoVv4pq2LBoWpprjnrxi7PYhukkkUeA","c":"vsl","best":false,"wide":false,"title":"UGC Supplement Ad 11","cat":"Supplement","meta":"Female creator","img":""},{"id":"1yQSfwYC3QU8dq9lbXMh-6RoxRrx3zLDI","c":"vsl","best":false,"wide":false,"title":"UGC Supplement Ad 12","cat":"Supplement","meta":"Female creator","img":""},{"id":"1IxgxGNUjt8Xna8mnU5NlUJf8ZySt8skR","c":"vsl","best":false,"wide":false,"title":"UGC Supplement Ad 13","cat":"Supplement","meta":"Female creator","img":""},{"id":"1FQHAt7evcyMwOArWUvHoqmdSSgLrJECT","c":"vsl","best":false,"wide":false,"title":"UGC Supplement Ad 14","cat":"Supplement","meta":"Female creator","img":""},{"id":"1Mwo02QhjdUWQ9PicvFQwvppLV6FRnsFz","c":"vsl","best":false,"wide":false,"title":"UGC Supplement Ad 15","cat":"Supplement","meta":"Female creator","img":""},{"id":"1InYIj5Q4CZesVOtNGZz8PWKQJc_PAs4V","c":"vsl","best":false,"wide":false,"title":"UGC Supplement Ad 16","cat":"Supplement","meta":"Female creator","img":""},{"id":"1n6c8vYBpeF0kajhKJn5UMhTWJyyemFrt","c":"vsl","best":false,"wide":false,"title":"UGC Supplement Ad 17","cat":"Supplement","meta":"Female creator","img":""},{"id":"1SLrwuRB5yOwfZN45T-ddqWtmuowU1UWc","c":"vsl","best":false,"wide":false,"title":"UGC Supplement Ad 18","cat":"Supplement","meta":"Male creator","img":""},{"id":"1OQoPOjvbmQ-Jyqqk8Ry8zy7inLIJ8ts5","c":"vsl","best":false,"wide":false,"title":"UGC Supplement Ad 19","cat":"Supplement","meta":"Male creator","img":""},{"id":"1wHYaVoHi4ZJfxCPpp6-sb0USoveT0XGJ","c":"vsl","best":false,"wide":false,"title":"UGC Supplement Ad 20","cat":"Supplement","meta":"Male creator","img":""},{"id":"1jSJaTxLZ1nRYijHH0Grr3hB-AO261avc","c":"vsl","best":false,"wide":false,"title":"UGC Supplement Ad 21","cat":"Supplement","meta":"Male creator","img":""},{"id":"1L9QvKFsyWFt1EffaeSw-Bbj7w1C5bMsw","c":"vsl","best":false,"wide":false,"title":"UGC Supplement Ad 22","cat":"Supplement","meta":"Male creator","img":""},{"id":"1zIuRefyXN5mKUyPKEgyPP6Z871JiF2kq","c":"vsl","best":false,"wide":false,"title":"UGC Supplement Ad 23","cat":"Supplement","meta":"Male creator","img":""},{"id":"1OZAJcEBIgOmhZk1GIm0s0KA8MVC5O2Y0","c":"vsl","best":false,"wide":false,"title":"UGC Supplement Ad 24","cat":"Supplement","meta":"Male creator","img":""},{"id":"1YRYNl2flgxzO-CvyqpbfEUscbBMEFEFk","c":"vsl","best":false,"wide":false,"title":"UGC Supplement Ad 25","cat":"Supplement","meta":"Male creator","img":""},{"id":"1K_C07y3wvnqEJAvgmAH3P5Yxb4NehPVf","c":"vsl","best":false,"wide":false,"title":"UGC Supplement Ad 26","cat":"Supplement","meta":"Male creator","img":""},{"id":"1CWPzX190NNcJMqrd5b8s5aKKS1z5yrdw","c":"vsl","best":false,"wide":false,"title":"UGC Supplement Ad 27","cat":"Supplement","meta":"Male creator","img":""},{"id":"19tx87GRjFd_szNSYU9jdH0t2-sqIzEnD","c":"vsl","best":false,"wide":false,"title":"UGC Supplement Ad 28","cat":"Supplement","meta":"Male creator","img":""},{"id":"1jTtRdgNs8ZX3nb_5uujnaC2GT3j_Kgsi","c":"vsl","best":false,"wide":false,"title":"UGC Supplement Ad 29","cat":"Supplement","meta":"Male creator","img":""},{"id":"1-vizuN4uvCan5qus0m85YTGBH86tv-5j","c":"vsl","best":false,"wide":false,"title":"UGC Supplement Ad 30","cat":"Supplement","meta":"Male creator","img":""},{"id":"1m418F3PYxQmuNoXW8ON7EQALsEM7fB2C","c":"vsl","best":false,"wide":false,"title":"UGC Supplement Ad 31","cat":"Supplement","meta":"Male creator","img":""},{"id":"1Y-_fF7sY4K8AkyDNwbEPPnHtSSUsV_YG","c":"vsl","best":false,"wide":false,"title":"UGC Supplement Ad 32","cat":"Supplement","meta":"Male creator","img":""},{"id":"1BsqlHAyyLJM3h_3BvlrBqMf764WxRYrY","c":"vsl","best":false,"wide":false,"title":"UGC Supplement Ad 33","cat":"Supplement","meta":"Male creator","img":""},{"id":"1sDAdB7mu-JiwXV8XX-akr4A4boAESdf8","c":"vsl","best":false,"wide":false,"title":"UGC Supplement Ad 34","cat":"Supplement","meta":"Male creator","img":""},{"id":"1voV7QJHY3abs6GdeLG0Kp2IchDDHWcVS","c":"vsl","best":false,"wide":false,"title":"UGC Supplement Ad 35","cat":"Supplement","meta":"Male creator","img":""},{"id":"187eUu6Ca2AzWJ0WDD5rEnl2z0rdcZXOp","c":"vsl","best":false,"wide":false,"title":"UGC Supplement Ad 36","cat":"Supplement","meta":"Male creator","img":""},{"id":"154H-xhiL4euCiMrvKSTxJlinH3Q8UT1i","c":"vsl","best":false,"wide":false,"title":"UGC Supplement Ad 37","cat":"Supplement","meta":"Male creator","img":""},{"id":"1ZkBixBgfPt8VeIbRmieQRtbrWiBJz-GS","c":"vsl","best":false,"wide":false,"title":"UGC Supplement Ad 38","cat":"Supplement","meta":"Male creator","img":""},{"id":"1rt9b-W3QL-6kLFNoQM6plnvjv_LqD6L2","c":"ugc","best":false,"wide":false,"title":"Realistic AI UGC 01","cat":"AI UGC","meta":"AI video","img":""},{"id":"1v_EQ-cSgojcPiETZZol6rZSqAx58KMnx","c":"ugc","best":false,"wide":false,"title":"Realistic AI UGC 02","cat":"AI UGC","meta":"AI video","img":""},{"id":"1HJZSEcGvQw9BvTkc-CVayqRoHi3sb0GL","c":"ugc","best":false,"wide":false,"title":"Realistic AI UGC 03","cat":"AI UGC","meta":"AI video","img":""},{"id":"1MRWBkELzhUILnPvfMEFGPjhsvNTldyHL","c":"ugc","best":false,"wide":false,"title":"Realistic AI UGC 04","cat":"AI UGC","meta":"AI video","img":""},{"id":"1bS5xWHx61jDOyO4Zz4Mh5yesgYhxLCuC","c":"vsl","best":false,"wide":false,"title":"Spanish VSL: Botox","cat":"VSL","meta":"Spanish","img":""},{"id":"1AKcpu5lqBj4jmkgv0nHGbJ2stG7W-C1a","c":"ugc","best":false,"wide":false,"title":"Realistic AI UGC 05","cat":"AI UGC","meta":"AI video","img":""},{"id":"1vUdkqHyl3XXGwPbH9ym4WtebiL5a7K-J","c":"ugc","best":false,"wide":false,"title":"Realistic AI UGC 06","cat":"AI UGC","meta":"AI video","img":""},{"id":"1TMCRqh2W6eD5VscFKC_r6IYF2EnR8F88","c":"ugc","best":false,"wide":false,"title":"Realistic AI UGC 07","cat":"AI UGC","meta":"AI video","img":""},{"id":"1ILFwgVfbAbd4zEMPm8DF7kxMa1R8Ll4X","c":"vsl","best":false,"wide":false,"title":"Video Sales Letter 01","cat":"VSL","meta":"AI video","img":""},{"id":"1Xow-HC5jyutbNQlBLpFEs-n8jbDolqAt","c":"vsl","best":false,"wide":false,"title":"Video Sales Letter 02","cat":"VSL","meta":"AI video","img":""},{"id":"1Luc8kKPfTn0bkqs20Oww5g8HdpTW3bN_","c":"vsl","best":false,"wide":false,"title":"Native UGC VSL","cat":"VSL","meta":"AI video","img":""},{"id":"1RnJ8fJHfdchWQxC4sAcNwAn5KdfNEBbh","c":"vsl","best":false,"wide":false,"title":"Video Sales Letter 03","cat":"VSL","meta":"AI video","img":""}];
+const TABS=[["best","Top ads"],["drama","AI drama"],["anim","Animation"],["song","Song ads"],["ugc","UGC & podcast"],["vsl","VSL & supplement"],["brand","Intros & local"],["all","All"]];
+const esc=s=>s.replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+function thumb(v){return v.img?v.img:`https://drive.google.com/thumbnail?id=${v.id}&sz=w720`}
+function card(v,lazy=true){
+  const hot=v.best&&/\$|3M/.test(v.cat);
+  return `<div class="pc${v.wide?' wide':''}" data-id="${v.id}" data-title="${esc(v.title)}" data-wide="${v.wide?1:0}"><div class="ph"></div><img src="${thumb(v)}" ${lazy?'loading="lazy"':''} onerror="this.remove()" alt=""><div class="shade"></div><span class="badge${hot?' hot':''}">${esc(v.best?(hot?v.cat:'Top ad'):v.cat)}</span><span class="play">▶</span><div class="cap"><small>${esc(v.meta)}</small><b>${esc(v.title)}</b></div></div>`;
+}
+// reel: best vertical ads
+const reelItems=VIDEOS.filter(v=>v.best&&!v.wide);
+document.getElementById('reel').innerHTML=(reelItems.map(v=>card(v,false)).join('')).repeat(2);
+// tabs
+let cur='best',limit=16;
+const tabsEl=document.getElementById('tabs'),grid=document.getElementById('grid'),more=document.getElementById('moreBtn');
+const match=(v,t)=>t==='all'||(t==='best'?v.best:v.c===t);
+tabsEl.innerHTML=TABS.map(([k,l])=>`<button class="tab${k===cur?' on':''}" data-t="${k}">${l}<i>${VIDEOS.filter(v=>match(v,k)).length}</i></button>`).join('');
+function render(){const list=VIDEOS.filter(v=>match(v,cur));grid.innerHTML=list.slice(0,limit).map(v=>card(v)).join('');more.parentElement.style.display=list.length>limit?'flex':'none'}
+tabsEl.addEventListener('click',e=>{const b=e.target.closest('.tab');if(!b)return;cur=b.dataset.t;limit=16;tabsEl.querySelectorAll('.tab').forEach(x=>x.classList.toggle('on',x===b));render()});
+more.addEventListener('click',()=>{limit+=16;render()});
+render();
+document.getElementById('countAds').textContent=VIDEOS.length;
+// player
+const modal=document.getElementById('modal'),mbox=document.getElementById('mbox'),mframe=document.getElementById('mframe');
+function openV(el){mframe.innerHTML=`<iframe src="https://drive.google.com/file/d/${el.dataset.id}/preview" allow="autoplay; fullscreen" allowfullscreen></iframe>`;document.getElementById('mtitle').textContent=el.dataset.title||'Video';mbox.classList.toggle('wide',el.dataset.wide==='1');modal.classList.add('open')}
+function closeV(){modal.classList.remove('open');mframe.innerHTML=''}
+document.addEventListener('click',e=>{const p=e.target.closest('.pc');if(p)openV(p)});
+document.getElementById('mclose').addEventListener('click',closeV);
+modal.addEventListener('click',e=>{if(e.target===modal)closeV()});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeV()});
+// menu
+const menu=document.getElementById('menu'),links=document.getElementById('links');
+menu.addEventListener('click',()=>{const o=links.classList.toggle('open');menu.setAttribute('aria-expanded',o)});
+links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>links.classList.remove('open')));
+// reveal
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+document.getElementById('yr').textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
