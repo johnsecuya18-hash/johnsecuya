@@ -239,7 +239,7 @@
   <div class="wrap nav">
     <a class="logo" href="#top"><i></i>JOHN SECUYA</a>
     <nav class="links" id="links">
-      <a href="#work">Work</a><a href="#results">Results</a><a href="#process">Process</a><a href="#systems">Systems</a><a href="#about">About</a>
+      <a href="#work">Work</a><a href="#more">More work</a><a href="#results">Results</a><a href="#process">Process</a><a href="#systems">Systems</a><a href="#about">About</a>
     </nav>
     <a class="btn btn-w" href="#contact">Work with me →</a>
     <button class="menu" id="menu" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
@@ -269,6 +269,16 @@
       <p class="intro rv">My best ad in each style. Tap any ad to play it with sound.</p>
       <div class="grid best6" id="grid"></div>
       <div class="more"><a class="btn btn-g" href="https://drive.google.com/drive/folders/11Tq3K1C1LvILClAtYhhQo6u-c_OX-eq8" target="_blank" rel="noopener">See all my work ↗</a></div>
+    </div>
+  </section>
+
+  <!-- MORE WORK -->
+  <section id="more" style="padding-top:20px">
+    <div class="wrap">
+      <span class="eyebrow rv">More of my work</span>
+      <h2 class="h rv">Pick a style. <em class="s">Press play.</em></h2>
+      <div class="tabs" id="mtabs"></div>
+      <div class="grid" id="mgrid"></div>
     </div>
   </section>
 
@@ -428,6 +438,11 @@ function card(v,i,showNum){
 }
 document.getElementById('grid').innerHTML=BEST.map((v,i)=>card(v,i,true)).join('');
 document.getElementById('reel').innerHTML=(BEST.map((v,i)=>card(v,i,false)).join('')).repeat(3);
+const MORE={"Drama Ads": [{"id": "18qVklzjgLkeCoFXCMbkBbwzomfScDTLB", "title": "Drama: The Bed Date", "meta": "English", "img": ""}, {"id": "1cmHSPCmhbGEIYNGTsXVrXLoQpo3jc0xh", "title": "Drama: The Airport", "meta": "English", "img": ""}, {"id": "1G_77Zv_QKUlvnpPwS7RyUW23p-Oeb8qn", "title": "AI Drama Film 01", "meta": "Cinematic story ad", "img": ""}, {"id": "1CkJglcR7asmzDRi222e8PS4zKOspConx", "title": "AI Drama Film 02", "meta": "Cinematic story ad", "img": ""}, {"id": "17KYy65UCuhBb7SK6DGFUjc-OMapms3Hr", "title": "AI Drama Film 03", "meta": "Cinematic story ad", "img": ""}, {"id": "1kR1KLBLqHIurPveybLs6xvK1YuTTqApg", "title": "Drama: The Bed Date", "meta": "Spanish · Hook 2", "img": ""}, {"id": "1y8VZzb7iBYuMv6uByW0R5X3xo4sm0NJh", "title": "AI Drama Film 04", "meta": "Cinematic story ad", "img": ""}], "Song Ads": [{"id": "1Dbej42J-ZTsm15yUK1-UqUuH9Sv3qhsu", "title": "GeniusMind Song Ad", "meta": "English · 3:33 song story", "img": ""}, {"id": "14Xu6QVI9uVko7NmtZqc_aUrT1QQxJN-j", "title": "Song Ad: Seoul", "meta": "English", "img": "images/song-seoul.jpg"}, {"id": "1sZw3f1O5ML1h-hFnNWZ0AsSeT9hCBsd-", "title": "Song Ad: The Husband", "meta": "Spanish", "img": "images/song-husband-es.jpg"}, {"id": "10bdiq8bamrxy8o8wE0Q-z2z8Hml1BdSI", "title": "AI Song Ad", "meta": "Animated song story", "img": ""}, {"id": "1X5xty9axROLGM6BXRhexiiP6ymVn_NpR", "title": "Song Ad: Mistakes", "meta": "Spanish", "img": ""}], "Animations": [{"id": "11a3DtpYtFi2JPRGLDJI-G0XvCIM3B0Zq", "title": "Claymation Explainer", "meta": "Spanish · Claymation", "img": ""}, {"id": "1r-DKSQEvJaPpaCA8NRSzgWmM4fAYmWWC", "title": "Pixar-Style Animation", "meta": "Pixar 3D", "img": ""}, {"id": "1xxCs6c-55_ruLPpDVxeM4a4OgAN6ENVd", "title": "Pixar-Style Health Ad", "meta": "English · Pixar 3D", "img": "images/pixar-mirror.jpg"}, {"id": "16qzaN1TX6CQyqlbH6eE_65enNx5Br0f4", "title": "Pixar-Style Mascot Ad", "meta": "English · Pixar 3D", "img": "images/pixar-salt.jpg"}, {"id": "11_mVrSPvVkpQ-L2RzVY9_2NkOBtnscxG", "title": "Skeleton Explainer", "meta": "English · 3D x-ray", "img": "images/skeleton-coffee.jpg"}, {"id": "1esqlkZN52De8mELSoUIADzA4eTqzXGhW", "title": "Animated Product Ad", "meta": "3D animation", "img": ""}], "VSL": [{"id": "1TQFVDUpU3LG3mxULw0Lr4As6RgU90nPt", "title": "Video Sales Letter 01", "meta": "Direct response", "img": ""}, {"id": "1mRXPC9rquL1yAeK19IBZsBuuu-pxHW7k", "title": "High-Performing VSL", "meta": "Top performer", "img": ""}, {"id": "1WMGBJP9JANMjvPob_dqEat9LXTP6z5vS", "title": "Video Sales Letter 02", "meta": "Direct response", "img": ""}, {"id": "15chy9eSZUkuQVO9JopNla9rQWHXrf5P-", "title": "Spanish VSL", "meta": "Spanish · Beauty", "img": "images/vsl-mirror-es.jpg"}, {"id": "1VIvQpTCcg7RCq5y8oHEGa3FRiK1q7JIQ", "title": "Video Sales Letter 03", "meta": "Direct response", "img": ""}], "UGC": [{"id": "1lx5V8PM566iMdPl602I3ZaZYowUt0_RC", "title": "UGC: Wellness Trend", "meta": "English", "img": "images/ugc-lymphatic.jpg"}, {"id": "1AKcpu5lqBj4jmkgv0nHGbJ2stG7W-C1a", "title": "Realistic AI UGC 01", "meta": "Creator testimonial", "img": ""}, {"id": "1brEJdu2mW8Z2hZGrSs_vW3P3sJpo_9ol", "title": "UGC: Audience Q&A", "meta": "English", "img": "images/ugc-audience.jpg"}, {"id": "1lgUGIIDOCTk5hpTYbDGWvObt0-NI_IsC", "title": "Realistic AI UGC 02", "meta": "Creator clip", "img": ""}, {"id": "1jhDm8t-9EKt1b6yeSTerwww-vOg3FQ77", "title": "UGC: Post-Workout", "meta": "English", "img": "images/ugc-gym.jpg"}, {"id": "1TMCRqh2W6eD5VscFKC_r6IYF2EnR8F88", "title": "Realistic AI UGC 03", "meta": "Creator clip", "img": ""}, {"id": "1Dz9il5tssahSWujCjbQS52r_ARororqm", "title": "UGC: Gym Selfie", "meta": "English", "img": "images/ugc-gym-2.jpg"}, {"id": "1Qow6e12YFWuN02bwgWrT4q444psS5Sa_", "title": "UGC: Before & After", "meta": "Skincare", "img": "images/ugc-puffy-face.jpg"}], "Podcast": [{"id": "1tKHEscg24zRqD-IYVqulTyq2WxYTLGpk", "title": "AI Podcast Ad 02", "meta": "Conversation format", "img": ""}]};
+(function(){const tabs=document.getElementById('mtabs'),g=document.getElementById('mgrid'),keys=Object.keys(MORE);let cur=keys[0];
+function mcard(v,style){return `<div class="pc" data-id="${v.id}" data-title="${esc(v.title)}"><div class="ph"></div><img src="${v.img||`https://drive.google.com/thumbnail?id=${v.id}&sz=w720`}" loading="lazy" onerror="this.remove()" alt=""><div class="shade"></div><span class="play">▶</span><div class="cap"><span class="sty">${esc(style)}</span><b>${esc(v.title)}</b><small>${esc(v.meta)}</small></div></div>`}
+function draw(){tabs.innerHTML=keys.map(k=>`<button class="tab${k===cur?' on':''}" data-k="${k}">${k}<i>${MORE[k].length}</i></button>`).join('');g.innerHTML=MORE[cur].map(v=>mcard(v,cur)).join('')}
+tabs.addEventListener('click',e=>{const b=e.target.closest('.tab');if(!b)return;cur=b.dataset.k;draw()});draw();})();
 // player
 const modal=document.getElementById('modal'),mbox=document.getElementById('mbox'),mframe=document.getElementById('mframe');
 function openV(el){mframe.innerHTML=`<iframe src="https://drive.google.com/file/d/${el.dataset.id}/preview" allow="autoplay; fullscreen" allowfullscreen></iframe>`;document.getElementById('mtitle').textContent=el.dataset.title||'Video';mbox.classList.toggle('wide',el.dataset.wide==='1');modal.classList.add('open')}
