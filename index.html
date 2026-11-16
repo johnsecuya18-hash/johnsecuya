@@ -111,6 +111,20 @@
   .grid.best6 .pc .cap b{font-size:19px}
   @media (max-width:900px){.grid.best6{grid-template-columns:1fr 1fr}}
   @media (max-width:600px){.pc .num{display:none}.grid.best6{gap:12px}.grid.best6 .pc .cap b{font-size:15px}.pc .cap .sty{font-size:9.5px}}
+  .flow{display:grid;grid-template-columns:150px 110px 1fr 40px 1fr;align-items:center;margin:42px 0 34px;gap:0}
+  .flow-hooks{display:flex;flex-direction:column;gap:14px}
+  .flow-hooks span{padding:12px 16px;border-radius:999px;background:var(--fg);color:#0b0913;font-weight:700;text-align:center;font-size:15px}
+  .flow-lines{width:100%;height:150px}
+  .flow-lines path{fill:none;stroke:var(--violet);stroke-width:2;vector-effect:non-scaling-stroke;opacity:.8}
+  .flow-hold,.flow-win{border:1px solid var(--line2);border-radius:20px;padding:20px 22px;background:linear-gradient(180deg,var(--card2),var(--card))}
+  .flow-hold small,.flow-win small{display:block;font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--lilac)}
+  .flow-hold b,.flow-win b{display:block;font-size:24px;font-weight:800;letter-spacing:-.02em;margin:4px 0}
+  .flow-hold span,.flow-win span{color:var(--muted);font-size:14px}
+  .flow-win{border-color:rgba(167,139,250,.5);box-shadow:0 0 40px -12px rgba(167,139,250,.5)}
+  .flow-arrow{text-align:center;font-size:24px;color:var(--lilac)}
+  .hooks{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  @media (max-width:900px){.flow{grid-template-columns:1fr;gap:14px}.flow-hooks{flex-direction:row;flex-wrap:wrap}.flow-hooks span{flex:1}.flow-lines{display:none}.flow-arrow{transform:rotate(90deg)}}
+  @media (max-width:600px){.hooks{grid-template-columns:1fr 1fr 1fr;gap:8px}.hooks .pc .cap b{font-size:12px}.hooks .pc .cap small{display:none}.hooks .pc .cap .sty{font-size:9px}.hooks .pc .badge{display:none}}
   /* RESULTS */
   .results{display:grid;grid-template-columns:1.25fr 1fr;gap:18px;margin-top:48px}
   .rc{background:linear-gradient(180deg,var(--card2),var(--card));border:1px solid var(--line);border-radius:28px;padding:30px;position:relative;overflow:hidden}
@@ -244,7 +258,7 @@
   <div class="wrap nav">
     <a class="logo" href="#top"><i></i>JOHN SECUYA</a>
     <nav class="links" id="links">
-      <a href="#work">Work</a><a href="#more">More work</a><a href="#results">Results</a><a href="#process">Process</a><a href="#systems">Systems</a><a href="#about">About</a>
+      <a href="#work">Work</a><a href="#more">More work</a><a href="#concept">Concept</a><a href="#results">Results</a><a href="#process">Process</a><a href="#systems">Systems</a><a href="#about">About</a>
     </nav>
     <a class="btn btn-w" href="#contact">Work with me →</a>
     <button class="menu" id="menu" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
@@ -284,6 +298,24 @@
       <h2 class="h rv">Pick a style. <em class="s">Press play.</em></h2>
       <div class="tabs" id="mtabs"></div>
       <div class="grid" id="mgrid"></div>
+    </div>
+  </section>
+
+  <!-- CONCEPT -->
+  <section id="concept">
+    <div class="glow" style="width:520px;height:520px;right:-180px;top:60px;background:radial-gradient(circle,#4c34b8,transparent 65%);opacity:.35"></div>
+    <div class="wrap" style="position:relative">
+      <span class="eyebrow rv">Sample concept</span>
+      <h2 class="h rv">One concept. <em class="s">Three hooks.</em> One hold.</h2>
+      <p class="intro rv">Every concept ships with multiple openings on the same body. You test all three, find the hook that wins, and scale it without paying for a whole new ad.</p>
+      <div class="flow rv">
+        <div class="flow-hooks"><span>Hook 1</span><span>Hook 2</span><span>Hook 3</span></div>
+        <svg class="flow-lines" viewBox="0 0 120 150" preserveAspectRatio="none" aria-hidden="true"><path d="M0 25 C60 25 60 75 120 75"/><path d="M0 75 L120 75"/><path d="M0 125 C60 125 60 75 120 75"/></svg>
+        <div class="flow-hold"><small>The hold</small><b>Same body</b><span>Story, proof and CTA stay locked</span></div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-win"><small>Result</small><b>Scale the winner</b><span>Test 3 openings for the cost of 1 ad</span></div>
+      </div>
+      <div class="hooks"><div class="hk rv"><div class="pc" data-id="1zuifANZ3bPTInpolqH9gQkQhrfDg0i1G" data-title="VSL 1 · Hook 1"><div class="ph"></div><img src="https://drive.google.com/thumbnail?id=1zuifANZ3bPTInpolqH9gQkQhrfDg0i1G&amp;sz=w720" loading="lazy" onerror="this.remove()" alt=""><div class="shade"></div><span class="badge hot">Hook 1</span><span class="play">▶</span><div class="cap"><span class="sty">Hook 1 + Hold</span><b>VSL 1 · Hook 1</b><small>Same body, new opening</small></div></div></div><div class="hk rv"><div class="pc" data-id="1pK9ltF9noq5NPWPsi8TTkLkAvAbCH6NP" data-title="VSL 1 · Hook 2"><div class="ph"></div><img src="https://drive.google.com/thumbnail?id=1pK9ltF9noq5NPWPsi8TTkLkAvAbCH6NP&amp;sz=w720" loading="lazy" onerror="this.remove()" alt=""><div class="shade"></div><span class="badge hot">Hook 2</span><span class="play">▶</span><div class="cap"><span class="sty">Hook 2 + Hold</span><b>VSL 1 · Hook 2</b><small>Same body, new opening</small></div></div></div><div class="hk rv"><div class="pc" data-id="1Miive7urCvvqLJPK_cTim4uYcb6RyY2a" data-title="VSL 1 · Hook 3"><div class="ph"></div><img src="https://drive.google.com/thumbnail?id=1Miive7urCvvqLJPK_cTim4uYcb6RyY2a&amp;sz=w720" loading="lazy" onerror="this.remove()" alt=""><div class="shade"></div><span class="badge hot">Hook 3</span><span class="play">▶</span><div class="cap"><span class="sty">Hook 3 + Hold</span><b>VSL 1 · Hook 3</b><small>Same body, new opening</small></div></div></div></div>
     </div>
   </section>
 
