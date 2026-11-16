@@ -64,7 +64,8 @@
   .hero{padding:110px 0 70px;text-align:center;overflow:hidden}
   .hero h1{font-size:clamp(46px,8.2vw,112px);font-weight:800;line-height:.98;letter-spacing:-.045em;margin:22px auto 22px;max-width:1050px}
   .hero h1 em.s{font-size:1.06em;display:inline-block}
-  .hero .sub{font-size:clamp(17px,1.6vw,20px);color:var(--muted);max-width:640px;margin:0 auto}
+  .hero .sub{font-size:clamp(17px,1.6vw,20px);color:var(--muted);max-width:720px;margin:0 auto;line-height:1.6}
+  .hero .sub b{color:var(--fg);font-weight:700}
   .hero .ctas{display:flex;gap:12px;justify-content:center;margin-top:36px;flex-wrap:wrap}
   .trust{margin-top:30px;display:flex;justify-content:center;gap:10px 22px;flex-wrap:wrap;font-size:14px;color:var(--muted)}
   .trust b{color:var(--fg);font-weight:700}
@@ -180,6 +181,10 @@
   .tools{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
   .tools span{font-size:13px;padding:7px 12px;border-radius:999px;border:1px solid var(--line2);color:var(--muted)}
 
+  .about-np{display:block}
+  .about-np .facts{grid-template-columns:repeat(4,1fr)}
+  @media (max-width:900px){.about-np .facts{grid-template-columns:1fr 1fr}}
+  @media (max-width:600px){.about-np .facts{grid-template-columns:1fr}}
   /* CTA */
   .cta{text-align:center;padding:140px 0 120px;overflow:hidden}
   .cta h2{font-size:clamp(44px,7.4vw,104px);font-weight:800;letter-spacing:-.045em;line-height:1;max-width:1000px;margin:18px auto 20px}
@@ -252,9 +257,9 @@
     <div class="glow" style="width:680px;height:680px;left:50%;top:-260px;margin-left:-340px;background:radial-gradient(circle,#5b3fd0,transparent 65%)"></div>
     <div class="glow" style="width:420px;height:420px;right:-120px;top:120px;background:radial-gradient(circle,#b0418f,transparent 65%);opacity:.35"></div>
     <div class="wrap" style="position:relative">
-      <span class="eyebrow rv">John Roderick Secuya · Senior AI Creative Specialist</span>
+      <span class="eyebrow rv">John Roderick Secuya · AI Video Specialist</span>
       <h1 class="rv">Turn your product into AI ads <em class="s">that sell.</em></h1>
-      <p class="sub rv">Creative direction and AI video production for brands and e-commerce agencies. UGC, drama, Pixar-style, song ads and VSLs, delivered test-ready.</p>
+      <p class="sub rv">I'm John. Hand me your ad script and I'll turn it into a video people stop scrolling for: a <b>cinematic AI drama</b>, a <b>Pixar-style 3D story</b>, a <b>musical song ad</b>, an <b>animated explainer</b> or a <b>realistic UGC ad</b>. Built for health, wellness, beauty and e-commerce brands, with Claude skills and MCP powering every step of production.</p>
       <div class="ctas rv"><a class="btn btn-w" href="#contact">Work with me →</a><a class="btn btn-g" href="#work">See the work</a></div>
       <div class="trust rv"><span><b>$70K+</b> ad spend on one creative</span><span><b>3M+</b> views on another</span><span><b>English &amp; Spanish</b> ads</span></div>
     </div>
@@ -385,21 +390,16 @@
   <!-- ABOUT -->
   <section id="about">
     <div class="wrap">
-      <div class="about">
-        <div class="ph-card rv"><img src="images/profile.jpg" alt="John Roderick Secuya"><div class="nm"><b>John Roderick Secuya</b><span>Senior AI Creative Specialist</span></div></div>
-        <div class="rv">
-          <span class="eyebrow">About</span>
-          <h2 class="h">Real person. <em class="s">AI-powered output.</em></h2>
-          <p class="lead">I'm John, a Senior AI Creative Specialist from the Philippines making AI-powered ads for e-commerce, beauty, fashion and health &amp; wellness brands.</p>
-          <p>I handle the whole pipeline myself, from script breakdown and references to generation, voice, lip sync, editing, sound and captions, so you get one accountable creative partner and ads built to test.</p>
-          <div class="facts">
-            <div><small>Based in</small><b>Philippines · GMT+8</b></div>
-            <div><small>Languages</small><b>English &amp; LatAm Spanish ads</b></div>
-            <div><small>Platforms</small><b>Meta, TikTok, YouTube Shorts</b></div>
-            <div><small>Experience</small><b>2024 – present, freelance</b></div>
-          </div>
-          <div class="tools"><span>Kling</span><span>Seedance</span><span>Higgsfield</span><span>WAN</span><span>Runway</span><span>HeyGen</span><span>GPT Image</span><span>Nano Banana</span><span>Seedream</span><span>CapCut Pro</span><span>Claude</span><span>ChatGPT</span></div>
+      <div class="about about-np rv">
+        <span class="eyebrow">About</span>
+        <h2 class="h">Real person. <em class="s">AI-powered output.</em></h2>
+        <div class="facts">
+          <div><small>Based in</small><b>Philippines · GMT+8</b></div>
+          <div><small>Languages</small><b>English &amp; LatAm Spanish ads</b></div>
+          <div><small>Platforms</small><b>Meta, TikTok, YouTube Shorts</b></div>
+          <div><small>Experience</small><b>2024 – present, freelance</b></div>
         </div>
+        <div class="tools"><span>Kling</span><span>Seedance</span><span>Higgsfield</span><span>WAN</span><span>Runway</span><span>HeyGen</span><span>GPT Image</span><span>Nano Banana</span><span>Seedream</span><span>CapCut Pro</span><span>Claude</span><span>ChatGPT</span></div>
       </div>
     </div>
   </section>
@@ -422,7 +422,7 @@
   </section>
 </main>
 
-<footer><div class="wrap"><span>© <span id="yr">2026</span> John Roderick Secuya · Senior AI Creative Specialist</span><a href="https://drive.google.com/drive/folders/11Tq3K1C1LvILClAtYhhQo6u-c_OX-eq8" target="_blank" rel="noopener">Full portfolio on Google Drive ↗</a></div></footer>
+<footer><div class="wrap"><span>© <span id="yr">2026</span> John Roderick Secuya · AI Video Specialist</span><a href="https://drive.google.com/drive/folders/11Tq3K1C1LvILClAtYhhQo6u-c_OX-eq8" target="_blank" rel="noopener">Full portfolio on Google Drive ↗</a></div></footer>
 
 <div class="modal" id="modal" role="dialog" aria-modal="true" aria-label="Video player">
   <div class="mbox" id="mbox"><div class="mhead"><span id="mtitle">Video</span><button id="mclose" aria-label="Close">✕</button></div><div class="mframe" id="mframe"></div></div>
