@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="robots" content="noindex">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>John Roderick Secuya · Senior AI Creative Specialist</title>
+<meta name="description" content="John Roderick Secuya — Senior AI Creative Specialist. AI UGC, VSLs, cinematic drama ads, podcast ads, song ads and animated product creatives for Meta, TikTok and YouTube Shorts.">
+<meta name="theme-color" content="#111111">
+<meta property="og:title" content="John Roderick Secuya · Senior AI Creative Specialist">
+<meta property="og:description" content="AI video ads built to stop the scroll. UGC, VSLs, cinematic drama, podcast and song ads.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;700;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#fff; --fg:#000; --muted:#6b6b6b; --soft:#f2f2f2;
+    --sans:"Inter Tight",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+    --mono:"JetBrains Mono",ui-monospace,Menlo,monospace;
+    --b:1px solid #000;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--fg);font-family:var(--sans);line-height:1.5;-webkit-font-smoothing:antialiased}
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+  .wrap{max-width:1320px;margin:0 auto;border-left:var(--b);border-right:var(--b)}
+  .mono{font-family:var(--mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase}
+  .muted{color:var(--muted)}
+  .skip{position:absolute;left:-999px;top:0;background:#000;color:#fff;padding:8px 12px;z-index:100}
+  .skip:focus{left:8px;top:8px}
+
+  /* grid system: 1px black gaps = clean grid lines everywhere */
+  .g{display:grid;gap:1px;background:#000}
+  .g > *{background:#fff}
+
+  /* NAV */
+  header{position:sticky;top:0;z-index:50;background:#fff;border-bottom:var(--b)}
+  .nav{display:grid;grid-template-columns:auto 1fr auto;max-width:1320px;margin:0 auto;border-left:var(--b);border-right:var(--b);position:relative}
+  .brand{display:flex;align-items:center;gap:12px;padding:12px 20px;border-right:var(--b)}
+  .brand .mark{width:36px;height:36px;background:#000;color:#fff;display:grid;place-items:center;font-weight:900;font-size:14px}
+  .brand b{font-weight:700;font-size:15px;display:block;line-height:1.15}
+  .links{display:flex;justify-content:flex-end}
+  .links a{display:flex;align-items:center;padding:0 18px;border-left:var(--b);transition:.2s}
+  .links a:hover{background:#000;color:#fff}
+  .nav .cta{display:flex;align-items:center;padding:0 22px;background:#000;color:#fff;border-left:var(--b);transition:.2s}
+  .nav .cta:hover{background:#fff;color:#000}
+  .toggle{display:none;background:none;border:0;border-left:var(--b);padding:0 20px;cursor:pointer;font:inherit}
+
+  section{border-bottom:var(--b)}
+  .sec-head{display:grid;grid-template-columns:240px 1fr;border-bottom:var(--b)}
+  .sec-head .idx{padding:30px 20px;border-right:var(--b)}
+  .sec-head h2{padding:26px 24px;font-size:clamp(30px,4.2vw,58px);font-weight:900;line-height:1;letter-spacing:-.035em}
+
+  /* HERO */
+  .hero{display:grid;grid-template-columns:1.55fr 1fr}
+  .hero-main{padding:56px 24px 40px;border-right:var(--b);display:flex;flex-direction:column;justify-content:space-between;gap:40px}
+  .hero h1{font-size:clamp(52px,8.8vw,132px);font-weight:900;line-height:.88;letter-spacing:-.055em;margin-top:22px}
+  .hero h1 em{font-style:normal;background:#000;color:#fff;padding:0 .1em;white-space:nowrap}
+  .hero .role{margin-top:26px;font-size:20px;font-weight:700}
+  .hero p.lead{max-width:560px;font-size:18px;margin-top:10px}
+  .btns{display:flex;flex-wrap:wrap;margin-top:30px}
+  .btn{display:inline-flex;align-items:center;gap:10px;padding:16px 22px;border:var(--b);font-weight:500;transition:.2s;background:#fff;cursor:pointer;font:inherit;font-weight:500}
+  .btn + .btn{margin-left:-1px}
+  .btn.dark{background:#000;color:#fff}
+  .btn:hover{background:#000;color:#fff}
+  .btn.dark:hover{background:#fff;color:#000}
+  .pipeline{display:grid;grid-template-columns:repeat(4,1fr);border:var(--b)}
+  .pipeline div{padding:12px 14px;border-right:var(--b)}
+  .pipeline div:last-child{border-right:0}
+  .pipeline b{display:block;font-size:15px;margin-top:2px}
+
+  .hero-side{display:grid;grid-template-rows:1fr auto}
+  .feature{position:relative;min-height:380px;border-bottom:var(--b);background:#000;color:#fff;overflow:hidden;cursor:pointer;display:flex;flex-direction:column;justify-content:space-between;padding:20px}
+  .feature::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(45deg,rgba(255,255,255,.14) 0 1px,transparent 1px 14px)}
+  .feature img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:grayscale(1);opacity:.75;transition:.5s}
+  .feature:hover img{filter:none;opacity:.9}
+  .feature::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.55),transparent 35%,transparent 55%,rgba(0,0,0,.8))}
+  .feature > *:not(img){position:relative;z-index:1}
+  .feature .play{width:78px;height:78px;border:1px solid #fff;border-radius:50%;display:grid;place-items:center;align-self:center;font-size:22px;transition:.25s;background:rgba(0,0,0,.4)}
+  .feature:hover .play{background:#fff;color:#000;transform:scale(1.06)}
+  .feature h3{font-size:28px;font-weight:900;letter-spacing:-.03em;line-height:1}
+  .stats{grid-template-columns:repeat(3,1fr)}
+  .stat{padding:18px 20px}
+  .stat b{display:block;font-size:36px;font-weight:900;letter-spacing:-.04em;line-height:1.05}
+
+  .marquee{overflow:hidden;border-bottom:var(--b);background:#000;color:#fff;white-space:nowrap}
+  .marquee .track{display:inline-flex;gap:40px;padding:14px 0;animation:scroll 32s linear infinite}
+  .marquee span{display:inline-flex;gap:40px}
+  @keyframes scroll{to{transform:translateX(-50%)}}
+
+  /* SPECIALIZATIONS */
+  .specs{grid-template-columns:repeat(4,1fr)}
+  .card{padding:26px 22px;min-height:250px;display:flex;flex-direction:column;gap:12px;transition:.25s}
+  .card:hover{background:#000;color:#fff}
+  .card:hover .muted{color:#bdbdbd}
+  .card h3{font-size:23px;font-weight:700;letter-spacing:-.02em;margin-top:auto;line-height:1.1}
+
+  /* WORK */
+  .filters{display:flex;flex-wrap:wrap;border-bottom:var(--b)}
+  .filters button{background:none;border:0;border-right:var(--b);padding:16px 20px;font:inherit;cursor:pointer}
+  .filters button.active,.filters button:hover{background:#000;color:#fff}
+  .work{grid-template-columns:repeat(4,1fr)}
+  .item{display:flex;flex-direction:column;cursor:pointer}
+  .item.hide{display:none}
+  .g.work{background:#fff}
+  .g.work > .item{box-shadow:0 0 0 1px #000}
+  .item.wide{grid-column:span 2}
+  .item.wide .thumb{aspect-ratio:16/9}
+  .item[data-best="1"] .cat::before{content:"★ "}
+  .showmore{display:flex;justify-content:center;padding:24px;border-top:var(--b)}
+  .showmore.hide{display:none}
+  .thumb{aspect-ratio:9/14;border-bottom:var(--b);background:var(--soft);position:relative;overflow:hidden;display:grid;place-items:center}
+  .thumb img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:grayscale(1);transition:.45s}
+  .item:hover .thumb img{filter:none;transform:scale(1.04)}
+  .thumb .play{position:relative;width:58px;height:58px;border-radius:50%;background:#fff;border:var(--b);display:grid;place-items:center;transition:.25s}
+  .item:hover .thumb .play{background:#000;color:#fff}
+  .thumb .rt{position:absolute;right:10px;bottom:10px;background:#000;color:#fff;padding:3px 8px}
+  .thumb .cat{position:absolute;left:10px;top:10px;background:#fff;border:var(--b);padding:3px 8px}
+  .p1{background:repeating-linear-gradient(0deg,#000 0 1px,transparent 1px 18px),var(--soft)}
+  .p2{background:radial-gradient(#000 1px,transparent 1.6px) 0 0/14px 14px,var(--soft)}
+  .p3{background:repeating-linear-gradient(90deg,#000 0 1px,transparent 1px 18px),var(--soft)}
+  .p4{background:repeating-linear-gradient(-45deg,#000 0 1px,transparent 1px 14px),var(--soft)}
+  .item .body{padding:16px 18px 20px;display:flex;flex-direction:column;gap:6px;flex:1}
+  .item h3{font-size:18px;font-weight:700;letter-spacing:-.02em;line-height:1.2}
+  .item p{font-size:14px}
+  .more{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;padding:24px;border-top:var(--b)}
+  .more h3{font-size:26px;font-weight:900;letter-spacing:-.03em}
+
+  /* EXPERTISE */
+  .expert{grid-template-columns:repeat(3,1fr)}
+  .col{padding:26px 24px}
+  .col h3{font-size:22px;font-weight:700;letter-spacing:-.02em;margin:10px 0 16px}
+  .col ul{list-style:none}
+  .col li{padding:10px 0;border-top:var(--b);display:flex;gap:12px}
+  .col li::before{content:"→"}
+
+  /* TOOLS */
+  .stack{grid-template-columns:repeat(5,1fr)}
+  .tgroup{padding:22px 20px;display:flex;flex-direction:column;gap:14px}
+  .chips{display:flex;flex-wrap:wrap;gap:6px}
+  .chip{border:var(--b);padding:7px 12px;font-weight:500;font-size:15px;transition:.2s}
+  .chip:hover{background:#000;color:#fff}
+
+  /* PROCESS */
+  .process{grid-template-columns:repeat(4,1fr)}
+  .step{padding:26px 22px 30px;display:flex;flex-direction:column;gap:10px}
+  .step .num{font-size:68px;font-weight:900;line-height:1;letter-spacing:-.06em}
+  .step h3{font-size:20px;font-weight:700}
+  .pill{align-self:flex-start;border:var(--b);padding:4px 10px;margin-top:auto}
+
+  /* ABOUT */
+  .about{display:grid;grid-template-columns:1.2fr 1fr}
+  .about .txt{padding:36px 24px;border-right:var(--b);font-size:19px;display:flex;flex-direction:column;gap:18px}
+  .about .side{display:grid;grid-template-rows:auto 1fr}
+  .exp{padding:24px;border-bottom:var(--b)}
+  .exp b{display:block;font-size:22px;letter-spacing:-.02em;margin-top:6px}
+  .facts{grid-template-columns:1fr 1fr}
+  .fact{padding:22px 20px}
+  .fact b{display:block;font-size:19px;margin-top:6px;line-height:1.2}
+
+  /* CONTACT */
+  .contact{display:grid;grid-template-columns:1.4fr 1fr;background:#000;color:#fff}
+  .contact .big{padding:56px 24px;border-right:1px solid #fff}
+  .contact h2{font-size:clamp(44px,7.4vw,104px);font-weight:900;line-height:.9;letter-spacing:-.055em}
+  .contact .big p{max-width:500px;margin-top:22px;color:#cfcfcf;font-size:18px}
+  .contact .btn{border-color:#fff;background:#000;color:#fff}
+  .contact .btn.light{background:#fff;color:#000}
+  .contact .btn:hover{background:#fff;color:#000}
+  .contact .btn.light:hover{background:#000;color:#fff}
+  .clinks{display:flex;flex-direction:column}
+  .clinks a{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:20px 24px;border-bottom:1px solid #fff;font-size:19px;font-weight:500;transition:.2s;flex:1}
+  .clinks a:last-child{border-bottom:0}
+  .clinks a small{display:block;font-family:var(--mono);font-size:12px;color:#9a9a9a;font-weight:400;text-transform:none;letter-spacing:0}
+  .clinks a:hover{background:#fff;color:#000}
+  .clinks a:hover small{color:#555}
+
+  footer .wrap{display:flex;justify-content:space-between;padding:20px;flex-wrap:wrap;gap:8px}
+
+  /* MODAL */
+  .modal{position:fixed;inset:0;background:rgba(0,0,0,.92);z-index:200;display:none;align-items:center;justify-content:center;padding:20px}
+  .modal.open{display:flex}
+  .mbox{background:#000;border:1px solid #fff;color:#fff;width:min(440px,100%);display:flex;flex-direction:column}
+  .mbar{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #fff}
+  .mbar span{padding:12px 14px}
+  .mbar button{background:#fff;color:#000;border:0;padding:12px 16px;cursor:pointer;font:inherit}
+  .mframe{aspect-ratio:9/16;max-height:72vh;width:100%;background:#111}
+  .mframe iframe,.mframe video{width:100%;height:100%;border:0;display:block}
+  .mfoot{padding:12px 14px;border-top:1px solid #fff}
+
+  .rv{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease}
+  .rv.in{opacity:1;transform:none}
+  @media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}.marquee .track{animation:none}html{scroll-behavior:auto}}
+
+  @media (max-width:1080px){
+    .specs,.work{grid-template-columns:repeat(3,1fr)}
+    .stack{grid-template-columns:repeat(3,1fr)}
+  }
+  @media (max-width:960px){
+    .links{display:none;position:absolute;top:100%;left:-1px;right:-1px;flex-direction:column;background:#fff;border:var(--b);border-top:0}
+    .links.open{display:flex}
+    .links a{padding:16px 20px;border-left:0;border-top:var(--b)}
+    .links a:first-child{border-top:0}
+    .toggle{display:block}
+    .nav .cta{display:none}
+    .hero,.about,.contact{grid-template-columns:1fr}
+    .hero-main,.about .txt{border-right:0;border-bottom:var(--b)}
+    .contact .big{border-right:0;border-bottom:1px solid #fff}
+    .sec-head{grid-template-columns:1fr}
+    .sec-head .idx{border-right:0;border-bottom:var(--b);padding:14px 20px}
+    .specs,.work,.process,.expert{grid-template-columns:1fr 1fr}
+    .stack{grid-template-columns:1fr 1fr}
+  }
+  @media (max-width:600px){
+    .brand span{display:none}
+    .specs,.process,.expert,.stack{grid-template-columns:1fr}
+    .work{grid-template-columns:1fr 1fr}
+    .item .body{padding:12px}
+    .item h3{font-size:15px}
+    .item p{display:none}
+    .pipeline{grid-template-columns:1fr 1fr}
+    .pipeline div:nth-child(2){border-right:0}
+    .pipeline div:nth-child(-n+2){border-bottom:var(--b)}
+    .card{min-height:180px}
+    .btns{gap:8px}.btn + .btn{margin-left:0}
+    .stat b{font-size:28px}
+  }
+
+  /* GRID BACKGROUND */
+  body{background-color:#fff;background-image:
+      linear-gradient(rgba(0,0,0,.075) 1px,transparent 1px),
+      linear-gradient(90deg,rgba(0,0,0,.075) 1px,transparent 1px);
+    background-size:32px 32px;background-position:-1px -1px}
+  header,.filters{background-color:#fff}
+  .hero-main,.sec-head,.about .txt,.more,.exp,.pipeline{background:transparent}
+  .pipeline div,.btn:not(.dark):not(.light){background-color:#fff}
+  .sec-head .idx,.sec-head h2{background:transparent}
+  .contact{background-color:#000;background-image:
+      linear-gradient(rgba(255,255,255,.09) 1px,transparent 1px),
+      linear-gradient(90deg,rgba(255,255,255,.09) 1px,transparent 1px);
+    background-size:32px 32px}
+  .contact .btn:not(.light){background-color:#000}
+  .hero h1,.sec-head h2{text-shadow:0 0 0 #fff}
+  /* cross markers on section corners */
+  .sec-head{position:relative}
+  .sec-head::after{content:"+";position:absolute;right:10px;top:6px;font-family:var(--mono);font-size:14px;color:#000;opacity:.6}
+
+  /* ===== PALETTE 1: charcoal / cream / lime ===== */
+  :root{--ink:#111111;--cream:#F4F1EA;--lime:#D4FF3A;--b:1px solid #111111;--muted:#6b675e;--soft:#e9e5db}
+  body{background-color:var(--cream);color:var(--ink);background-image:
+      linear-gradient(rgba(17,17,17,.07) 1px,transparent 1px),
+      linear-gradient(90deg,rgba(17,17,17,.07) 1px,transparent 1px)}
+  ::selection{background:var(--lime);color:var(--ink)}
+  header,.filters,footer{background-color:var(--cream)}
+  .g{background:var(--ink)}
+  .g > *{background:var(--cream)}
+  .g.work{background:var(--cream)}
+  .g.work > .item{box-shadow:0 0 0 1px var(--ink)}
+  .brand .mark{background:var(--ink);color:var(--lime)}
+  .nav .cta{background:var(--lime);color:var(--ink)}
+  .nav .cta:hover{background:var(--ink);color:var(--lime)}
+  .links a:hover{background:var(--ink);color:var(--lime)}
+
+  /* dark hero */
+  .hero-main{background-color:var(--ink);color:var(--cream);border-right:1px solid rgba(244,241,234,.2);background-image:
+      linear-gradient(rgba(244,241,234,.06) 1px,transparent 1px),
+      linear-gradient(90deg,rgba(244,241,234,.06) 1px,transparent 1px);background-size:32px 32px}
+  .hero-main .muted{color:#a9a69d}
+  .hero h1 em{background:var(--lime);color:var(--ink)}
+  .hero .btn,.hero .btn:not(.dark):not(.light){background:transparent;color:var(--cream);border-color:var(--cream)}
+  .hero .btn:hover{background:var(--cream);color:var(--ink)}
+  .hero .btn.dark{background:var(--lime);color:var(--ink);border-color:var(--lime)}
+  .hero .btn.dark:hover{background:var(--cream);border-color:var(--cream)}
+  .pipeline{border-color:rgba(244,241,234,.35)}
+  .pipeline div,.hero .pipeline div{background:transparent;border-color:rgba(244,241,234,.35)}
+  .pipeline .muted{color:var(--lime)}
+  .feature{background:var(--ink)}
+  .feature:hover .play{background:var(--lime);color:var(--ink);border-color:var(--lime)}
+  .g.stats{background:rgba(244,241,234,.22)}
+  .g.stats > .stat{background:var(--ink);color:var(--cream)}
+  .stat b{color:var(--lime)}
+  .stat .muted{color:#a9a69d}
+  .hero-side{background:var(--ink)}
+
+  /* lime banner */
+  .marquee{background:var(--lime);color:var(--ink)}
+
+  /* light sections */
+  .btn:not(.dark):not(.light){background-color:var(--cream)}
+  .btn.dark{background:var(--ink);color:var(--cream)}
+  .btn.dark:hover{background:var(--lime);color:var(--ink)}
+  .btn:hover{background:var(--ink);color:var(--cream)}
+  .filters button.active,.filters button:hover{background:var(--ink);color:var(--lime)}
+  .card:hover{background:var(--ink) !important;color:var(--cream)}
+  .card:hover .mono{color:var(--lime)}
+  .thumb{background:var(--soft)}
+  .thumb .cat{background:var(--cream)}
+  .item[data-best="1"] .thumb .cat{background:var(--lime);border-color:var(--ink)}
+  .thumb .play{background:var(--cream)}
+  .item:hover .thumb .play{background:var(--lime);color:var(--ink)}
+  .thumb .rt{background:var(--ink);color:var(--cream)}
+  .chip:hover{background:var(--ink);color:var(--lime)}
+  .step:hover .num{color:var(--ink);text-shadow:3px 3px 0 var(--lime)}
+  .col li::before{color:var(--ink)}
+  .sec-head::after{color:var(--ink)}
+
+  /* dark contact */
+  .contact{background-color:var(--ink);color:var(--cream)}
+  .contact .big{border-right-color:rgba(244,241,234,.25)}
+  .contact .big p{color:#bdb9ae}
+  .contact .big .mono{color:var(--lime) !important}
+  .contact .btn,.contact .btn:not(.light){background:transparent;color:var(--cream);border-color:var(--cream)}
+  .contact .btn:hover{background:var(--cream);color:var(--ink)}
+  .contact .btn.light{background:var(--lime);color:var(--ink);border-color:var(--lime)}
+  .contact .btn.light:hover{background:var(--cream);border-color:var(--cream)}
+  .clinks a{border-bottom-color:rgba(244,241,234,.25)}
+  .clinks a:hover{background:var(--lime);color:var(--ink)}
+  .clinks a:hover small{color:#3a3a2a}
+  @media (max-width:960px){.contact .big{border-bottom-color:rgba(244,241,234,.25)}.hero-main{border-bottom:1px solid rgba(244,241,234,.2)}}
+
+  /* ===== ALL-DARK THEME ===== */
+  :root{--line:rgba(244,241,234,.18);--b:1px solid rgba(244,241,234,.18);--muted:#a9a69d;--soft:#1c1c1c}
+  body{background-color:var(--ink);color:var(--cream);background-image:
+      linear-gradient(rgba(244,241,234,.055) 1px,transparent 1px),
+      linear-gradient(90deg,rgba(244,241,234,.055) 1px,transparent 1px)}
+  header,.filters,footer{background-color:var(--ink)}
+  .hero-main{background-color:transparent;background-image:none}
+  .g{background:var(--line)}
+  .g > *{background:var(--ink)}
+  .g.work{background:var(--ink)}
+  .g.work > .item{box-shadow:0 0 0 1px var(--line)}
+  .muted{color:var(--muted)}
+  .brand .mark{background:var(--lime);color:var(--ink)}
+  .links a:hover{background:var(--lime);color:var(--ink)}
+  .sec-head::after{color:var(--lime)}
+  .sec-head .idx{color:var(--lime)}
+  /* buttons */
+  .btn,.btn:not(.dark):not(.light){background:transparent;color:var(--cream);border-color:var(--cream)}
+  .btn:hover{background:var(--cream);color:var(--ink)}
+  .btn.dark{background:var(--lime);color:var(--ink);border-color:var(--lime)}
+  .btn.dark:hover{background:var(--cream);color:var(--ink);border-color:var(--cream)}
+  .filters button{color:var(--cream)}
+  .filters button.active,.filters button:hover{background:var(--lime);color:var(--ink)}
+  /* cards */
+  .card:hover{background:var(--lime) !important;color:var(--ink)}
+  .card:hover .muted{color:#3a3a2a}
+  .card:hover .mono{color:var(--ink)}
+  .thumb{background:var(--soft)}
+  .thumb .cat{background:var(--ink);color:var(--cream);border-color:var(--line)}
+  .item[data-best="1"] .thumb .cat{background:var(--lime);color:var(--ink);border-color:var(--lime)}
+  .thumb .play{background:var(--cream);color:var(--ink);border-color:var(--cream)}
+  .item:hover .thumb .play{background:var(--lime);border-color:var(--lime)}
+  .item:hover h3{color:var(--lime)}
+  .chip{border-color:rgba(244,241,234,.35)}
+  .chip:hover{background:var(--lime);color:var(--ink);border-color:var(--lime)}
+  .pill{border-color:rgba(244,241,234,.35)}
+  .step .num{color:var(--cream)}
+  .step:hover .num{color:var(--lime);text-shadow:none}
+  .col li::before{color:var(--lime)}
+  .exp b,.fact b{color:var(--cream)}
+  .more h3{color:var(--cream)}
+  /* contact blends in */
+  .contact{background-image:none;background-color:transparent}
+  footer .wrap{color:var(--muted)}
+  @media (max-width:960px){.links{background:var(--ink)}}
+  .seeall{display:flex;align-items:center;justify-content:center;text-align:center;padding:24px;background:var(--lime) !important;color:var(--ink);min-height:200px}
+  .seeall .muted{color:#3a3a2a}
+  .seeall h3{font-size:26px;font-weight:900;letter-spacing:-.03em;margin:8px 0}
+  .seeall:hover{background:var(--cream) !important}
+  .thumb.p1{background:repeating-linear-gradient(0deg,rgba(244,241,234,.12) 0 1px,transparent 1px 18px),#1a1a1a}
+  .thumb.p2{background:radial-gradient(rgba(244,241,234,.2) 1px,transparent 1.6px) 0 0/14px 14px,#1a1a1a}
+  .thumb.p3{background:repeating-linear-gradient(90deg,rgba(244,241,234,.12) 0 1px,transparent 1px 18px),#1a1a1a}
+  .thumb.p4{background:repeating-linear-gradient(-45deg,rgba(244,241,234,.12) 0 1px,transparent 1px 14px),#1a1a1a}
+  .about .photo{position:relative;border-right:var(--b);overflow:hidden;min-height:360px;background:var(--ink)}
+  .about .photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 20%;transition:.5s}
+  .about .photo:hover img{transform:scale(1.03)}
+  .about .photo .tag{position:absolute;left:12px;bottom:12px;background:var(--lime);color:var(--ink);padding:5px 10px}
+  @media (max-width:960px){.about{grid-template-columns:1fr}.about .photo{border-right:0;border-bottom:var(--b);min-height:0;aspect-ratio:1/1}}
+  .contact{grid-template-columns:1.25fr .85fr .9fr}
+  .cphoto{position:relative;overflow:hidden;border-right:1px solid rgba(244,241,234,.25);min-height:420px}
+  .cphoto img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 25%;transition:.5s}
+  .cphoto:hover img{transform:scale(1.03)}
+  .cphoto .tag{position:absolute;left:12px;right:12px;bottom:12px;background:var(--lime);color:var(--ink);padding:6px 10px;text-align:center}
+  .bigmail{display:inline-block;margin-top:22px;font-size:clamp(20px,2.3vw,30px);font-weight:700;letter-spacing:-.02em;color:var(--lime);border-bottom:2px solid var(--lime);padding-bottom:2px;word-break:break-all}
+  .bigmail:hover{color:var(--cream);border-color:var(--cream)}
+  @media (max-width:960px){.contact{grid-template-columns:1fr}.cphoto{border-right:0;border-bottom:1px solid rgba(244,241,234,.25);min-height:0;aspect-ratio:1/1}}
+  .contact{grid-template-columns:1.4fr 1fr}
+  .cphoto{min-height:0;display:flex;align-items:center;justify-content:center;padding:32px 24px}
+  .cphoto .pcard{position:relative;width:100%;max-width:280px;aspect-ratio:3/4;border:1px solid rgba(244,241,234,.25);border-radius:12px;overflow:hidden;background:#1a1a1a}
+  .cphoto .pcard img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 20%;transition:.5s}
+  .cphoto .pcard:hover img{transform:scale(1.04)}
+  .cphoto .plabel{position:absolute;left:12px;top:12px;color:var(--lime);background:rgba(17,17,17,.75);padding:4px 8px;border-radius:4px;font-size:11px}
+  .cphoto .pnum{position:absolute;right:10px;bottom:-6px;font-size:76px;font-weight:900;letter-spacing:-.05em;line-height:1;color:var(--lime);opacity:.85;text-shadow:0 2px 12px rgba(0,0,0,.35)}
+  @media (max-width:960px){.cphoto{aspect-ratio:auto;padding:28px 20px}.cphoto .pcard{max-width:260px}}
+  .meet{display:grid;grid-template-columns:.8fr 1.4fr;align-items:stretch;gap:0}
+  .meet-photo{align-items:center}
+  .meet-txt{display:flex;flex-direction:column;justify-content:center}
+  .meet-photo{display:flex;justify-content:center;padding:56px 32px;border-right:var(--b)}
+  .meet-photo .pcard{position:relative;width:100%;max-width:340px;aspect-ratio:3/4;border:1px solid rgba(244,241,234,.25);border-radius:12px;overflow:hidden;background:#1a1a1a}
+  .meet-photo .pcard img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 20%;transition:.5s}
+  .meet-photo .pcard:hover img{transform:scale(1.04)}
+  .meet-photo .plabel{position:absolute;left:12px;top:12px;color:var(--lime);background:rgba(17,17,17,.78);padding:4px 8px;border-radius:4px;font-size:11px}
+  .meet-photo .pnum{position:absolute;right:12px;bottom:-8px;font-size:92px;font-weight:900;letter-spacing:-.05em;line-height:1;color:var(--lime);opacity:.85;text-shadow:0 2px 14px rgba(0,0,0,.35)}
+  .meet-txt{padding:56px 40px}
+  .meet-txt .kicker{display:flex;align-items:center;gap:12px;color:var(--cream)}
+  .meet-txt .kicker::before{content:"";width:28px;height:2px;background:var(--lime)}
+  .meet-txt h2{font-size:clamp(44px,6.5vw,92px);font-weight:900;line-height:.92;letter-spacing:-.05em;margin:18px 0 22px}
+  .meet-txt .lead{font-size:clamp(19px,1.9vw,26px);color:#bdb9ae;max-width:640px;line-height:1.4}
+  .meet-txt .small{margin-top:16px;color:var(--muted);max-width:620px;font-size:16px}
+  @media (max-width:960px){.meet{grid-template-columns:1fr}.meet-photo{border-right:0;border-bottom:var(--b);padding:36px 20px}.meet-photo .pcard{max-width:280px}.meet-txt{padding:36px 20px}}
+  .systems{grid-template-columns:1fr 1fr}
+  .sys{padding:32px 28px;display:flex;flex-direction:column;gap:14px}
+  .sys .sys-n{color:var(--lime)}
+  .sys h3{font-size:clamp(24px,2.6vw,36px);font-weight:900;letter-spacing:-.03em;line-height:1.05}
+  .sys .chips{margin-top:6px}
+  .sys-strip{grid-template-columns:repeat(3,1fr);border-top:var(--b)}
+  .sys-strip > div{padding:20px 28px}
+  .sys-strip b{display:block;font-size:30px;font-weight:900;letter-spacing:-.03em;color:var(--lime)}
+  @media (max-width:960px){.systems,.sys-strip{grid-template-columns:1fr}}
+  .toggle{color:var(--cream)}
+  .spot{display:grid;grid-template-columns:.75fr 1.25fr}
+  .spot-video{position:relative;aspect-ratio:9/14;max-height:640px;width:100%;background:#1a1a1a;border-right:var(--b);overflow:hidden;cursor:pointer;display:grid;place-items:center}
+  .spot-video::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(45deg,rgba(244,241,234,.08) 0 1px,transparent 1px 14px)}
+  .spot-video img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:.5s}
+  .spot-video:hover img{transform:scale(1.03)}
+  .spot-video .play{position:relative;width:84px;height:84px;border-radius:50%;background:var(--lime);color:var(--ink);display:grid;place-items:center;font-size:24px;transition:.25s}
+  .spot-video:hover .play{transform:scale(1.08)}
+  .spot-tag{position:absolute;left:14px;top:14px;background:var(--ink);color:var(--lime);padding:5px 10px;border:1px solid var(--lime)}
+  .spot-click{position:absolute;left:14px;bottom:14px;color:var(--cream);background:rgba(17,17,17,.7);padding:4px 8px}
+  .spot-txt{padding:48px 40px;display:flex;flex-direction:column;justify-content:center}
+  .spot-txt .kicker{display:flex;align-items:center;gap:12px;color:var(--cream)}
+  .spot-txt .kicker::before{content:"";width:28px;height:2px;background:var(--lime)}
+  .spot-txt h2{font-size:clamp(52px,7.5vw,112px);font-weight:900;line-height:.9;letter-spacing:-.055em;margin:18px 0 20px;color:var(--lime)}
+  .spot-txt h2 span{color:var(--cream)}
+  .spot-txt .lead{font-size:clamp(18px,1.7vw,22px);color:#bdb9ae;max-width:620px;line-height:1.45}
+  .spot-stats{grid-template-columns:repeat(3,1fr);margin-top:28px;border:var(--b)}
+  .spot-stats > div{padding:16px 18px}
+  .spot-stats b{display:block;font-size:24px;font-weight:900;letter-spacing:-.02em}
+  @media (max-width:960px){.spot{grid-template-columns:1fr}.spot-video{border-right:0;border-bottom:var(--b);max-height:none;aspect-ratio:4/5}.spot-txt{padding:32px 20px}.spot-stats{grid-template-columns:1fr 1fr 1fr}}
+  @media (max-width:600px){.spot-stats b{font-size:18px}}
+  .proof{margin-top:18px;border:var(--b);padding:12px;display:inline-flex;flex-direction:column;gap:10px;align-self:flex-start;max-width:100%;background:rgba(244,241,234,.03)}
+  .proof-label{color:var(--lime)}
+  .proof img{display:block;width:100%;max-width:710px;height:auto;border-radius:6px}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header>
+  <nav class="nav" aria-label="Main">
+    <a class="brand" href="#top">
+      <div class="mark">JS</div>
+      <div><b>John Roderick Secuya</b><span class="mono muted">AI Creative Specialist</span></div>
+    </a>
+    <div class="links" id="links">
+      <a href="#work" class="mono">Work</a>
+      <a href="#specializations" class="mono">Specializations</a>
+      <a href="#tools" class="mono">Tools</a>
+      <a href="#process" class="mono">Process</a>
+      <a href="#systems" class="mono">Systems</a>
+      <a href="#about" class="mono">About</a>
+      <a href="#meet" class="mono">Meet John</a>
+    </div>
+    <button class="toggle mono" id="toggle" aria-expanded="false" aria-controls="links">Menu</button>
+    <a class="cta mono" href="#contact">Work with me ↗</a>
+  </nav>
+</header>
+
+<main id="main">
+<div class="wrap" id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-main">
+      <div>
+        <p class="mono muted">● Available for freelance projects</p>
+        <h1>AI ads built to <em>stop</em> the scroll.</h1>
+        <p class="role">John Roderick Secuya · Senior AI Creative Specialist</p>
+        <p class="lead muted">AI UGC, VSLs, cinematic drama ads, podcast ads, song ads and animated product creatives for e-commerce, beauty, fashion and health &amp; wellness brands, made for Meta, TikTok and YouTube Shorts.</p>
+        <div class="btns">
+          <a class="btn dark" href="#work">Watch my work →</a>
+          <a class="btn" href="mailto:johnsecuya18@gmail.com">Email me</a>
+          <a class="btn" href="https://drive.google.com/drive/folders/11Tq3K1C1LvILClAtYhhQo6u-c_OX-eq8" target="_blank" rel="noopener">Full portfolio ↗</a>
+        </div>
+      </div>
+      <div class="pipeline">
+        <div><span class="mono muted">01</span><b>Script</b></div>
+        <div><span class="mono muted">02</span><b>Generate</b></div>
+        <div><span class="mono muted">03</span><b>Edit</b></div>
+        <div><span class="mono muted">04</span><b>Iterate</b></div>
+      </div>
+    </div>
+    <div class="hero-side">
+      <!-- FEATURED VIDEO: set data-video to a Google Drive / YouTube link; add <img src="images/featured.jpg" alt=""> for a cover -->
+      <div class="feature" data-video="https://drive.google.com/file/d/1garZX07ZpRBDaRAi2X_IufmP0wvJ6_8q/view" data-title="Top performer · 3M views">
+        <img src="images/supplement-magnesium.jpg" alt="Top performing ad">
+        <span class="mono">Featured / Supplement ad · 3M views</span>
+        <div class="play" aria-hidden="true">▶</div>
+        <div><h3>3 million views. One AI ad.</h3><p class="mono" style="margin-top:8px;color:#cfcfcf">Click to watch</p></div>
+      </div>
+      <div class="g stats">
+        <div class="stat"><b>3M+</b><span class="mono muted">Views, one ad</span></div>
+        <div class="stat"><b>39</b><span class="mono muted">Portfolio videos</span></div>
+        <div class="stat"><b>EN/ES</b><span class="mono muted">Bilingual content</span></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="marquee mono" aria-hidden="true">
+    <div class="track">
+      <span>AI Drama ✦ Claymation ✦ Pixar 3D ✦ Song Ads ✦ AI UGC ✦ Skeleton Explainers ✦ Podcasts ✦ VSLs ✦ Supplement Ads ✦ YouTube Intros ✦ Local Services ✦ Static Ads ✦</span>
+      <span>AI Drama ✦ Claymation ✦ Pixar 3D ✦ Song Ads ✦ AI UGC ✦ Skeleton Explainers ✦ Podcasts ✦ VSLs ✦ Supplement Ads ✦ YouTube Intros ✦ Local Services ✦ Static Ads ✦</span>
+    </div>
+  </div>
+
+  <!-- SPOTLIGHT -->
+  <section id="spotlight" class="spot">
+    <div class="spot-video rv" data-video="https://drive.google.com/file/d/1Bz_Bi8OwMbON1n3rd47hErUe5cMRXXna/view" data-title="The Cabin · $70,589 ad spend">
+      <img src="https://drive.google.com/thumbnail?id=1Bz_Bi8OwMbON1n3rd47hErUe5cMRXXna&amp;sz=w720" onerror="this.remove()" alt="The Cabin ad">
+      <span class="spot-tag mono">Spotlight / VSL</span>
+      <span class="play" aria-hidden="true">▶</span>
+      <span class="spot-click mono">Click to watch</span>
+    </div>
+    <div class="spot-txt rv">
+      <span class="kicker mono">Spotlight</span>
+      <h2>$70,589<br><span>spent on one ad.</span></h2>
+      <p class="lead">"The Cabin" (Greek version, iteration 6). This creative was scaled to over $70K in ad spend, proof it holds up when the budget goes up.</p>
+      <div class="g spot-stats">
+        <div><b>$70,589</b><span class="mono muted">Ad spend</span></div>
+        <div><b>Greek</b><span class="mono muted">Localized version</span></div>
+        <div><b>ITR 6</b><span class="mono muted">Iteration tested</span></div>
+      </div>
+      <figure class="proof"><span class="mono proof-label">Proof · ad spend report · edited by John</span><img src="images/proof-cabin-spend.png" alt="Screenshot of ad report: the cabin greek itr, EB0_1294_ITR-6_VID, editor John, $70,589 spend" loading="lazy"></figure>
+      <div class="btns"><button class="btn dark" type="button" data-video="https://drive.google.com/file/d/1Bz_Bi8OwMbON1n3rd47hErUe5cMRXXna/view" data-title="The Cabin · $70,589 ad spend">Watch the ad ▶</button><a class="btn" href="#contact">Get an ad like this</a></div>
+    </div>
+  </section>
+
+  <!-- WORK -->
+  <section id="work">
+    <div class="sec-head rv"><div class="idx mono">( 01 ) Selected work</div><h2>Real ads. Ready to watch.</h2></div>
+    <div class="filters mono">
+      <button class="active" data-f="best">★ Best work (<span class="n"></span>)</button>
+      <button data-f="all">All (<span class="n"></span>)</button>
+      <button data-f="drama">AI drama (<span class="n"></span>)</button>
+      <button data-f="anim">Animation (<span class="n"></span>)</button>
+      <button data-f="song">Song ads (<span class="n"></span>)</button>
+      <button data-f="ugc">UGC &amp; podcast (<span class="n"></span>)</button>
+      <button data-f="vsl">VSL &amp; supplement (<span class="n"></span>)</button>
+      <button data-f="brand">Intros &amp; local (<span class="n"></span>)</button>
+    </div>
+    <!-- To make a card play here: set data-video to a Google Drive / YouTube / .mp4 link. Empty = opens the Canva portfolio. -->
+    <div class="g work" id="workgrid">
+      <article class="item" data-best="1" data-c="vsl" data-video="https://drive.google.com/file/d/1Bz_Bi8OwMbON1n3rd47hErUe5cMRXXna/view" data-title="The Cabin · $70,589 ad spend"><div class="thumb p1"><img src="https://drive.google.com/thumbnail?id=1Bz_Bi8OwMbON1n3rd47hErUe5cMRXXna&amp;sz=w720" onerror="this.remove()" alt="The Cabin ad" loading="lazy"><span class="cat mono">$70K+ ad spend</span><span class="play">▶</span><span class="rt mono">VSL</span></div><div class="body"><span class="mono muted">Greek · Iteration 6</span><h3>The Cabin · $70,589 Spend</h3><p class="muted">Scaled creative with over $70K in ad spend behind it.</p></div></article>
+      <article class="item" data-best="1" data-c="vsl" data-video="https://drive.google.com/file/d/1garZX07ZpRBDaRAi2X_IufmP0wvJ6_8q/view" data-title="Top performer · 3M views"><div class="thumb"><img src="images/supplement-magnesium.jpg" alt="Top performing ad, 3 million views" loading="lazy"><span class="cat mono">3M views · Supplement</span><span class="play">▶</span><span class="rt mono">9:16</span></div><div class="body"><span class="mono muted">English · Top performer</span><h3>Supplement Ad · 3M Views</h3><p class="muted">Magnesium supplement creative that passed 3 million views.</p></div></article>
+      <article class="item" data-best="1" data-c="drama" data-video="https://drive.google.com/file/d/18qVklzjgLkeCoFXCMbkBbwzomfScDTLB/view" data-title="Bed Date"><div class="thumb"><img src="https://drive.google.com/thumbnail?id=18qVklzjgLkeCoFXCMbkBbwzomfScDTLB&amp;sz=w720" onerror="this.onerror=null;this.src='images/drama-out-loud.jpg'" alt="Bed Date" loading="lazy"><span class="cat mono">AI Drama</span><span class="play">▶</span><span class="rt mono">9:16</span></div><div class="body"><span class="mono muted">English</span><h3>Bed Date</h3><p class="muted">Cinematic relationship drama with consistent characters and an emotional hook.</p></div></article>
+      <article class="item" data-best="1" data-c="anim" data-video="https://drive.google.com/file/d/11a3DtpYtFi2JPRGLDJI-G0XvCIM3B0Zq/view" data-title="Claymation Explainer"><div class="thumb"><img src="https://drive.google.com/thumbnail?id=11a3DtpYtFi2JPRGLDJI-G0XvCIM3B0Zq&amp;sz=w720" onerror="this.onerror=null;this.src='images/claymation-botox-1.jpg'" alt="Claymation Explainer" loading="lazy"><span class="cat mono">Claymation</span><span class="play">▶</span><span class="rt mono">9:16</span></div><div class="body"><span class="mono muted">Spanish</span><h3>Claymation Explainer</h3><p class="muted">Handcrafted clay-style animation explaining a beauty topic in Spanish.</p></div></article>
+      <article class="item" data-best="1" data-c="anim" data-video="https://drive.google.com/file/d/1vnkSXt41f0v6A0SYAjzUoEN04TeZqw2t/view" data-title="Pixar-Style Story Ad"><div class="thumb"><img src="https://drive.google.com/thumbnail?id=1vnkSXt41f0v6A0SYAjzUoEN04TeZqw2t&amp;sz=w720" onerror="this.onerror=null;this.src='images/pixar-salt.jpg'" alt="Pixar-Style Story Ad" loading="lazy"><span class="cat mono">Pixar 3D</span><span class="play">▶</span><span class="rt mono">9:16</span></div><div class="body"><span class="mono muted">Spanish</span><h3>Pixar-Style Story Ad</h3><p class="muted">3D-animated characters telling a product story in Spanish.</p></div></article>
+      <article class="item" data-best="1" data-c="song" data-video="https://drive.google.com/file/d/1UYD1LYxiI2D_ntUKcifR-x_tVXR9WzZX/view" data-title="Pixar-Style Song Ad"><div class="thumb"><img src="images/song-beach.jpg" alt="Pixar-Style Song Ad" loading="lazy"><span class="cat mono">Song ad</span><span class="play">▶</span><span class="rt mono">9:16</span></div><div class="body"><span class="mono muted">English</span><h3>Pixar-Style Song Ad</h3><p class="muted">Branded song performed by 3D-animated characters, edited to the beat.</p></div></article>
+      <article class="item" data-best="1" data-c="ugc" data-video="https://drive.google.com/file/d/1Dz9il5tssahSWujCjbQS52r_ARororqm/view" data-title="Realistic AI UGC Ad"><div class="thumb"><img src="images/ugc-gym-2.jpg" alt="Realistic AI UGC Ad" loading="lazy"><span class="cat mono">AI UGC</span><span class="play">▶</span><span class="rt mono">9:16</span></div><div class="body"><span class="mono muted">English</span><h3>Realistic AI UGC Ad</h3><p class="muted">Creator-style ad with photorealistic talent and natural delivery.</p></div></article>
+      <article class="item" data-best="1" data-c="anim" data-video="https://drive.google.com/file/d/11_mVrSPvVkpQ-L2RzVY9_2NkOBtnscxG/view" data-title="Skeleton Explainer"><div class="thumb"><img src="images/skeleton-coffee.jpg" alt="Skeleton Explainer" loading="lazy"><span class="cat mono">Skeleton</span><span class="play">▶</span><span class="rt mono">9:16</span></div><div class="body"><span class="mono muted">English</span><h3>Skeleton Explainer</h3><p class="muted">3D x-ray skeleton explainer showing what happens inside the body.</p></div></article>
+      <article class="item" data-best="1" data-c="ugc" data-video="https://drive.google.com/file/d/1puwB7fQA8YV-CPtBAbn0-IgOgXwExyVJ/view" data-title="AI Podcast Ad"><div class="thumb"><img src="images/podcast.jpg" alt="AI Podcast Ad" loading="lazy"><span class="cat mono">Podcast</span><span class="play">▶</span><span class="rt mono">9:16</span></div><div class="body"><span class="mono muted">English</span><h3>AI Podcast Ad</h3><p class="muted">Podcast-style ad with natural conversation, voices and lip sync.</p></div></article>
+      <article class="item" data-best="1" data-c="vsl" data-video="https://drive.google.com/file/d/1WMGBJP9JANMjvPob_dqEat9LXTP6z5vS/view" data-title="Video Sales Letter"><div class="thumb"><img src="https://drive.google.com/thumbnail?id=1WMGBJP9JANMjvPob_dqEat9LXTP6z5vS&amp;sz=w720" onerror="this.onerror=null;this.src='images/vsl-nurse.jpg'" alt="Video Sales Letter" loading="lazy"><span class="cat mono">VSL</span><span class="play">▶</span><span class="rt mono">9:16</span></div><div class="body"><span class="mono muted">English</span><h3>Video Sales Letter</h3><p class="muted">Direct-response VSL that hooks fast and drives the click.</p></div></article>
+      <article class="item" data-best="1" data-c="vsl" data-video="https://drive.google.com/file/d/1YLVFcsVbXjf0FzAhb5e4VoWLA5C-HbMj/view" data-title="UGC Supplement Ad"><div class="thumb"><img src="https://drive.google.com/thumbnail?id=1YLVFcsVbXjf0FzAhb5e4VoWLA5C-HbMj&amp;sz=w720" onerror="this.onerror=null;this.src='images/supplement-magnesium.jpg'" alt="UGC Supplement Ad" loading="lazy"><span class="cat mono">Supplement</span><span class="play">▶</span><span class="rt mono">9:16</span></div><div class="body"><span class="mono muted">English</span><h3>UGC Supplement Ad</h3><p class="muted">Supplement creative with realistic product handling and bold captions.</p></div></article>
+      <article class="item" data-best="1" data-c="ugc" data-video="https://drive.google.com/file/d/10TeKW9QgQjx_X0lhaMlqYu90J_Zbofsv/view" data-title="AI Street Interview"><div class="thumb"><img src="https://drive.google.com/thumbnail?id=10TeKW9QgQjx_X0lhaMlqYu90J_Zbofsv&amp;sz=w720" onerror="this.onerror=null;this.src='images/supplement-mall.jpg'" alt="AI Street Interview" loading="lazy"><span class="cat mono">Street interview</span><span class="play">▶</span><span class="rt mono">9:16</span></div><div class="body"><span class="mono muted">English</span><h3>AI Street Interview</h3><p class="muted">Vox-pop street interview format with authentic-looking reactions.</p></div></article>
+      <a class="item seeall" data-best="1" data-c="none" href="#work" id="seeAll"><div class="seeall-in"><span class="mono">Want more?</span><h3>See all my videos →</h3><p class="muted">Every style, every language.</p></div></a>
+      <article class="item" data-c="ugc" data-video="https://drive.google.com/file/d/1jhDm8t-9EKt1b6yeSTerwww-vOg3FQ77/view" data-title="UGC: Post-Workout"><div class="thumb"><img src="images/ugc-gym.jpg" alt="UGC: Post-Workout" loading="lazy"><span class="cat mono">AI UGC</span><span class="play">▶</span><span class="rt mono">9:16</span></div><div class="body"><span class="mono muted">English</span><h3>UGC: Post-Workout</h3><p class="muted">Selfie-style fitness creator ad that looks shot on a phone.</p></div></article>
+      <article class="item" data-c="anim" data-video="https://drive.google.com/file/d/16qzaN1TX6CQyqlbH6eE_65enNx5Br0f4/view" data-title="Pixar-Style Mascot Ad"><div class="thumb"><img src="images/pixar-salt.jpg" alt="Pixar-Style Mascot Ad" loading="lazy"><span class="cat mono">Pixar 3D</span><span class="play">▶</span><span class="rt mono">9:16</span></div><div class="body"><span class="mono muted">English</span><h3>Pixar-Style Mascot Ad</h3><p class="muted">Animated salt-shaker mascot turning a health tip into a story.</p></div></article>
+      <article class="item" data-c="vsl" data-video="https://drive.google.com/file/d/1VZ7tDvAFX7eNNKcpC0tqif0uUDiyhvmV/view" data-title="Supplement Ad: Street Interview"><div class="thumb"><img src="images/supplement-mall.jpg" alt="Supplement Ad: Street Interview" loading="lazy"><span class="cat mono">Supplement</span><span class="play">▶</span><span class="rt mono">9:16</span></div><div class="body"><span class="mono muted">English</span><h3>Supplement Ad: Street Interview</h3><p class="muted">Mall interview format with authentic reactions.</p></div></article>
+      <article class="item" data-c="song" data-video="https://drive.google.com/file/d/1In6RvnrliMdZltFy4oRsR2HjqH6UEjyH/view" data-title="Pixar-Style Song Video 01"><div class="thumb"><img src="images/song-seoul.jpg" alt="Pixar-Style Song Video 01" loading="lazy"><span class="cat mono">Song ad</span><span class="play">▶</span><span class="rt mono">9:16</span></div><div class="body"><span class="mono muted">English</span><h3>Pixar-Style Song Video 01</h3><p class="muted">Branded song story performed by 3D-animated characters.</p></div></article>
+      <article class="item" data-c="ugc" data-video="https://drive.google.com/file/d/13RC9-NpelwbXPTwwme_yW_eFWp2mJHNK/view" data-title="Spanish UGC Testimonial"><div class="thumb"><img src="images/ugc-car-es.jpg" alt="Spanish UGC Testimonial" loading="lazy"><span class="cat mono">AI UGC</span><span class="play">▶</span><span class="rt mono">9:16</span></div><div class="body"><span class="mono muted">LatAm Spanish</span><h3>Spanish UGC Testimonial</h3><p class="muted">Car-selfie creator testimonial with AI voice and lip sync.</p></div></article>
+      <article class="item" data-c="anim" data-video="https://drive.google.com/file/d/1xxCs6c-55_ruLPpDVxeM4a4OgAN6ENVd/view" data-title="Pixar-Style Health Ad"><div class="thumb"><img src="images/pixar-mirror.jpg" alt="Pixar-Style Health Ad" loading="lazy"><span class="cat mono">Pixar 3D</span><span class="play">▶</span><span class="rt mono">9:16</span></div><div class="body"><span class="mono muted">English</span><h3>Pixar-Style Health Ad</h3><p class="muted">3D animated character with a scroll-stopping first line.</p></div></article>
+      <article class="item" data-c="song" data-video="https://drive.google.com/file/d/1sZw3f1O5ML1h-hFnNWZ0AsSeT9hCBsd-/view" data-title="Spanish Song Story Ad"><div class="thumb"><img src="images/song-husband-es.jpg" alt="Spanish Song Story Ad" loading="lazy"><span class="cat mono">Song ad</span><span class="play">▶</span><span class="rt mono">9:16</span></div><div class="body"><span class="mono muted">LatAm Spanish</span><h3>Spanish Song Story Ad</h3><p class="muted">Spanish musical storytelling with on-beat edits.</p></div></article>
+      <article class="item" data-c="ugc" data-video="https://drive.google.com/file/d/1brEJdu2mW8Z2hZGrSs_vW3P3sJpo_9ol/view" data-title="UGC: Audience Q&A"><div class="thumb"><img src="images/ugc-audience.jpg" alt="UGC: Audience Q&A" loading="lazy"><span class="cat mono">AI UGC</span><span class="play">▶</span><span class="rt mono">9:16</span></div><div class="body"><span class="mono muted">English</span><h3>UGC: Audience Q&A</h3><p class="muted">Event-style crowd scene with a live-mic hook.</p></div></article>
+      <article class="item" data-c="ugc" data-video="https://drive.google.com/file/d/1lx5V8PM566iMdPl602I3ZaZYowUt0_RC/view" data-title="UGC: Wellness Trend"><div class="thumb"><img src="images/ugc-lymphatic.jpg" alt="UGC: Wellness Trend" loading="lazy"><span class="cat mono">AI UGC</span><span class="play">▶</span><span class="rt mono">9:16</span></div><div class="body"><span class="mono muted">English</span><h3>UGC: Wellness Trend</h3><p class="muted">Trend-format walk-up video with on-screen text hook.</p></div></article>
+      <article class="item" data-c="ugc" data-video="https://drive.google.com/file/d/11iWHR-DPZeAuWfbZyeSEn7Nlk04BrY2i/view" data-title="Swedish UGC Ad"><div class="thumb"><img src="images/ugc-swedish.jpg" alt="Swedish UGC Ad" loading="lazy"><span class="cat mono">AI UGC</span><span class="play">▶</span><span class="rt mono">9:16</span></div><div class="body"><span class="mono muted">Swedish</span><h3>Swedish UGC Ad</h3><p class="muted">Localized creator ad produced in Swedish.</p></div></article>
+      <article class="item" data-c="ugc" data-video="https://drive.google.com/file/d/1Qow6e12YFWuN02bwgWrT4q444psS5Sa_/view" data-title="UGC: Before & After"><div class="thumb"><img src="images/ugc-puffy-face.jpg" alt="UGC: Before & After" loading="lazy"><span class="cat mono">AI UGC</span><span class="play">▶</span><span class="rt mono">9:16</span></div><div class="body"><span class="mono muted">English</span><h3>UGC: Before & After</h3><p class="muted">Day 0 vs. day 30 skincare transformation format.</p></div></article>
+      <article class="item" data-c="vsl" data-video="https://drive.google.com/file/d/15chy9eSZUkuQVO9JopNla9rQWHXrf5P-/view" data-title="Spanish VSL"><div class="thumb"><img src="images/vsl-mirror-es.jpg" alt="Spanish VSL" loading="lazy"><span class="cat mono">VSL</span><span class="play">▶</span><span class="rt mono">9:16</span></div><div class="body"><span class="mono muted">LatAm Spanish</span><h3>Spanish VSL</h3><p class="muted">Mirror-routine VSL localized for Latin American audiences.</p></div></article>
+      <article class="item" data-c="vsl" data-video="https://drive.google.com/file/d/1yQToTHzp6UHzt4-uVwHrEJ44mU_MFZgw/view" data-title="Supplement Ad: Beach Interview"><div class="thumb"><img src="images/supplement-beach.jpg" alt="Supplement Ad: Beach Interview" loading="lazy"><span class="cat mono">Supplement</span><span class="play">▶</span><span class="rt mono">9:16</span></div><div class="body"><span class="mono muted">English</span><h3>Supplement Ad: Beach Interview</h3><p class="muted">Vox-pop style couple interview for a health brand.</p></div></article>
+      <article class="item" data-c="vsl" data-video="https://drive.google.com/file/d/16PL_lERlYJ9zA0xJw55iVWH3zfEydPRY/view" data-title="Supplement Ad: Couple Interview"><div class="thumb"><img src="images/supplement-lake.jpg" alt="Supplement Ad: Couple Interview" loading="lazy"><span class="cat mono">Supplement</span><span class="play">▶</span><span class="rt mono">9:16</span></div><div class="body"><span class="mono muted">English</span><h3>Supplement Ad: Couple Interview</h3><p class="muted">Lakeside interview creative with bold captions.</p></div></article>
+      <article class="item" data-c="vsl" data-video="https://drive.google.com/file/d/1uMsTRxwxmaq2YIK5hN2QquenEUSjeVne/view" data-title="Supplement Ad: Herbal Expert"><div class="thumb"><img src="images/supplement-tea.jpg" alt="Supplement Ad: Herbal Expert" loading="lazy"><span class="cat mono">Supplement</span><span class="play">▶</span><span class="rt mono">9:16</span></div><div class="body"><span class="mono muted">English</span><h3>Supplement Ad: Herbal Expert</h3><p class="muted">Herbalist-style spokesperson ad with product lineup.</p></div></article>
+      <article class="item wide" data-c="brand" data-video="https://drive.google.com/file/d/1v3w5SnOKC1-1CDH2xt1wwss4V-ZfLh16/view" data-title="Plumbing Brand Intro"><div class="thumb"><img src="images/yt-plumbing-intro.jpg" alt="Plumbing Brand Intro" loading="lazy"><span class="cat mono">YouTube intro</span><span class="play">▶</span><span class="rt mono">16:9</span></div><div class="body"><span class="mono muted">Brand video</span><h3>Plumbing Brand Intro</h3><p class="muted">Animated 3D logo intro for a plumbing & heating company.</p></div></article>
+      <article class="item wide" data-c="brand" data-video="https://drive.google.com/file/d/1x4Gn2dO4L5F_NDsXpJvmtD9-I7LgeE8i/view" data-title="Plumbing Brand Outro"><div class="thumb"><img src="images/yt-plumbing-outro.jpg" alt="Plumbing Brand Outro" loading="lazy"><span class="cat mono">YouTube outro</span><span class="play">▶</span><span class="rt mono">16:9</span></div><div class="body"><span class="mono muted">Brand video</span><h3>Plumbing Brand Outro</h3><p class="muted">Matching logo outro with light sweep and motion.</p></div></article>
+      <article class="item wide" data-c="brand" data-video="https://drive.google.com/file/d/1Gh0OztYNGwuJxqyq7itIBD9ZAXkBPb0l/view" data-title="Tech-Style Logo Intro"><div class="thumb"><img src="images/yt-sogood-intro.jpg" alt="Tech-Style Logo Intro" loading="lazy"><span class="cat mono">YouTube intro</span><span class="play">▶</span><span class="rt mono">16:9</span></div><div class="body"><span class="mono muted">Brand video</span><h3>Tech-Style Logo Intro</h3><p class="muted">Electric neon control-room intro for a YouTube channel.</p></div></article>
+      <article class="item wide" data-c="brand" data-video="https://drive.google.com/file/d/1AygpOc5cZXBViXgnemd6phGddZuDUNeI/view" data-title="Tech-Style Logo Outro"><div class="thumb"><img src="images/yt-sogood-outro.jpg" alt="Tech-Style Logo Outro" loading="lazy"><span class="cat mono">YouTube outro</span><span class="play">▶</span><span class="rt mono">16:9</span></div><div class="body"><span class="mono muted">Brand video</span><h3>Tech-Style Logo Outro</h3><p class="muted">Neon outro matching the channel's intro.</p></div></article>
+      <article class="item wide" data-c="brand" data-video="https://drive.google.com/file/d/17yBrPBGZNzPk6iAh3zFFi5ZY9WpliNw_/view" data-title="HVAC Brand Intro"><div class="thumb"><img src="images/yt-hvac-intro.jpg" alt="HVAC Brand Intro" loading="lazy"><span class="cat mono">YouTube intro</span><span class="play">▶</span><span class="rt mono">16:9</span></div><div class="body"><span class="mono muted">Brand video</span><h3>HVAC Brand Intro</h3><p class="muted">Clean light-reveal logo intro for a heating & air brand.</p></div></article>
+      <article class="item wide" data-c="brand" data-video="https://drive.google.com/file/d/1-K3zVlb49RgDYRSSUJJ5C2PZGclBKL0U/view" data-title="HVAC Brand Outro"><div class="thumb"><img src="images/yt-hvac-outro.jpg" alt="HVAC Brand Outro" loading="lazy"><span class="cat mono">YouTube outro</span><span class="play">▶</span><span class="rt mono">16:9</span></div><div class="body"><span class="mono muted">Brand video</span><h3>HVAC Brand Outro</h3><p class="muted">Minimal logo outro with soft lighting.</p></div></article>
+      <article class="item wide" data-c="brand" data-video="https://drive.google.com/file/d/15wMyDxn_z6bkVb---4Cq1gAxGhsiXsbY/view" data-title="Local Plumbing Promo"><div class="thumb"><img src="images/local-plumbing.jpg" alt="Local Plumbing Promo" loading="lazy"><span class="cat mono">Local services</span><span class="play">▶</span><span class="rt mono">16:9</span></div><div class="body"><span class="mono muted">Brand video</span><h3>Local Plumbing Promo</h3><p class="muted">Promo video for a local plumbing business.</p></div></article>
+      <article class="item wide" data-c="brand" data-video="https://drive.google.com/file/d/1HPpPdV_zPusJoyRUCHnuVhFhB7xXf9Je/view" data-title="Local Plumbing Promo 02"><div class="thumb"><img src="images/local-plumbing-2.jpg" alt="Local Plumbing Promo 02" loading="lazy"><span class="cat mono">Local services</span><span class="play">▶</span><span class="rt mono">16:9</span></div><div class="body"><span class="mono muted">Brand video</span><h3>Local Plumbing Promo 02</h3><p class="muted">Second cut of the plumbing promo for a different placement.</p></div></article>
+      <article class="item wide" data-c="brand" data-video="https://drive.google.com/file/d/1pSEwOJXXXLW1An1nfWN8BdbKQ_SrD83B/view" data-title="Roofing Explainer Video"><div class="thumb"><img src="images/local-roofing.jpg" alt="Roofing Explainer Video" loading="lazy"><span class="cat mono">Local services</span><span class="play">▶</span><span class="rt mono">16:9</span></div><div class="body"><span class="mono muted">Brand video</span><h3>Roofing Explainer Video</h3><p class="muted">Educational explainer for a local roofing company.</p></div></article>
+      <article class="item wide" data-c="brand" data-video="https://drive.google.com/file/d/1iK1QL8GrSlotkx3vLD_rt5P_aYchOuwa/view" data-title="Local Business Promo"><div class="thumb"><img src="images/local-sogood.jpg" alt="Local Business Promo" loading="lazy"><span class="cat mono">Local services</span><span class="play">▶</span><span class="rt mono">16:9</span></div><div class="body"><span class="mono muted">Brand video</span><h3>Local Business Promo</h3><p class="muted">Branded promo with a high-energy animated open.</p></div></article>
+      <article class="item" data-c="anim" data-video="https://drive.google.com/file/d/10hwFLZMQYgEQRfb-Xod86LfpX9F23cXh/view" data-title="Claymation Short"><div class="thumb p1"><img src="https://drive.google.com/thumbnail?id=10hwFLZMQYgEQRfb-Xod86LfpX9F23cXh&amp;sz=w720" onerror="this.remove()" alt="Claymation Short" loading="lazy"><span class="cat mono">Claymation</span><span class="play">▶</span><span class="rt mono">9:16</span></div><div class="body"><span class="mono muted">AI video</span><h3>Claymation Short</h3><p class="muted">Clay-style animated short with handcrafted textures.</p></div></article>
+      <article class="item" data-c="drama" data-video="https://drive.google.com/file/d/17KYy65UCuhBb7SK6DGFUjc-OMapms3Hr/view" data-title="AI Drama Film 01"><div class="thumb p2"><img src="https://drive.google.com/thumbnail?id=17KYy65UCuhBb7SK6DGFUjc-OMapms3Hr&amp;sz=w720" onerror="this.remove()" alt="AI Drama Film 01" loading="lazy"><span class="cat mono">AI Drama</span><span class="play">▶</span><span class="rt mono">9:16</span></div><div class="body"><span class="mono muted">AI video</span><h3>AI Drama Film 01</h3><p class="muted">Cinematic AI drama with multi-scene storytelling.</p></div></article>
+      <article class="item" data-c="drama" data-video="https://drive.google.com/file/d/1y8VZzb7iBYuMv6uByW0R5X3xo4sm0NJh/view" data-title="AI Drama Film 02"><div class="thumb p3"><img src="https://drive.google.com/thumbnail?id=1y8VZzb7iBYuMv6uByW0R5X3xo4sm0NJh&amp;sz=w720" onerror="this.remove()" alt="AI Drama Film 02" loading="lazy"><span class="cat mono">AI Drama</span><span class="play">▶</span><span class="rt mono">9:16</span></div><div class="body"><span class="mono muted">AI video</span><h3>AI Drama Film 02</h3><p class="muted">Cinematic AI drama with multi-scene storytelling.</p></div></article>
+      <article class="item" data-c="drama" data-video="https://drive.google.com/file/d/1CkJglcR7asmzDRi222e8PS4zKOspConx/view" data-title="AI Drama Film 03"><div class="thumb p4"><img src="https://drive.google.com/thumbnail?id=1CkJglcR7asmzDRi222e8PS4zKOspConx&amp;sz=w720" onerror="this.remove()" alt="AI Drama Film 03" loading="lazy"><span class="cat mono">AI Drama</span><span class="play">▶</span><span class="rt mono">9:16</span></div><div class="body"><span class="mono muted">AI video</span><h3>AI Drama Film 03</h3><p class="muted">Cinematic AI drama with multi-scene storytelling.</p></div></article>
+      <article class="item" data-c="drama" data-video="https://drive.google.com/file/d/1G_77Zv_QKUlvnpPwS7RyUW23p-Oeb8qn/view" data-title="AI Drama Film 04"><div class="thumb p1"><img src="https://drive.google.com/thumbnail?id=1G_77Zv_QKUlvnpPwS7RyUW23p-Oeb8qn&amp;sz=w720" onerror="this.remove()" alt="AI Drama Film 04" loading="lazy"><span class="cat mono">AI Drama</span><span class="play">▶</span><span class="rt mono">9:16</span></div><div class="body"><span class="mono muted">AI video</span><h3>AI Drama Film 04</h3><p class="muted">Cinematic AI drama with multi-scene storytelling.</p></div></article>
+      <article class="item" data-c="drama" data-video="https://drive.google.com/file/d/1X7iqtFFy-00xBzB3_IIit5tMXem0K0hm/view" data-title="Drama: Letting Go"><div class="thumb p2"><img src="https://drive.google.com/thumbnail?id=1X7iqtFFy-00xBzB3_IIit5tMXem0K0hm&amp;sz=w720" onerror="this.remove()" alt="Drama: Letting Go" loading="lazy"><span class="cat mono">AI Drama</span><span class="play">▶</span><span class="rt mono">9:16</span></div><div class="body"><span class="mono muted">English</span><h3>Drama: Letting Go</h3><p class="muted">Emotional story ad with cinematic pacing.</p></div></article>
+      <article class="item" data-c="drama" data-video="https://drive.google.com/file/d/1cmHSPCmhbGEIYNGTsXVrXLoQpo3jc0xh/view" data-title="Drama: The Airport"><div class="thumb p3"><img src="https://drive.google.com/thumbnail?id=1cmHSPCmhbGEIYNGTsXVrXLoQpo3jc0xh&amp;sz=w720" onerror="this.remove()" alt="Drama: The Airport" loading="lazy"><span class="cat mono">AI Drama</span><span class="play">▶</span><span class="rt mono">9:16</span></div><div class="body"><span class="mono muted">English</span><h3>Drama: The Airport</h3><p class="muted">Airport reunion story with consistent characters.</p></div></article>
+      <article class="item" data-c="vsl" data-video="https://drive.google.com/file/d/1AQEvYLWnYHtSPyaMkk4cSg0pNw_B48Cz/view" data-title="High-Performing VSL"><div class="thumb p4"><img src="https://drive.google.com/thumbnail?id=1AQEvYLWnYHtSPyaMkk4cSg0pNw_B48Cz&amp;sz=w720" onerror="this.remove()" alt="High-Performing VSL" loading="lazy"><span class="cat mono">High performer</span><span class="play">▶</span><span class="rt mono">9:16</span></div><div class="body"><span class="mono muted">Top performer</span><h3>High-Performing VSL</h3><p class="muted">One of my top-performing direct-response videos.</p></div></article>
+      <article class="item wide" data-c="brand" data-video="https://drive.google.com/file/d/1tgObTQzYtetebh6vJu3k3fGjpBILBViL/view" data-title="Brand Intro 01"><div class="thumb p1"><img src="https://drive.google.com/thumbnail?id=1tgObTQzYtetebh6vJu3k3fGjpBILBViL&amp;sz=w720" onerror="this.remove()" alt="Brand Intro 01" loading="lazy"><span class="cat mono">YouTube intro</span><span class="play">▶</span><span class="rt mono">16:9</span></div><div class="body"><span class="mono muted">Brand video</span><h3>Brand Intro 01</h3><p class="muted">Animated logo intro for a YouTube channel or brand.</p></div></article>
+      <article class="item wide" data-c="brand" data-video="https://drive.google.com/file/d/1cLH1hVvOHMZXxWup0kMg4xwOET_HLaAa/view" data-title="Brand Outro 01"><div class="thumb p2"><img src="https://drive.google.com/thumbnail?id=1cLH1hVvOHMZXxWup0kMg4xwOET_HLaAa&amp;sz=w720" onerror="this.remove()" alt="Brand Outro 01" loading="lazy"><span class="cat mono">YouTube outro</span><span class="play">▶</span><span class="rt mono">16:9</span></div><div class="body"><span class="mono muted">Brand video</span><h3>Brand Outro 01</h3><p class="muted">Animated logo outro with matching motion.</p></div></article>
+      <article class="item wide" data-c="brand" data-video="https://drive.google.com/file/d/1qfQzZ5UOsDx60IB2va_xOfQiYVnfvKsM/view" data-title="Brand Intro 02"><div class="thumb p3"><img src="https://drive.google.com/thumbnail?id=1qfQzZ5UOsDx60IB2va_xOfQiYVnfvKsM&amp;sz=w720" onerror="this.remove()" alt="Brand Intro 02" loading="lazy"><span class="cat mono">YouTube intro</span><span class="play">▶</span><span class="rt mono">16:9</span></div><div class="body"><span class="mono muted">Brand video</span><h3>Brand Intro 02</h3><p class="muted">Animated logo intro for a YouTube channel or brand.</p></div></article>
+      <article class="item wide" data-c="brand" data-video="https://drive.google.com/file/d/1G5hm7sVT7K2rt6VZ_RqMqdxeY2wDc9L5/view" data-title="Brand Intro 03"><div class="thumb p4"><img src="https://drive.google.com/thumbnail?id=1G5hm7sVT7K2rt6VZ_RqMqdxeY2wDc9L5&amp;sz=w720" onerror="this.remove()" alt="Brand Intro 03" loading="lazy"><span class="cat mono">YouTube intro</span><span class="play">▶</span><span class="rt mono">16:9</span></div><div class="body"><span class="mono muted">Brand video</span><h3>Brand Intro 03</h3><p class="muted">Animated logo intro for a YouTube channel or brand.</p></div></article>
+      <article class="item wide" data-c="brand" data-video="https://drive.google.com/file/d/1wtJ2goGix6IcqH4ed4VHPydOTOLqsbet/view" data-title="Brand Intro 04"><div class="thumb p1"><img src="https://drive.google.com/thumbnail?id=1wtJ2goGix6IcqH4ed4VHPydOTOLqsbet&amp;sz=w720" onerror="this.remove()" alt="Brand Intro 04" loading="lazy"><span class="cat mono">YouTube intro</span><span class="play">▶</span><span class="rt mono">16:9</span></div><div class="body"><span class="mono muted">Brand video</span><h3>Brand Intro 04</h3><p class="muted">Animated logo intro for a YouTube channel or brand.</p></div></article>
+      <article class="item wide" data-c="brand" data-video="https://drive.google.com/file/d/16dZMF0WXaqfaLHKXhMIk8jTxR_hI95rb/view" data-title="Brand Intro 05"><div class="thumb p2"><img src="https://drive.google.com/thumbnail?id=16dZMF0WXaqfaLHKXhMIk8jTxR_hI95rb&amp;sz=w720" onerror="this.remove()" alt="Brand Intro 05" loading="lazy"><span class="cat mono">YouTube intro</span><span class="play">▶</span><span class="rt mono">16:9</span></div><div class="body"><span class="mono muted">Brand video</span><h3>Brand Intro 05</h3><p class="muted">Animated logo intro for a YouTube channel or brand.</p></div></article>
+      <article class="item wide" data-c="brand" data-video="https://drive.google.com/file/d/1IUMY35NjN4FLtNGZlVjqzOyCyT5yYEVt/view" data-title="Brand Intro 06"><div class="thumb p3"><img src="https://drive.google.com/thumbnail?id=1IUMY35NjN4FLtNGZlVjqzOyCyT5yYEVt&amp;sz=w720" onerror="this.remove()" alt="Brand Intro 06" loading="lazy"><span class="cat mono">YouTube intro</span><span class="play">▶</span><span class="rt mono">16:9</span></div><div class="body"><span class="mono muted">Brand video</span><h3>Brand Intro 06</h3><p class="muted">Animated logo intro for a YouTube channel or brand.</p></div></article>
+      <article class="item wide" data-c="brand" data-video="https://drive.google.com/file/d/12w3BPt_Ego10etI0eVc8VR03sYxBCF6f/view" data-title="Brand Intro 07"><div class="thumb p4"><img src="https://drive.google.com/thumbnail?id=12w3BPt_Ego10etI0eVc8VR03sYxBCF6f&amp;sz=w720" onerror="this.remove()" alt="Brand Intro 07" loading="lazy"><span class="cat mono">YouTube intro</span><span class="play">▶</span><span class="rt mono">16:9</span></div><div class="body"><span class="mono muted">Brand video</span><h3>Brand Intro 07</h3><p class="muted">Animated logo intro for a YouTube channel or brand.</p></div></article>
+      <article class="item wide" data-c="brand" data-video="https://drive.google.com/file/d/1ary0GaOu98OAuJsGifwaucZda_ddqq-y/view" data-title="Brand Intro 08"><div class="thumb p1"><img src="https://drive.google.com/thumbnail?id=1ary0GaOu98OAuJsGifwaucZda_ddqq-y&amp;sz=w720" onerror="this.remove()" alt="Brand Intro 08" loading="lazy"><span class="cat mono">YouTube intro</span><span class="play">▶</span><span class="rt mono">16:9</span></div><div class="body"><span class="mono muted">Brand video</span><h3>Brand Intro 08</h3><p class="muted">Animated logo intro for a YouTube channel or brand.</p></div></article>
+      <article class="item wide" data-c="brand" data-video="https://drive.google.com/file/d/1uXy6IGV6Rp404aNLUEQnyzt5CC2G5CW5/view" data-title="Brand Intro 09"><div class="thumb p2"><img src="https://drive.google.com/thumbnail?id=1uXy6IGV6Rp404aNLUEQnyzt5CC2G5CW5&amp;sz=w720" onerror="this.remove()" alt="Brand Intro 09" loading="lazy"><span class="cat mono">YouTube intro</span><span class="play">▶</span><span class="rt mono">16:9</span></div><div class="body"><span class="mono muted">Brand video</span><h3>Brand Intro 09</h3><p class="muted">Animated logo intro for a YouTube channel or brand.</p></div></article>
+      <article class="item wide" data-c="brand" data-video="https://drive.google.com/file/d/1__N04sKZe8z2EdTggsEtQAfQ3VbpwTDG/view" data-title="Brand Outro 02"><div class="thumb p3"><img src="https://drive.google.com/thumbnail?id=1__N04sKZe8z2EdTggsEtQAfQ3VbpwTDG&amp;sz=w720" onerror="this.remove()" alt="Brand Outro 02" loading="lazy"><span class="cat mono">YouTube outro</span><span class="play">▶</span><span class="rt mono">16:9</span></div><div class="body"><span class="mono muted">Brand video</span><h3>Brand Outro 02</h3><p class="muted">Animated logo outro with matching motion.</p></div></article>
+      <article class="item wide" data-c="brand" data-video="https://drive.google.com/file/d/1pVCmZOQoEHWLxiUHT_9-hqwoCG4MpjTM/view" data-title="Brand Outro 03"><div class="thumb p4"><img src="https://drive.google.com/thumbnail?id=1pVCmZOQoEHWLxiUHT_9-hqwoCG4MpjTM&amp;sz=w720" onerror="this.remove()" alt="Brand Outro 03" loading="lazy"><span class="cat mono">YouTube outro</span><span class="play">▶</span><span class="rt mono">16:9</span></div><div class="body"><span class="mono muted">Brand video</span><h3>Brand Outro 03</h3><p class="muted">Animated logo outro with matching motion.</p></div></article>
+      <article class="item wide" data-c="brand" data-video="https://drive.google.com/file/d/1tAlxWKgJkoB5L5-RkY35JJgfytkI7fM4/view" data-title="Brand Outro 04"><div class="thumb p1"><img src="https://drive.google.com/thumbnail?id=1tAlxWKgJkoB5L5-RkY35JJgfytkI7fM4&amp;sz=w720" onerror="this.remove()" alt="Brand Outro 04" loading="lazy"><span class="cat mono">YouTube outro</span><span class="play">▶</span><span class="rt mono">16:9</span></div><div class="body"><span class="mono muted">Brand video</span><h3>Brand Outro 04</h3><p class="muted">Animated logo outro with matching motion.</p></div></article>
+      <article class="item wide" data-c="brand" data-video="https://drive.google.com/file/d/1STGioZa7LWfs3V3Bf7lAbnAsWbKRjR9C/view" data-title="Brand Outro 05"><div class="thumb p2"><img src="https://drive.google.com/thumbnail?id=1STGioZa7LWfs3V3Bf7lAbnAsWbKRjR9C&amp;sz=w720" onerror="this.remove()" alt="Brand Outro 05" loading="lazy"><span class="cat mono">YouTube outro</span><span class="play">▶</span><span class="rt mono">16:9</span></div><div class="body"><span class="mono muted">Brand video</span><h3>Brand Outro 05</h3><p class="muted">Animated logo outro with matching motion.</p></div></article>
+      <article class="item wide" data-c="brand" data-video="https://drive.google.com/file/d/1QSiPFyyJQIQxSO5Kl5mZu0Hu3uqeSaet/view" data-title="Brand Outro 06"><div class="thumb p3"><img src="https://drive.google.com/thumbnail?id=1QSiPFyyJQIQxSO5Kl5mZu0Hu3uqeSaet&amp;sz=w720" onerror="this.remove()" alt="Brand Outro 06" loading="lazy"><span class="cat mono">YouTube outro</span><span class="play">▶</span><span class="rt mono">16:9</span></div><div class="body"><span class="mono muted">Brand video</span><h3>Brand Outro 06</h3><p class="muted">Animated logo outro with matching motion.</p></div></article>
+      <article class="item wide" data-c="brand" data-video="https://drive.google.com/file/d/1M57wQl3RECZGcMrWS_pDIyJlc26IKekH/view" data-title="Brand Outro 07"><div class="thumb p4"><img src="https://drive.google.com/thumbnail?id=1M57wQl3RECZGcMrWS_pDIyJlc26IKekH&amp;sz=w720" onerror="this.remove()" alt="Brand Outro 07" loading="lazy"><span class="cat mono">YouTube outro</span><span class="play">▶</span><span class="rt mono">16:9</span></div><div class="body"><span class="mono muted">Brand video</span><h3>Brand Outro 07</h3><p class="muted">Animated logo outro with matching motion.</p></div></article>
+      <article class="item wide" data-c="brand" data-video="https://drive.google.com/file/d/1iTjEFtpiGaB02zsiLoxiaxJ0Y3DnSkYl/view" data-title="Brand Outro 08"><div class="thumb p1"><img src="https://drive.google.com/thumbnail?id=1iTjEFtpiGaB02zsiLoxiaxJ0Y3DnSkYl&amp;sz=w720" onerror="this.remove()" alt="Brand Outro 08" loading="lazy"><span class="cat mono">YouTube outro</span><span class="play">▶</span><span class="rt mono">16:9</span></div><div class="body"><span class="mono muted">Brand video</span><h3>Brand Outro 08</h3><p class="muted">Animated logo outro with matching motion.</p></div></article>
+      <article class="item wide" data-c="brand" data-video="https://drive.google.com/file/d/1CNDjfq-t7WL6CB1rDTNdD2roVNLEhW_v/view" data-title="Brand Outro 09"><div class="thumb p2"><img src="https://drive.google.com/thumbnail?id=1CNDjfq-t7WL6CB1rDTNdD2roVNLEhW_v&amp;sz=w720" onerror="this.remove()" alt="Brand Outro 09" loading="lazy"><span class="cat mono">YouTube outro</span><span class="play">▶</span><span class="rt mono">16:9</span></div><div class="body"><span class="mono muted">Brand video</span><h3>Brand Outro 09</h3><p class="muted">Animated logo outro with matching motion.</p></div></article>
+      <article class="item wide" data-c="brand" data-video="https://drive.google.com/file/d/19K3ieoaoj6-aekmGnwJuDb2cB0-EskES/view" data-title="Brand Outro 10"><div class="thumb p3"><img src="https://drive.google.com/thumbnail?id=19K3ieoaoj6-aekmGnwJuDb2cB0-EskES&amp;sz=w720" onerror="this.remove()" alt="Brand Outro 10" loading="lazy"><span class="cat mono">YouTube outro</span><span class="play">▶</span><span class="rt mono">16:9</span></div><div class="body"><span class="mono muted">Brand video</span><h3>Brand Outro 10</h3><p class="muted">Animated logo outro with matching motion.</p></div></article>
+      <article class="item wide" data-c="brand" data-video="https://drive.google.com/file/d/18vY5lxj7xi80dTW2x3EUNy81ZvT0OFtm/view" data-title="Local Business Promo 01"><div class="thumb p4"><img src="https://drive.google.com/thumbnail?id=18vY5lxj7xi80dTW2x3EUNy81ZvT0OFtm&amp;sz=w720" onerror="this.remove()" alt="Local Business Promo 01" loading="lazy"><span class="cat mono">Local services</span><span class="play">▶</span><span class="rt mono">16:9</span></div><div class="body"><span class="mono muted">Brand video</span><h3>Local Business Promo 01</h3><p class="muted">Promo video for a local service business.</p></div></article>
+      <article class="item wide" data-c="brand" data-video="https://drive.google.com/file/d/1kl9m7x2T5wklBFntyufQP929J6EBDZO9/view" data-title="Local Business Promo 02"><div class="thumb p1"><img src="https://drive.google.com/thumbnail?id=1kl9m7x2T5wklBFntyufQP929J6EBDZO9&amp;sz=w720" onerror="this.remove()" alt="Local Business Promo 02" loading="lazy"><span class="cat mono">Local services</span><span class="play">▶</span><span class="rt mono">16:9</span></div><div class="body"><span class="mono muted">Brand video</span><h3>Local Business Promo 02</h3><p class="muted">Promo video for a local service business.</p></div></article>
+      <article class="item wide" data-c="brand" data-video="https://drive.google.com/file/d/1mFewYx-a4SRcBa2tqqcHYUb3DxVX7rbP/view" data-title="Pest Control Explainer"><div class="thumb p2"><img src="https://drive.google.com/thumbnail?id=1mFewYx-a4SRcBa2tqqcHYUb3DxVX7rbP&amp;sz=w720" onerror="this.remove()" alt="Pest Control Explainer" loading="lazy"><span class="cat mono">Local services</span><span class="play">▶</span><span class="rt mono">16:9</span></div><div class="body"><span class="mono muted">Brand video</span><h3>Pest Control Explainer</h3><p class="muted">Educational explainer video for a local service business.</p></div></article>
+      <article class="item wide" data-c="brand" data-video="https://drive.google.com/file/d/18LrOcWWQaoh-AujoumJb0gKnqMHYRZnN/view" data-title="Tutoring Explainer"><div class="thumb p3"><img src="https://drive.google.com/thumbnail?id=18LrOcWWQaoh-AujoumJb0gKnqMHYRZnN&amp;sz=w720" onerror="this.remove()" alt="Tutoring Explainer" loading="lazy"><span class="cat mono">Local services</span><span class="play">▶</span><span class="rt mono">16:9</span></div><div class="body"><span class="mono muted">Brand video</span><h3>Tutoring Explainer</h3><p class="muted">Educational explainer video for a local service business.</p></div></article>
+      <article class="item wide" data-c="brand" data-video="https://drive.google.com/file/d/19a0DG5ym_FdRg2Xnz7FWhjW5ryF8dIoM/view" data-title="Roof Repair Explainer"><div class="thumb p4"><img src="https://drive.google.com/thumbnail?id=19a0DG5ym_FdRg2Xnz7FWhjW5ryF8dIoM&amp;sz=w720" onerror="this.remove()" alt="Roof Repair Explainer" loading="lazy"><span class="cat mono">Local services</span><span class="play">▶</span><span class="rt mono">16:9</span></div><div class="body"><span class="mono muted">Brand video</span><h3>Roof Repair Explainer</h3><p class="muted">Educational explainer video for a local service business.</p></div></article>
+      <article class="item wide" data-c="brand" data-video="https://drive.google.com/file/d/1ZZMYs-l9nrzSlREIXe-32JWmJ_NpytYT/view" data-title="Home Repair Explainer"><div class="thumb p1"><img src="https://drive.google.com/thumbnail?id=1ZZMYs-l9nrzSlREIXe-32JWmJ_NpytYT&amp;sz=w720" onerror="this.remove()" alt="Home Repair Explainer" loading="lazy"><span class="cat mono">Local services</span><span class="play">▶</span><span class="rt mono">16:9</span></div><div class="body"><span class="mono muted">Brand video</span><h3>Home Repair Explainer</h3><p class="muted">Educational explainer video for a local service business.</p></div></article>
+      <article class="item wide" data-c="brand" data-video="https://drive.google.com/file/d/1JtmujXYXQ8IRJ3Dx7PwHkjN2dAyYcmo-/view" data-title="Roofing Liability Explainer"><div class="thumb p2"><img src="https://drive.google.com/thumbnail?id=1JtmujXYXQ8IRJ3Dx7PwHkjN2dAyYcmo-&amp;sz=w720" onerror="this.remove()" alt="Roofing Liability Explainer" loading="lazy"><span class="cat mono">Local services</span><span class="play">▶</span><span class="rt mono">16:9</span></div><div class="body"><span class="mono muted">Brand video</span><h3>Roofing Liability Explainer</h3><p class="muted">Educational explainer video for a local service business.</p></div></article>
+      <article class="item wide" data-c="brand" data-video="https://drive.google.com/file/d/1Kqrt4MGwO1VHRvqKPR4BAlR76QvI_L0U/view" data-title="Local Business Promo 03"><div class="thumb p3"><img src="https://drive.google.com/thumbnail?id=1Kqrt4MGwO1VHRvqKPR4BAlR76QvI_L0U&amp;sz=w720" onerror="this.remove()" alt="Local Business Promo 03" loading="lazy"><span class="cat mono">Local services</span><span class="play">▶</span><span class="rt mono">16:9</span></div><div class="body"><span class="mono muted">Brand video</span><h3>Local Business Promo 03</h3><p class="muted">Promo video for a local service business.</p></div></article>
+      <article class="item" data-c="anim" data-video="https://drive.google.com/file/d/1VYBtGXjprtczEXABdWGE4CXfJiK743Ue/view" data-title="Pixar-Style Short 01"><div class="thumb p4"><img src="https://drive.google.com/thumbnail?id=1VYBtGXjprtczEXABdWGE4CXfJiK743Ue&amp;sz=w720" onerror="this.remove()" alt="Pixar-Style Short 01" loading="lazy"><span class="cat mono">Pixar 3D</span><span class="play">▶</span><span class="rt mono">9:16</span></div><div class="body"><span class="mono muted">AI video</span><h3>Pixar-Style Short 01</h3><p class="muted">3D-animated character short with expressive performance.</p></div></article>
+      <article class="item" data-c="anim" data-video="https://drive.google.com/file/d/13Kbpe7JM6JAQNeab2T0ZpJv7A22eVPmh/view" data-title="Pixar-Style Short 02"><div class="thumb p1"><img src="https://drive.google.com/thumbnail?id=13Kbpe7JM6JAQNeab2T0ZpJv7A22eVPmh&amp;sz=w720" onerror="this.remove()" alt="Pixar-Style Short 02" loading="lazy"><span class="cat mono">Pixar 3D</span><span class="play">▶</span><span class="rt mono">9:16</span></div><div class="body"><span class="mono muted">AI video</span><h3>Pixar-Style Short 02</h3><p class="muted">3D-animated character short with expressive performance.</p></div></article>
+      <article class="item" data-c="ugc" data-video="https://drive.google.com/file/d/1tKHEscg24zRqD-IYVqulTyq2WxYTLGpk/view" data-title="AI Podcast Ad 02"><div class="thumb p2"><img src="https://drive.google.com/thumbnail?id=1tKHEscg24zRqD-IYVqulTyq2WxYTLGpk&amp;sz=w720" onerror="this.remove()" alt="AI Podcast Ad 02" loading="lazy"><span class="cat mono">Podcast</span><span class="play">▶</span><span class="rt mono">9:16</span></div><div class="body"><span class="mono muted">AI video</span><h3>AI Podcast Ad 02</h3><p class="muted">Podcast-style conversation ad with AI voices and lip sync.</p></div></article>
+      <article class="item" data-c="song" data-video="https://drive.google.com/file/d/10bdiq8bamrxy8o8wE0Q-z2z8Hml1BdSI/view" data-title="AI Song Ad"><div class="thumb p3"><img src="https://drive.google.com/thumbnail?id=10bdiq8bamrxy8o8wE0Q-z2z8Hml1BdSI&amp;sz=w720" onerror="this.remove()" alt="AI Song Ad" loading="lazy"><span class="cat mono">Song ad</span><span class="play">▶</span><span class="rt mono">9:16</span></div><div class="body"><span class="mono muted">AI video</span><h3>AI Song Ad</h3><p class="muted">Branded song performed by AI characters.</p></div></article>
+      <article class="item" data-c="song" data-video="https://drive.google.com/file/d/1R2aI_To8tEJdYDSvtAXnUwsfGgNqyERQ/view" data-title="Spanish Song Ad: It Happens"><div class="thumb p4"><img src="https://drive.google.com/thumbnail?id=1R2aI_To8tEJdYDSvtAXnUwsfGgNqyERQ&amp;sz=w720" onerror="this.remove()" alt="Spanish Song Ad: It Happens" loading="lazy"><span class="cat mono">Song ad</span><span class="play">▶</span><span class="rt mono">9:16</span></div><div class="body"><span class="mono muted">Spanish</span><h3>Spanish Song Ad: It Happens</h3><p class="muted">Musical story ad in Spanish with synced vocals.</p></div></article>
+      <article class="item" data-c="song" data-video="https://drive.google.com/file/d/1X5xty9axROLGM6BXRhexiiP6ymVn_NpR/view" data-title="Spanish Song Ad: Mistakes"><div class="thumb p1"><img src="https://drive.google.com/thumbnail?id=1X5xty9axROLGM6BXRhexiiP6ymVn_NpR&amp;sz=w720" onerror="this.remove()" alt="Spanish Song Ad: Mistakes" loading="lazy"><span class="cat mono">Song ad</span><span class="play">▶</span><span class="rt mono">9:16</span></div><div class="body"><span class="mono muted">Spanish</span><h3>Spanish Song Ad: Mistakes</h3><p class="muted">Musical story ad in Spanish with on-beat edits.</p></div></article>
+      <article class="item" data-c="vsl" data-video="https://drive.google.com/file/d/1Cl2wctb3kkzD1HoV0Cc2KOI0kO6cxsld/view" data-title="UGC Supplement Ad 01"><div class="thumb p2"><img src="https://drive.google.com/thumbnail?id=1Cl2wctb3kkzD1HoV0Cc2KOI0kO6cxsld&amp;sz=w720" onerror="this.remove()" alt="UGC Supplement Ad 01" loading="lazy"><span class="cat mono">Supplement</span><span class="play">▶</span><span class="rt mono">9:16</span></div><div class="body"><span class="mono muted">Female creator</span><h3>UGC Supplement Ad 01</h3><p class="muted">Supplement creative with realistic product handling and bold captions.</p></div></article>
+      <article class="item" data-c="vsl" data-video="https://drive.google.com/file/d/1Fd2fTaT3n02yuOfqITwAcYI4xEqFLuLn/view" data-title="UGC Supplement Ad 02"><div class="thumb p3"><img src="https://drive.google.com/thumbnail?id=1Fd2fTaT3n02yuOfqITwAcYI4xEqFLuLn&amp;sz=w720" onerror="this.remove()" alt="UGC Supplement Ad 02" loading="lazy"><span class="cat mono">Supplement</span><span class="play">▶</span><span class="rt mono">9:16</span></div><div class="body"><span class="mono muted">Female creator</span><h3>UGC Supplement Ad 02</h3><p class="muted">Supplement creative with realistic product handling and bold captions.</p></div></article>
+      <article class="item" data-c="vsl" data-video="https://drive.google.com/file/d/1DutQlpTiFhTPqrYKAQ-PaXXaqtZEY0KJ/view" data-title="UGC Supplement Ad 03"><div class="thumb p4"><img src="https://drive.google.com/thumbnail?id=1DutQlpTiFhTPqrYKAQ-PaXXaqtZEY0KJ&amp;sz=w720" onerror="this.remove()" alt="UGC Supplement Ad 03" loading="lazy"><span class="cat mono">Supplement</span><span class="play">▶</span><span class="rt mono">9:16</span></div><div class="body"><span class="mono muted">Female creator</span><h3>UGC Supplement Ad 03</h3><p class="muted">Supplement creative with realistic product handling and bold captions.</p></div></article>
+      <article class="item" data-c="vsl" data-video="https://drive.google.com/file/d/1zTSs23133U8_PfCEwQwbz-auVVqtUWsn/view" data-title="UGC Supplement Ad 04"><div class="thumb p1"><img src="https://drive.google.com/thumbnail?id=1zTSs23133U8_PfCEwQwbz-auVVqtUWsn&amp;sz=w720" onerror="this.remove()" alt="UGC Supplement Ad 04" loading="lazy"><span class="cat mono">Supplement</span><span class="play">▶</span><span class="rt mono">9:16</span></div><div class="body"><span class="mono muted">Female creator</span><h3>UGC Supplement Ad 04</h3><p class="muted">Supplement creative with realistic product handling and bold captions.</p></div></article>
+      <article class="item" data-c="vsl" data-video="https://drive.google.com/file/d/1JF6uVCNe06lhyl8o0SpMAbeSaQh4Qo6S/view" data-title="UGC Supplement Ad 05"><div class="thumb p2"><img src="https://drive.google.com/thumbnail?id=1JF6uVCNe06lhyl8o0SpMAbeSaQh4Qo6S&amp;sz=w720" onerror="this.remove()" alt="UGC Supplement Ad 05" loading="lazy"><span class="cat mono">Supplement</span><span class="play">▶</span><span class="rt mono">9:16</span></div><div class="body"><span class="mono muted">Female creator</span><h3>UGC Supplement Ad 05</h3><p class="muted">Supplement creative with realistic product handling and bold captions.</p></div></article>
+      <article class="item" data-c="vsl" data-video="https://drive.google.com/file/d/13_Eka5wYaiAHN2nkVIqASFwhgyOODezc/view" data-title="UGC Supplement Ad 06"><div class="thumb p3"><img src="https://drive.google.com/thumbnail?id=13_Eka5wYaiAHN2nkVIqASFwhgyOODezc&amp;sz=w720" onerror="this.remove()" alt="UGC Supplement Ad 06" loading="lazy"><span class="cat mono">Supplement</span><span class="play">▶</span><span class="rt mono">9:16</span></div><div class="body"><span class="mono muted">Female creator</span><h3>UGC Supplement Ad 06</h3><p class="muted">Supplement creative with realistic product handling and bold captions.</p></div></article>
+      <article class="item" data-c="vsl" data-video="https://drive.google.com/file/d/1mJe4clHJ03niXUQ9VwnBqSifELsy4vEC/view" data-title="UGC Supplement Ad 07"><div class="thumb p4"><img src="https://drive.google.com/thumbnail?id=1mJe4clHJ03niXUQ9VwnBqSifELsy4vEC&amp;sz=w720" onerror="this.remove()" alt="UGC Supplement Ad 07" loading="lazy"><span class="cat mono">Supplement</span><span class="play">▶</span><span class="rt mono">9:16</span></div><div class="body"><span class="mono muted">Female creator</span><h3>UGC Supplement Ad 07</h3><p class="muted">Supplement creative with realistic product handling and bold captions.</p></div></article>
+      <article class="item" data-c="vsl" data-video="https://drive.google.com/file/d/17i6qN7bm17_uneSoEYCtPe5jUYhC9pOa/view" data-title="UGC Supplement Ad 08"><div class="thumb p1"><img src="https://drive.google.com/thumbnail?id=17i6qN7bm17_uneSoEYCtPe5jUYhC9pOa&amp;sz=w720" onerror="this.remove()" alt="UGC Supplement Ad 08" loading="lazy"><span class="cat mono">Supplement</span><span class="play">▶</span><span class="rt mono">9:16</span></div><div class="body"><span class="mono muted">Female creator</span><h3>UGC Supplement Ad 08</h3><p class="muted">Supplement creative with realistic product handling and bold captions.</p></div></article>
+      <article class="item" data-c="vsl" data-video="https://drive.google.com/file/d/1OeejLAFpkLS7zXmn9ubYb51P0RpX-3v-/view" data-title="UGC Supplement Ad 09"><div class="thumb p2"><img src="https://drive.google.com/thumbnail?id=1OeejLAFpkLS7zXmn9ubYb51P0RpX-3v-&amp;sz=w720" onerror="this.remove()" alt="UGC Supplement Ad 09" loading="lazy"><span class="cat mono">Supplement</span><span class="play">▶</span><span class="rt mono">9:16</span></div><div class="body"><span class="mono muted">Female creator</span><h3>UGC Supplement Ad 09</h3><p class="muted">Supplement creative with realistic product handling and bold captions.</p></div></article>
+      <article class="item" data-c="vsl" data-video="https://drive.google.com/file/d/1Doi9Jvnqc8fYe7xpGE82TgHFfSbeA8Pb/view" data-title="UGC Supplement Ad 10"><div class="thumb p3"><img src="https://drive.google.com/thumbnail?id=1Doi9Jvnqc8fYe7xpGE82TgHFfSbeA8Pb&amp;sz=w720" onerror="this.remove()" alt="UGC Supplement Ad 10" loading="lazy"><span class="cat mono">Supplement</span><span class="play">▶</span><span class="rt mono">9:16</span></div><div class="body"><span class="mono muted">Female creator</span><h3>UGC Supplement Ad 10</h3><p class="muted">Supplement creative with realistic product handling and bold captions.</p></div></article>
+      <article class="item" data-c="vsl" data-video="https://drive.google.com/file/d/1zcoVv4pq2LBoWpprjnrxi7PYhukkkUeA/view" data-title="UGC Supplement Ad 11"><div class="thumb p4"><img src="https://drive.google.com/thumbnail?id=1zcoVv4pq2LBoWpprjnrxi7PYhukkkUeA&amp;sz=w720" onerror="this.remove()" alt="UGC Supplement Ad 11" loading="lazy"><span class="cat mono">Supplement</span><span class="play">▶</span><span class="rt mono">9:16</span></div><div class="body"><span class="mono muted">Female creator</span><h3>UGC Supplement Ad 11</h3><p class="muted">Supplement creative with realistic product handling and bold captions.</p></div></article>
+      <article class="item" data-c="vsl" data-video="https://drive.google.com/file/d/1yQSfwYC3QU8dq9lbXMh-6RoxRrx3zLDI/view" data-title="UGC Supplement Ad 12"><div class="thumb p1"><img src="https://drive.google.com/thumbnail?id=1yQSfwYC3QU8dq9lbXMh-6RoxRrx3zLDI&amp;sz=w720" onerror="this.remove()" alt="UGC Supplement Ad 12" loading="lazy"><span class="cat mono">Supplement</span><span class="play">▶</span><span class="rt mono">9:16</span></div><div class="body"><span class="mono muted">Female creator</span><h3>UGC Supplement Ad 12</h3><p class="muted">Supplement creative with realistic product handling and bold captions.</p></div></article>
+      <article class="item" data-c="vsl" data-video="https://drive.google.com/file/d/1IxgxGNUjt8Xna8mnU5NlUJf8ZySt8skR/view" data-title="UGC Supplement Ad 13"><div class="thumb p2"><img src="https://drive.google.com/thumbnail?id=1IxgxGNUjt8Xna8mnU5NlUJf8ZySt8skR&amp;sz=w720" onerror="this.remove()" alt="UGC Supplement Ad 13" loading="lazy"><span class="cat mono">Supplement</span><span class="play">▶</span><span class="rt mono">9:16</span></div><div class="body"><span class="mono muted">Female creator</span><h3>UGC Supplement Ad 13</h3><p class="muted">Supplement creative with realistic product handling and bold captions.</p></div></article>
+      <article class="item" data-c="vsl" data-video="https://drive.google.com/file/d/1FQHAt7evcyMwOArWUvHoqmdSSgLrJECT/view" data-title="UGC Supplement Ad 14"><div class="thumb p3"><img src="https://drive.google.com/thumbnail?id=1FQHAt7evcyMwOArWUvHoqmdSSgLrJECT&amp;sz=w720" onerror="this.remove()" alt="UGC Supplement Ad 14" loading="lazy"><span class="cat mono">Supplement</span><span class="play">▶</span><span class="rt mono">9:16</span></div><div class="body"><span class="mono muted">Female creator</span><h3>UGC Supplement Ad 14</h3><p class="muted">Supplement creative with realistic product handling and bold captions.</p></div></article>
+      <article class="item" data-c="vsl" data-video="https://drive.google.com/file/d/1Mwo02QhjdUWQ9PicvFQwvppLV6FRnsFz/view" data-title="UGC Supplement Ad 15"><div class="thumb p4"><img src="https://drive.google.com/thumbnail?id=1Mwo02QhjdUWQ9PicvFQwvppLV6FRnsFz&amp;sz=w720" onerror="this.remove()" alt="UGC Supplement Ad 15" loading="lazy"><span class="cat mono">Supplement</span><span class="play">▶</span><span class="rt mono">9:16</span></div><div class="body"><span class="mono muted">Female creator</span><h3>UGC Supplement Ad 15</h3><p class="muted">Supplement creative with realistic product handling and bold captions.</p></div></article>
+      <article class="item" data-c="vsl" data-video="https://drive.google.com/file/d/1InYIj5Q4CZesVOtNGZz8PWKQJc_PAs4V/view" data-title="UGC Supplement Ad 16"><div class="thumb p1"><img src="https://drive.google.com/thumbnail?id=1InYIj5Q4CZesVOtNGZz8PWKQJc_PAs4V&amp;sz=w720" onerror="this.remove()" alt="UGC Supplement Ad 16" loading="lazy"><span class="cat mono">Supplement</span><span class="play">▶</span><span class="rt mono">9:16</span></div><div class="body"><span class="mono muted">Female creator</span><h3>UGC Supplement Ad 16</h3><p class="muted">Supplement creative with realistic product handling and bold captions.</p></div></article>
+      <article class="item" data-c="vsl" data-video="https://drive.google.com/file/d/1n6c8vYBpeF0kajhKJn5UMhTWJyyemFrt/view" data-title="UGC Supplement Ad 17"><div class="thumb p2"><img src="https://drive.google.com/thumbnail?id=1n6c8vYBpeF0kajhKJn5UMhTWJyyemFrt&amp;sz=w720" onerror="this.remove()" alt="UGC Supplement Ad 17" loading="lazy"><span class="cat mono">Supplement</span><span class="play">▶</span><span class="rt mono">9:16</span></div><div class="body"><span class="mono muted">Female creator</span><h3>UGC Supplement Ad 17</h3><p class="muted">Supplement creative with realistic product handling and bold captions.</p></div></article>
+      <article class="item" data-c="vsl" data-video="https://drive.google.com/file/d/1SLrwuRB5yOwfZN45T-ddqWtmuowU1UWc/view" data-title="UGC Supplement Ad 18"><div class="thumb p3"><img src="https://drive.google.com/thumbnail?id=1SLrwuRB5yOwfZN45T-ddqWtmuowU1UWc&amp;sz=w720" onerror="this.remove()" alt="UGC Supplement Ad 18" loading="lazy"><span class="cat mono">Supplement</span><span class="play">▶</span><span class="rt mono">9:16</span></div><div class="body"><span class="mono muted">Male creator</span><h3>UGC Supplement Ad 18</h3><p class="muted">Supplement creative with realistic product handling and bold captions.</p></div></article>
+      <article class="item" data-c="vsl" data-video="https://drive.google.com/file/d/1OQoPOjvbmQ-Jyqqk8Ry8zy7inLIJ8ts5/view" data-title="UGC Supplement Ad 19"><div class="thumb p4"><img src="https://drive.google.com/thumbnail?id=1OQoPOjvbmQ-Jyqqk8Ry8zy7inLIJ8ts5&amp;sz=w720" onerror="this.remove()" alt="UGC Supplement Ad 19" loading="lazy"><span class="cat mono">Supplement</span><span class="play">▶</span><span class="rt mono">9:16</span></div><div class="body"><span class="mono muted">Male creator</span><h3>UGC Supplement Ad 19</h3><p class="muted">Supplement creative with realistic product handling and bold captions.</p></div></article>
+      <article class="item" data-c="vsl" data-video="https://drive.google.com/file/d/1wHYaVoHi4ZJfxCPpp6-sb0USoveT0XGJ/view" data-title="UGC Supplement Ad 20"><div class="thumb p1"><img src="https://drive.google.com/thumbnail?id=1wHYaVoHi4ZJfxCPpp6-sb0USoveT0XGJ&amp;sz=w720" onerror="this.remove()" alt="UGC Supplement Ad 20" loading="lazy"><span class="cat mono">Supplement</span><span class="play">▶</span><span class="rt mono">9:16</span></div><div class="body"><span class="mono muted">Male creator</span><h3>UGC Supplement Ad 20</h3><p class="muted">Supplement creative with realistic product handling and bold captions.</p></div></article>
+      <article class="item" data-c="vsl" data-video="https://drive.google.com/file/d/1jSJaTxLZ1nRYijHH0Grr3hB-AO261avc/view" data-title="UGC Supplement Ad 21"><div class="thumb p2"><img src="https://drive.google.com/thumbnail?id=1jSJaTxLZ1nRYijHH0Grr3hB-AO261avc&amp;sz=w720" onerror="this.remove()" alt="UGC Supplement Ad 21" loading="lazy"><span class="cat mono">Supplement</span><span class="play">▶</span><span class="rt mono">9:16</span></div><div class="body"><span class="mono muted">Male creator</span><h3>UGC Supplement Ad 21</h3><p class="muted">Supplement creative with realistic product handling and bold captions.</p></div></article>
+      <article class="item" data-c="vsl" data-video="https://drive.google.com/file/d/1L9QvKFsyWFt1EffaeSw-Bbj7w1C5bMsw/view" data-title="UGC Supplement Ad 22"><div class="thumb p3"><img src="https://drive.google.com/thumbnail?id=1L9QvKFsyWFt1EffaeSw-Bbj7w1C5bMsw&amp;sz=w720" onerror="this.remove()" alt="UGC Supplement Ad 22" loading="lazy"><span class="cat mono">Supplement</span><span class="play">▶</span><span class="rt mono">9:16</span></div><div class="body"><span class="mono muted">Male creator</span><h3>UGC Supplement Ad 22</h3><p class="muted">Supplement creative with realistic product handling and bold captions.</p></div></article>
+      <article class="item" data-c="vsl" data-video="https://drive.google.com/file/d/1zIuRefyXN5mKUyPKEgyPP6Z871JiF2kq/view" data-title="UGC Supplement Ad 23"><div class="thumb p4"><img src="https://drive.google.com/thumbnail?id=1zIuRefyXN5mKUyPKEgyPP6Z871JiF2kq&amp;sz=w720" onerror="this.remove()" alt="UGC Supplement Ad 23" loading="lazy"><span class="cat mono">Supplement</span><span class="play">▶</span><span class="rt mono">9:16</span></div><div class="body"><span class="mono muted">Male creator</span><h3>UGC Supplement Ad 23</h3><p class="muted">Supplement creative with realistic product handling and bold captions.</p></div></article>
+      <article class="item" data-c="vsl" data-video="https://drive.google.com/file/d/1OZAJcEBIgOmhZk1GIm0s0KA8MVC5O2Y0/view" data-title="UGC Supplement Ad 24"><div class="thumb p1"><img src="https://drive.google.com/thumbnail?id=1OZAJcEBIgOmhZk1GIm0s0KA8MVC5O2Y0&amp;sz=w720" onerror="this.remove()" alt="UGC Supplement Ad 24" loading="lazy"><span class="cat mono">Supplement</span><span class="play">▶</span><span class="rt mono">9:16</span></div><div class="body"><span class="mono muted">Male creator</span><h3>UGC Supplement Ad 24</h3><p class="muted">Supplement creative with realistic product handling and bold captions.</p></div></article>
+      <article class="item" data-c="vsl" data-video="https://drive.google.com/file/d/1YRYNl2flgxzO-CvyqpbfEUscbBMEFEFk/view" data-title="UGC Supplement Ad 25"><div class="thumb p2"><img src="https://drive.google.com/thumbnail?id=1YRYNl2flgxzO-CvyqpbfEUscbBMEFEFk&amp;sz=w720" onerror="this.remove()" alt="UGC Supplement Ad 25" loading="lazy"><span class="cat mono">Supplement</span><span class="play">▶</span><span class="rt mono">9:16</span></div><div class="body"><span class="mono muted">Male creator</span><h3>UGC Supplement Ad 25</h3><p class="muted">Supplement creative with realistic product handling and bold captions.</p></div></article>
+      <article class="item" data-c="vsl" data-video="https://drive.google.com/file/d/1K_C07y3wvnqEJAvgmAH3P5Yxb4NehPVf/view" data-title="UGC Supplement Ad 26"><div class="thumb p3"><img src="https://drive.google.com/thumbnail?id=1K_C07y3wvnqEJAvgmAH3P5Yxb4NehPVf&amp;sz=w720" onerror="this.remove()" alt="UGC Supplement Ad 26" loading="lazy"><span class="cat mono">Supplement</span><span class="play">▶</span><span class="rt mono">9:16</span></div><div class="body"><span class="mono muted">Male creator</span><h3>UGC Supplement Ad 26</h3><p class="muted">Supplement creative with realistic product handling and bold captions.</p></div></article>
+      <article class="item" data-c="vsl" data-video="https://drive.google.com/file/d/1CWPzX190NNcJMqrd5b8s5aKKS1z5yrdw/view" data-title="UGC Supplement Ad 27"><div class="thumb p4"><img src="https://drive.google.com/thumbnail?id=1CWPzX190NNcJMqrd5b8s5aKKS1z5yrdw&amp;sz=w720" onerror="this.remove()" alt="UGC Supplement Ad 27" loading="lazy"><span class="cat mono">Supplement</span><span class="play">▶</span><span class="rt mono">9:16</span></div><div class="body"><span class="mono muted">Male creator</span><h3>UGC Supplement Ad 27</h3><p class="muted">Supplement creative with realistic product handling and bold captions.</p></div></article>
+      <article class="item" data-c="vsl" data-video="https://drive.google.com/file/d/19tx87GRjFd_szNSYU9jdH0t2-sqIzEnD/view" data-title="UGC Supplement Ad 28"><div class="thumb p1"><img src="https://drive.google.com/thumbnail?id=19tx87GRjFd_szNSYU9jdH0t2-sqIzEnD&amp;sz=w720" onerror="this.remove()" alt="UGC Supplement Ad 28" loading="lazy"><span class="cat mono">Supplement</span><span class="play">▶</span><span class="rt mono">9:16</span></div><div class="body"><span class="mono muted">Male creator</span><h3>UGC Supplement Ad 28</h3><p class="muted">Supplement creative with realistic product handling and bold captions.</p></div></article>
+      <article class="item" data-c="vsl" data-video="https://drive.google.com/file/d/1jTtRdgNs8ZX3nb_5uujnaC2GT3j_Kgsi/view" data-title="UGC Supplement Ad 29"><div class="thumb p2"><img src="https://drive.google.com/thumbnail?id=1jTtRdgNs8ZX3nb_5uujnaC2GT3j_Kgsi&amp;sz=w720" onerror="this.remove()" alt="UGC Supplement Ad 29" loading="lazy"><span class="cat mono">Supplement</span><span class="play">▶</span><span class="rt mono">9:16</span></div><div class="body"><span class="mono muted">Male creator</span><h3>UGC Supplement Ad 29</h3><p class="muted">Supplement creative with realistic product handling and bold captions.</p></div></article>
+      <article class="item" data-c="vsl" data-video="https://drive.google.com/file/d/1-vizuN4uvCan5qus0m85YTGBH86tv-5j/view" data-title="UGC Supplement Ad 30"><div class="thumb p3"><img src="https://drive.google.com/thumbnail?id=1-vizuN4uvCan5qus0m85YTGBH86tv-5j&amp;sz=w720" onerror="this.remove()" alt="UGC Supplement Ad 30" loading="lazy"><span class="cat mono">Supplement</span><span class="play">▶</span><span class="rt mono">9:16</span></div><div class="body"><span class="mono muted">Male creator</span><h3>UGC Supplement Ad 30</h3><p class="muted">Supplement creative with realistic product handling and bold captions.</p></div></article>
+      <article class="item" data-c="vsl" data-video="https://drive.google.com/file/d/1m418F3PYxQmuNoXW8ON7EQALsEM7fB2C/view" data-title="UGC Supplement Ad 31"><div class="thumb p4"><img src="https://drive.google.com/thumbnail?id=1m418F3PYxQmuNoXW8ON7EQALsEM7fB2C&amp;sz=w720" onerror="this.remove()" alt="UGC Supplement Ad 31" loading="lazy"><span class="cat mono">Supplement</span><span class="play">▶</span><span class="rt mono">9:16</span></div><div class="body"><span class="mono muted">Male creator</span><h3>UGC Supplement Ad 31</h3><p class="muted">Supplement creative with realistic product handling and bold captions.</p></div></article>
+      <article class="item" data-c="vsl" data-video="https://drive.google.com/file/d/1Y-_fF7sY4K8AkyDNwbEPPnHtSSUsV_YG/view" data-title="UGC Supplement Ad 32"><div class="thumb p1"><img src="https://drive.google.com/thumbnail?id=1Y-_fF7sY4K8AkyDNwbEPPnHtSSUsV_YG&amp;sz=w720" onerror="this.remove()" alt="UGC Supplement Ad 32" loading="lazy"><span class="cat mono">Supplement</span><span class="play">▶</span><span class="rt mono">9:16</span></div><div class="body"><span class="mono muted">Male creator</span><h3>UGC Supplement Ad 32</h3><p class="muted">Supplement creative with realistic product handling and bold captions.</p></div></article>
+      <article class="item" data-c="vsl" data-video="https://drive.google.com/file/d/1BsqlHAyyLJM3h_3BvlrBqMf764WxRYrY/view" data-title="UGC Supplement Ad 33"><div class="thumb p2"><img src="https://drive.google.com/thumbnail?id=1BsqlHAyyLJM3h_3BvlrBqMf764WxRYrY&amp;sz=w720" onerror="this.remove()" alt="UGC Supplement Ad 33" loading="lazy"><span class="cat mono">Supplement</span><span class="play">▶</span><span class="rt mono">9:16</span></div><div class="body"><span class="mono muted">Male creator</span><h3>UGC Supplement Ad 33</h3><p class="muted">Supplement creative with realistic product handling and bold captions.</p></div></article>
+      <article class="item" data-c="vsl" data-video="https://drive.google.com/file/d/1sDAdB7mu-JiwXV8XX-akr4A4boAESdf8/view" data-title="UGC Supplement Ad 34"><div class="thumb p3"><img src="https://drive.google.com/thumbnail?id=1sDAdB7mu-JiwXV8XX-akr4A4boAESdf8&amp;sz=w720" onerror="this.remove()" alt="UGC Supplement Ad 34" loading="lazy"><span class="cat mono">Supplement</span><span class="play">▶</span><span class="rt mono">9:16</span></div><div class="body"><span class="mono muted">Male creator</span><h3>UGC Supplement Ad 34</h3><p class="muted">Supplement creative with realistic product handling and bold captions.</p></div></article>
+      <article class="item" data-c="vsl" data-video="https://drive.google.com/file/d/1voV7QJHY3abs6GdeLG0Kp2IchDDHWcVS/view" data-title="UGC Supplement Ad 35"><div class="thumb p4"><img src="https://drive.google.com/thumbnail?id=1voV7QJHY3abs6GdeLG0Kp2IchDDHWcVS&amp;sz=w720" onerror="this.remove()" alt="UGC Supplement Ad 35" loading="lazy"><span class="cat mono">Supplement</span><span class="play">▶</span><span class="rt mono">9:16</span></div><div class="body"><span class="mono muted">Male creator</span><h3>UGC Supplement Ad 35</h3><p class="muted">Supplement creative with realistic product handling and bold captions.</p></div></article>
+      <article class="item" data-c="vsl" data-video="https://drive.google.com/file/d/187eUu6Ca2AzWJ0WDD5rEnl2z0rdcZXOp/view" data-title="UGC Supplement Ad 36"><div class="thumb p1"><img src="https://drive.google.com/thumbnail?id=187eUu6Ca2AzWJ0WDD5rEnl2z0rdcZXOp&amp;sz=w720" onerror="this.remove()" alt="UGC Supplement Ad 36" loading="lazy"><span class="cat mono">Supplement</span><span class="play">▶</span><span class="rt mono">9:16</span></div><div class="body"><span class="mono muted">Male creator</span><h3>UGC Supplement Ad 36</h3><p class="muted">Supplement creative with realistic product handling and bold captions.</p></div></article>
+      <article class="item" data-c="vsl" data-video="https://drive.google.com/file/d/154H-xhiL4euCiMrvKSTxJlinH3Q8UT1i/view" data-title="UGC Supplement Ad 37"><div class="thumb p2"><img src="https://drive.google.com/thumbnail?id=154H-xhiL4euCiMrvKSTxJlinH3Q8UT1i&amp;sz=w720" onerror="this.remove()" alt="UGC Supplement Ad 37" loading="lazy"><span class="cat mono">Supplement</span><span class="play">▶</span><span class="rt mono">9:16</span></div><div class="body"><span class="mono muted">Male creator</span><h3>UGC Supplement Ad 37</h3><p class="muted">Supplement creative with realistic product handling and bold captions.</p></div></article>
+      <article class="item" data-c="vsl" data-video="https://drive.google.com/file/d/1ZkBixBgfPt8VeIbRmieQRtbrWiBJz-GS/view" data-title="UGC Supplement Ad 38"><div class="thumb p3"><img src="https://drive.google.com/thumbnail?id=1ZkBixBgfPt8VeIbRmieQRtbrWiBJz-GS&amp;sz=w720" onerror="this.remove()" alt="UGC Supplement Ad 38" loading="lazy"><span class="cat mono">Supplement</span><span class="play">▶</span><span class="rt mono">9:16</span></div><div class="body"><span class="mono muted">Male creator</span><h3>UGC Supplement Ad 38</h3><p class="muted">Supplement creative with realistic product handling and bold captions.</p></div></article>
+      <article class="item" data-c="ugc" data-video="https://drive.google.com/file/d/1rt9b-W3QL-6kLFNoQM6plnvjv_LqD6L2/view" data-title="Realistic AI UGC 01"><div class="thumb p4"><img src="https://drive.google.com/thumbnail?id=1rt9b-W3QL-6kLFNoQM6plnvjv_LqD6L2&amp;sz=w720" onerror="this.remove()" alt="Realistic AI UGC 01" loading="lazy"><span class="cat mono">AI UGC</span><span class="play">▶</span><span class="rt mono">9:16</span></div><div class="body"><span class="mono muted">AI video</span><h3>Realistic AI UGC 01</h3><p class="muted">Creator-style AI UGC clip with natural delivery.</p></div></article>
+      <article class="item" data-c="ugc" data-video="https://drive.google.com/file/d/1v_EQ-cSgojcPiETZZol6rZSqAx58KMnx/view" data-title="Realistic AI UGC 02"><div class="thumb p1"><img src="https://drive.google.com/thumbnail?id=1v_EQ-cSgojcPiETZZol6rZSqAx58KMnx&amp;sz=w720" onerror="this.remove()" alt="Realistic AI UGC 02" loading="lazy"><span class="cat mono">AI UGC</span><span class="play">▶</span><span class="rt mono">9:16</span></div><div class="body"><span class="mono muted">AI video</span><h3>Realistic AI UGC 02</h3><p class="muted">Creator-style AI UGC clip with natural delivery.</p></div></article>
+      <article class="item" data-c="ugc" data-video="https://drive.google.com/file/d/1HJZSEcGvQw9BvTkc-CVayqRoHi3sb0GL/view" data-title="Realistic AI UGC 03"><div class="thumb p2"><img src="https://drive.google.com/thumbnail?id=1HJZSEcGvQw9BvTkc-CVayqRoHi3sb0GL&amp;sz=w720" onerror="this.remove()" alt="Realistic AI UGC 03" loading="lazy"><span class="cat mono">AI UGC</span><span class="play">▶</span><span class="rt mono">9:16</span></div><div class="body"><span class="mono muted">AI video</span><h3>Realistic AI UGC 03</h3><p class="muted">Creator-style AI UGC clip with natural delivery.</p></div></article>
+      <article class="item" data-c="ugc" data-video="https://drive.google.com/file/d/1MRWBkELzhUILnPvfMEFGPjhsvNTldyHL/view" data-title="Realistic AI UGC 04"><div class="thumb p3"><img src="https://drive.google.com/thumbnail?id=1MRWBkELzhUILnPvfMEFGPjhsvNTldyHL&amp;sz=w720" onerror="this.remove()" alt="Realistic AI UGC 04" loading="lazy"><span class="cat mono">AI UGC</span><span class="play">▶</span><span class="rt mono">9:16</span></div><div class="body"><span class="mono muted">AI video</span><h3>Realistic AI UGC 04</h3><p class="muted">Creator-style AI UGC clip with natural delivery.</p></div></article>
+      <article class="item" data-c="vsl" data-video="https://drive.google.com/file/d/1bS5xWHx61jDOyO4Zz4Mh5yesgYhxLCuC/view" data-title="Spanish VSL: Botox"><div class="thumb p4"><img src="https://drive.google.com/thumbnail?id=1bS5xWHx61jDOyO4Zz4Mh5yesgYhxLCuC&amp;sz=w720" onerror="this.remove()" alt="Spanish VSL: Botox" loading="lazy"><span class="cat mono">VSL</span><span class="play">▶</span><span class="rt mono">9:16</span></div><div class="body"><span class="mono muted">Spanish</span><h3>Spanish VSL: Botox</h3><p class="muted">Beauty VSL localized for Spanish-speaking audiences.</p></div></article>
+      <article class="item" data-c="ugc" data-video="https://drive.google.com/file/d/1AKcpu5lqBj4jmkgv0nHGbJ2stG7W-C1a/view" data-title="Realistic AI UGC 05"><div class="thumb p1"><img src="https://drive.google.com/thumbnail?id=1AKcpu5lqBj4jmkgv0nHGbJ2stG7W-C1a&amp;sz=w720" onerror="this.remove()" alt="Realistic AI UGC 05" loading="lazy"><span class="cat mono">AI UGC</span><span class="play">▶</span><span class="rt mono">9:16</span></div><div class="body"><span class="mono muted">AI video</span><h3>Realistic AI UGC 05</h3><p class="muted">Creator-style AI UGC clip with natural delivery.</p></div></article>
+      <article class="item" data-c="ugc" data-video="https://drive.google.com/file/d/1vUdkqHyl3XXGwPbH9ym4WtebiL5a7K-J/view" data-title="Realistic AI UGC 06"><div class="thumb p2"><img src="https://drive.google.com/thumbnail?id=1vUdkqHyl3XXGwPbH9ym4WtebiL5a7K-J&amp;sz=w720" onerror="this.remove()" alt="Realistic AI UGC 06" loading="lazy"><span class="cat mono">AI UGC</span><span class="play">▶</span><span class="rt mono">9:16</span></div><div class="body"><span class="mono muted">AI video</span><h3>Realistic AI UGC 06</h3><p class="muted">Creator-style AI UGC clip with natural delivery.</p></div></article>
+      <article class="item" data-c="ugc" data-video="https://drive.google.com/file/d/1TMCRqh2W6eD5VscFKC_r6IYF2EnR8F88/view" data-title="Realistic AI UGC 07"><div class="thumb p3"><img src="https://drive.google.com/thumbnail?id=1TMCRqh2W6eD5VscFKC_r6IYF2EnR8F88&amp;sz=w720" onerror="this.remove()" alt="Realistic AI UGC 07" loading="lazy"><span class="cat mono">AI UGC</span><span class="play">▶</span><span class="rt mono">9:16</span></div><div class="body"><span class="mono muted">AI video</span><h3>Realistic AI UGC 07</h3><p class="muted">Creator-style AI UGC clip with natural delivery.</p></div></article>
+      <article class="item" data-c="vsl" data-video="https://drive.google.com/file/d/1ILFwgVfbAbd4zEMPm8DF7kxMa1R8Ll4X/view" data-title="Video Sales Letter 01"><div class="thumb p4"><img src="https://drive.google.com/thumbnail?id=1ILFwgVfbAbd4zEMPm8DF7kxMa1R8Ll4X&amp;sz=w720" onerror="this.remove()" alt="Video Sales Letter 01" loading="lazy"><span class="cat mono">VSL</span><span class="play">▶</span><span class="rt mono">9:16</span></div><div class="body"><span class="mono muted">AI video</span><h3>Video Sales Letter 01</h3><p class="muted">Direct-response VSL built to hook fast and drive the click.</p></div></article>
+      <article class="item" data-c="vsl" data-video="https://drive.google.com/file/d/1Xow-HC5jyutbNQlBLpFEs-n8jbDolqAt/view" data-title="Video Sales Letter 02"><div class="thumb p1"><img src="https://drive.google.com/thumbnail?id=1Xow-HC5jyutbNQlBLpFEs-n8jbDolqAt&amp;sz=w720" onerror="this.remove()" alt="Video Sales Letter 02" loading="lazy"><span class="cat mono">VSL</span><span class="play">▶</span><span class="rt mono">9:16</span></div><div class="body"><span class="mono muted">AI video</span><h3>Video Sales Letter 02</h3><p class="muted">Direct-response VSL built to hook fast and drive the click.</p></div></article>
+      <article class="item" data-c="vsl" data-video="https://drive.google.com/file/d/1Luc8kKPfTn0bkqs20Oww5g8HdpTW3bN_/view" data-title="Native UGC VSL"><div class="thumb p2"><img src="https://drive.google.com/thumbnail?id=1Luc8kKPfTn0bkqs20Oww5g8HdpTW3bN_&amp;sz=w720" onerror="this.remove()" alt="Native UGC VSL" loading="lazy"><span class="cat mono">VSL</span><span class="play">▶</span><span class="rt mono">9:16</span></div><div class="body"><span class="mono muted">AI video</span><h3>Native UGC VSL</h3><p class="muted">Native-UGC style sales video with a helpful-creator hook.</p></div></article>
+      <article class="item" data-c="vsl" data-video="https://drive.google.com/file/d/1RnJ8fJHfdchWQxC4sAcNwAn5KdfNEBbh/view" data-title="Video Sales Letter 03"><div class="thumb p3"><img src="https://drive.google.com/thumbnail?id=1RnJ8fJHfdchWQxC4sAcNwAn5KdfNEBbh&amp;sz=w720" onerror="this.remove()" alt="Video Sales Letter 03" loading="lazy"><span class="cat mono">VSL</span><span class="play">▶</span><span class="rt mono">9:16</span></div><div class="body"><span class="mono muted">AI video</span><h3>Video Sales Letter 03</h3><p class="muted">Direct-response VSL built to hook fast and drive the click.</p></div></article>
+    </div>
+    <div class="showmore hide" id="showmore"><button class="btn dark" id="moreBtn">Load more videos ↓</button></div>
+    <div class="more">
+      <div><span class="mono muted">These are my best picks.</span><h3>Tap "All" or a category above to see every video.</h3></div>
+      <a class="btn dark" href="https://drive.google.com/drive/folders/11Tq3K1C1LvILClAtYhhQo6u-c_OX-eq8" target="_blank" rel="noopener">Open full portfolio ↗</a>
+    </div>
+  </section>
+
+  <!-- SPECIALIZATIONS -->
+  <section id="specializations">
+    <div class="sec-head rv"><div class="idx mono">( 02 ) Specializations</div><h2>One creative partner. Every ad format.</h2></div>
+    <div class="g specs">
+      <article class="card"><span class="mono">01</span><h3>Realistic AI UGC</h3><p class="muted">Creator-style ads with photorealistic people, real product handling and natural delivery.</p></article>
+      <article class="card"><span class="mono">02</span><h3>Video Sales Letters</h3><p class="muted">Direct-response VSLs that hook fast, build the story and drive the click.</p></article>
+      <article class="card"><span class="mono">03</span><h3>Cinematic Drama Ads</h3><p class="muted">Short, emotional story ads with consistent characters, scenes and wardrobe.</p></article>
+      <article class="card"><span class="mono">04</span><h3>Podcast &amp; Testimonial Ads</h3><p class="muted">Conversational formats with AI voices, expressive performance and lip sync.</p></article>
+      <article class="card"><span class="mono">05</span><h3>AI Song Ads</h3><p class="muted">Branded songs and jingles performed by AI characters, edited to the beat.</p></article>
+      <article class="card"><span class="mono">06</span><h3>3D Animation &amp; Claymation</h3><p class="muted">Animated mascots and stylized product worlds that stand out in the feed.</p></article>
+      <article class="card"><span class="mono">07</span><h3>Skeleton Explainers</h3><p class="muted">3D x-ray style explainers that show what happens inside the body.</p></article>
+      <article class="card"><span class="mono">08</span><h3>Local Business &amp; YouTube Intros</h3><p class="muted">Promo videos, intros, outros and static ads for local service brands.</p></article>
+    </div>
+  </section>
+
+  <!-- EXPERTISE -->
+  <section id="expertise">
+    <div class="sec-head rv"><div class="idx mono">( 03 ) Core expertise</div><h2>From prompt to final edit.</h2></div>
+    <div class="g expert">
+      <div class="col"><span class="mono muted">A</span><h3>AI Content Creation</h3><ul>
+        <li>Advanced prompt engineering</li><li>AI image &amp; video generation</li><li>AI voice integration &amp; lip sync</li><li>Character &amp; scene consistency</li><li>Master prompt library development</li></ul></div>
+      <div class="col"><span class="mono muted">B</span><h3>Commercial Creative</h3><ul>
+        <li>Direct-response video ads</li><li>AI product visualization</li><li>Product demonstrations</li><li>Visual storytelling</li><li>Creative direction</li></ul></div>
+      <div class="col"><span class="mono muted">C</span><h3>Production Workflow</h3><ul>
+        <li>Script breakdown &amp; storyboarding</li><li>Shot planning &amp; camera direction</li><li>Image-to-video workflows</li><li>A-roll &amp; B-roll editing</li><li>Hook variations &amp; iteration</li></ul></div>
+    </div>
+  </section>
+
+  <!-- TOOLS -->
+  <section id="tools">
+    <div class="sec-head rv"><div class="idx mono">( 04 ) Tool stack</div><h2>The tools behind the work.</h2></div>
+    <div class="g stack">
+      <div class="tgroup"><span class="mono muted">AI video generation</span><div class="chips"><span class="chip">WAN</span><span class="chip">Kling</span><span class="chip">Higgsfield</span><span class="chip">Runway</span><span class="chip">Seedance</span><span class="chip">HeyGen</span></div></div>
+      <div class="tgroup"><span class="mono muted">AI image generation</span><div class="chips"><span class="chip">GPT Image</span><span class="chip">Nano Banana</span><span class="chip">Seedream</span><span class="chip">Soul</span></div></div>
+      <div class="tgroup"><span class="mono muted">Video editing</span><div class="chips"><span class="chip">CapCut Pro</span></div></div>
+      <div class="tgroup"><span class="mono muted">Production platforms</span><div class="chips"><span class="chip">Figma Weavy</span><span class="chip">Sunra.ai</span><span class="chip">Kie.ai</span><span class="chip">ArgoLink</span></div></div>
+      <div class="tgroup"><span class="mono muted">AI productivity</span><div class="chips"><span class="chip">ChatGPT</span><span class="chip">Claude</span></div></div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section id="process">
+    <div class="sec-head rv"><div class="idx mono">( 05 ) Process</div><h2>A clear path from brief to delivery.</h2></div>
+    <div class="g process">
+      <div class="step"><span class="num">01</span><h3>Break down the script</h3><p class="muted">I turn your brief or script into scenes, shots, hooks and camera direction.</p><span class="pill mono">Direction</span></div>
+      <div class="step"><span class="num">02</span><h3>Build the references</h3><p class="muted">Characters, wardrobe, locations and product references locked in for consistency.</p><span class="pill mono">Consistency</span></div>
+      <div class="step"><span class="num">03</span><h3>Generate &amp; edit</h3><p class="muted">AI video generation, voice, lip sync, then editing with sound and captions.</p><span class="pill mono">Production</span></div>
+      <div class="step"><span class="num">04</span><h3>Hooks &amp; revisions</h3><p class="muted">Alternate hooks and revisions based on your feedback and campaign results.</p><span class="pill mono">Iteration</span></div>
+    </div>
+  </section>
+
+  <!-- SYSTEMS -->
+  <section id="systems">
+    <div class="sec-head rv"><div class="idx mono">( 06 ) Systems</div><h2>Built on systems, not luck.</h2></div>
+    <div class="g systems">
+      <div class="sys">
+        <span class="mono sys-n">A / Prompt library</span>
+        <h3>A master prompt for every video style.</h3>
+        <p class="muted">I've built and tested a master prompt for each style I produce. Every new project starts from a proven base, so characters stay consistent, the look stays on-brand and turnaround stays fast.</p>
+        <div class="chips"><span class="chip">AI Drama</span><span class="chip">Claymation</span><span class="chip">Pixar 3D</span><span class="chip">Song Ads</span><span class="chip">AI UGC</span><span class="chip">Skeleton Explainers</span><span class="chip">Podcasts</span><span class="chip">VSLs</span><span class="chip">Supplement Ads</span><span class="chip">Street Interviews</span><span class="chip">Brand Intros</span><span class="chip">Local Services</span></div>
+      </div>
+      <div class="sys">
+        <span class="mono sys-n">B / Claude skills</span>
+        <h3>Claude skills, ready for MCP.</h3>
+        <p class="muted">I package my workflows as custom Claude skills that turn a brief into scripts, scene plans and generation prompts. They're ready to plug into MCP-connected tools, so production runs as a repeatable pipeline instead of starting from scratch.</p>
+        <div class="chips"><span class="chip">Claude skills</span><span class="chip">MCP-ready</span><span class="chip">Brief → script</span><span class="chip">Scene plans</span><span class="chip">Generation prompts</span></div>
+      </div>
+    </div>
+    <div class="g sys-strip">
+      <div><b>12</b><span class="mono muted">Styles with a master prompt</span></div>
+      <div><b>1 brief</b><span class="mono muted">→ script, scenes and prompts</span></div>
+      <div><b>MCP</b><span class="mono muted">Ready to connect to your tools</span></div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="sec-head rv"><div class="idx mono">( 07 ) About</div><h2>AI speed. Direct-response instincts.</h2></div>
+    <div class="about">
+      <div class="txt">
+        <p>I'm John, a Senior AI Creative Specialist with 2 years of experience making AI-powered ads for e-commerce, beauty, fashion and health &amp; wellness brands.</p>
+        <p class="muted">I combine direct-response storytelling with realistic AI visuals, and handle the whole pipeline myself, from script breakdown and references through generation, voice, lip sync, editing, sound and captions. I produce content in English and Latin American Spanish, and my top-performing ad has passed 3 million views.</p>
+      </div>
+      <div class="side">
+        <div class="exp"><span class="mono muted">Experience · 2024 – Present</span><b>Senior AI Creative Specialist &amp; AI Content Producer</b><span class="muted">Freelance</span></div>
+        <div class="g facts">
+          <div class="fact"><span class="mono muted">Based in</span><b>Philippines</b></div>
+          <div class="fact"><span class="mono muted">Languages</span><b>English &amp; LatAm Spanish content</b></div>
+          <div class="fact"><span class="mono muted">Platforms</span><b>Meta, TikTok, YouTube Shorts</b></div>
+          <div class="fact"><span class="mono muted">Industries</span><b>E-com, beauty, fashion, wellness</b></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MEET JOHN -->
+  <section id="meet" class="meet">
+    <div class="meet-photo rv">
+      <div class="pcard"><img src="images/profile.jpg" alt="John Roderick Secuya"><span class="plabel mono">JRS / AI CREATIVE</span><span class="pnum">08</span></div>
+    </div>
+    <div class="meet-txt rv">
+      <span class="kicker mono">Meet John</span>
+      <h2>Real person.<br>AI-powered output.</h2>
+      <p class="lead">I'm John Roderick Secuya, a Senior AI Creative Specialist from the Philippines who turns briefs into scroll-stopping AI ads.</p>
+      <p class="small">I work hands-on through every step, from references and generation to voice, lip sync and the final edit, so you get one accountable creative partner, fast turnarounds and ads built to test.</p>
+      <div class="btns"><a class="btn dark" href="#contact">Work with me →</a><a class="btn" href="resume.pdf" target="_blank" rel="noopener">View resume ↗</a></div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact">
+    <div class="big">
+      <p class="mono" style="color:#cfcfcf">( 09 ) Contact</p>
+      <h2 style="margin-top:18px">Got a product? I'll bring the sales.</h2>
+      <p>Open to AI UGC, VSLs, drama ads and full ad production for brands and agencies.</p>
+      <div class="btns">
+        <a class="btn light" href="mailto:johnsecuya18@gmail.com">Send an email ↗</a>
+        <a class="btn" href="resume.pdf" target="_blank" rel="noopener">Download resume ↗</a>
+      </div>
+    </div>
+    <div class="clinks">
+      <a href="mailto:johnsecuya18@gmail.com"><span>Email<small>johnsecuya18@gmail.com</small></span><span>↗</span></a>
+      <a href="https://wa.me/639770559761" target="_blank" rel="noopener"><span>WhatsApp<small>+63 977 055 9761</small></span><span>↗</span></a>
+      <a href="https://discord.com/users/yuan04723" target="_blank" rel="noopener"><span>Discord<small>yuan04723</small></span><span>↗</span></a>    </div>
+  </section>
+
+</div>
+</main>
+
+<footer>
+  <div class="wrap mono"><span>© <span id="yr">2026</span> John Roderick Secuya · Senior AI Creative Specialist</span><a href="#top">Back to top ↑</a></div>
+</footer>
+
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-label="Portfolio video">
+  <div class="mbox">
+    <div class="mbar"><span class="mono" id="mtitle">Portfolio video</span><button class="mono" id="mclose">Close ✕</button></div>
+    <div class="mframe" id="mframe"></div>
+    <div class="mfoot mono"><a id="mlink" href="#" target="_blank" rel="noopener">Open in new tab ↗</a></div>
+  </div>
+</div>
+
+<script>
+  const PORTFOLIO="https://drive.google.com/drive/folders/11Tq3K1C1LvILClAtYhhQo6u-c_OX-eq8";
+  // menu
+  const t=document.getElementById('toggle'),l=document.getElementById('links');
+  t.addEventListener('click',()=>{const o=l.classList.toggle('open');t.setAttribute('aria-expanded',o);t.textContent=o?'Close':'Menu'});
+  l.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{l.classList.remove('open');t.setAttribute('aria-expanded',false);t.textContent='Menu'}));
+  // filters (default: best work)
+  const items=[...document.querySelectorAll('#workgrid .item')];
+  let cur='best',limit=24;const sm=document.getElementById('showmore');
+  function render(f){if(f!==undefined){cur=f;limit=24}let shown=0,total=0;items.forEach(i=>{const m=(cur==='all'&&!i.classList.contains('seeall'))||(cur==='best'?i.dataset.best==='1':i.dataset.c===cur);let vis=m;if(m&&cur!=='best'){total++;vis=total<=limit}i.classList.toggle('hide',!vis)});sm.classList.toggle('hide',cur==='best'||total<=limit)}
+  document.getElementById('moreBtn').addEventListener('click',()=>{limit+=24;render()});
+  document.querySelectorAll('.filters button').forEach(b=>b.addEventListener('click',()=>{
+    document.querySelectorAll('.filters button').forEach(x=>x.classList.remove('active'));b.classList.add('active');render(b.dataset.f);
+  }));
+  document.querySelectorAll('.filters button').forEach(b=>{const f=b.dataset.f,n=items.filter(i=>!i.classList.contains('seeall')&&(f==='all'||(f==='best'?i.dataset.best==='1':i.dataset.c===f))).length;const el=b.querySelector('.n');if(el)el.textContent=n});
+  document.getElementById('seeAll').addEventListener('click',e=>{e.preventDefault();document.querySelector('.filters button[data-f="all"]').click()});
+  render('best');
+  // video modal: supports Google Drive, YouTube and direct .mp4 links
+  function embed(u){
+    let m;
+    if(m=u.match(/drive\.google\.com\/file\/d\/([^/]+)/))return {type:'iframe',src:`https://drive.google.com/file/d/${m[1]}/preview`};
+    if(m=u.match(/(?:youtu\.be\/|v=|shorts\/)([\w-]{11})/))return {type:'iframe',src:`https://www.youtube.com/embed/${m[1]}?autoplay=1`};
+    if(/\.(mp4|webm|mov)(\?|$)/i.test(u))return {type:'video',src:u};
+    return null;
+  }
+  const modal=document.getElementById('modal'),mf=document.getElementById('mframe');
+  function openVideo(el){
+    const u=el.dataset.video;
+    if(!u){window.open(PORTFOLIO,'_blank','noopener');return}
+    const e=embed(u);
+    if(!e){window.open(u,'_blank','noopener');return}
+    mf.innerHTML=e.type==='video'?`<video src="${e.src}" controls autoplay playsinline></video>`:`<iframe src="${e.src}" allow="autoplay; fullscreen" allowfullscreen></iframe>`;
+    document.getElementById('mtitle').textContent=el.dataset.title||'Portfolio video';
+    document.getElementById('mlink').href=u;
+    modal.classList.add('open');
+  }
+  function closeVideo(){modal.classList.remove('open');mf.innerHTML=''}
+  document.querySelectorAll('[data-video]').forEach(el=>{el.setAttribute('tabindex','0');el.addEventListener('click',()=>openVideo(el));el.addEventListener('keydown',e=>{if(e.key==='Enter')openVideo(el)})});
+  document.getElementById('mclose').addEventListener('click',closeVideo);
+  modal.addEventListener('click',e=>{if(e.target===modal)closeVideo()});
+  document.addEventListener('keydown',e=>{if(e.key==='Escape')closeVideo()});
+  // reveal
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+  document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+  document.getElementById('yr').textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
