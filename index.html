@@ -252,6 +252,8 @@
     .trust span+span::before{display:none}
   }
 
+  .mframe{position:relative}
+  .mframe .mask{position:absolute;top:0;right:0;width:62px;height:62px;background:#000;z-index:2;pointer-events:auto}
   /* ===== THEME: luxury black + platinum (colors only) ===== */
   :root{
     --bg:#050505; --bg2:#0b0b0c; --card:#0e0e0f; --card2:#141416;
@@ -517,7 +519,7 @@ function draw(){tabs.innerHTML=keys.map(k=>`<button class="tab${k===cur?' on':''
 tabs.addEventListener('click',e=>{const b=e.target.closest('.tab');if(!b)return;cur=b.dataset.k;draw()});draw();})();
 // player
 const modal=document.getElementById('modal'),mbox=document.getElementById('mbox'),mframe=document.getElementById('mframe');
-function openV(el){mframe.innerHTML=`<iframe src="https://drive.google.com/file/d/${el.dataset.id}/preview" allow="autoplay; fullscreen" allowfullscreen></iframe>`;document.getElementById('mtitle').textContent=el.dataset.title||'Video';mbox.classList.toggle('wide',el.dataset.wide==='1');modal.classList.add('open')}
+function openV(el){mframe.innerHTML=`<iframe src="https://drive.google.com/file/d/${el.dataset.id}/preview" allow="autoplay; fullscreen" allowfullscreen></iframe><div class="mask" aria-hidden="true"></div>`;document.getElementById('mtitle').textContent=el.dataset.title||'Video';mbox.classList.toggle('wide',el.dataset.wide==='1');modal.classList.add('open')}
 function closeV(){modal.classList.remove('open');mframe.innerHTML=''}
 document.addEventListener('click',e=>{const p=e.target.closest('.pc');if(p)openV(p)});
 document.getElementById('mclose').addEventListener('click',closeV);
