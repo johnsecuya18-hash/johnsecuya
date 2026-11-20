@@ -192,6 +192,37 @@
   @media (max-width:1000px){.pipe{grid-template-columns:1fr 1fr}.ps::after{display:none}}
   @media (max-width:640px){.pipe,.why{grid-template-columns:1fr}}
 
+  @media (max-width:1240px){.links{gap:16px!important}.links a{font-size:13.5px}}
+  @media (max-width:1060px) and (min-width:901px){.nav .btn{display:none}}
+  /* PRODUCTION */
+  .lead{color:var(--muted);max-width:620px;margin-top:14px;font-size:17px}
+  .prod{margin-top:44px;display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .pr{display:grid;grid-template-columns:96px 1fr;border:1px solid var(--line);border-radius:22px;background:var(--card);overflow:hidden}
+  .pn{border-right:1px solid var(--line);padding:20px 14px;display:flex;flex-direction:column;gap:6px;background:rgba(167,139,250,.05)}
+  .pn i{font-style:normal;font-size:30px;font-weight:800;letter-spacing:-.03em;color:var(--lilac);line-height:1}
+  .pn span{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--dim)}
+  .pb{padding:20px 22px;display:flex;flex-direction:column;gap:8px}
+  .pb h3{font-size:19px;font-weight:700;letter-spacing:-.02em}
+  .pb p{color:var(--muted);font-size:14.5px;line-height:1.55;flex:1}
+  .pb small{font-family:var(--mono);font-size:11px;letter-spacing:.05em;color:var(--lilac);text-transform:uppercase}
+  .prod .pr:last-child{grid-column:1/-1}
+  /* WHY */
+  .cmp{margin-top:44px;border:1px solid var(--line);border-radius:24px;overflow:hidden;background:var(--card)}
+  .cr{display:grid;grid-template-columns:1fr 1.2fr 1.4fr;gap:18px;padding:18px 26px;border-top:1px solid var(--line);align-items:center}
+  .cr b{font-size:15.5px}
+  .cr .o{color:var(--dim);font-size:14.5px}
+  .cr .y{color:var(--fg);font-size:14.5px;display:flex;gap:10px}
+  .cr .y::before{content:"✓";color:var(--lilac);font-weight:700}
+  .cr.ch{border-top:0;background:rgba(167,139,250,.06)}
+  .cr.ch span{font-family:var(--mono);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase}
+  .cr.ch .o{color:var(--dim)}.cr.ch .y{color:var(--lilac)}.cr.ch .y::before{content:none}
+  .proof{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:18px}
+  .proof div{border:1px solid var(--line);border-radius:20px;padding:22px;background:linear-gradient(180deg,var(--card2),var(--card))}
+  .proof b{display:block;font-size:clamp(30px,3.4vw,44px);font-weight:800;letter-spacing:-.04em;background:linear-gradient(100deg,var(--fg),var(--lilac));-webkit-background-clip:text;background-clip:text;color:transparent}
+  .proof span{color:var(--muted);font-size:14px}
+  @media (max-width:900px){.prod{grid-template-columns:1fr}.proof{grid-template-columns:1fr 1fr}.cr{grid-template-columns:1fr;gap:6px;padding:16px 20px}.cr.ch{display:none}.cr .o::before{content:"Traditional: ";color:var(--dim)}}
+  @media (max-width:520px){.pr{grid-template-columns:1fr}.pn{flex-direction:row;align-items:center;gap:12px;border-right:0;border-bottom:1px solid var(--line);padding:14px 18px}.pn i{font-size:22px}}
+
   /* ABOUT */
   .about{display:grid;grid-template-columns:.8fr 1.3fr;gap:56px;align-items:center;margin-top:10px}
   .ph-card{position:relative;border-radius:26px;overflow:hidden;border:1px solid var(--line2);aspect-ratio:4/5;background:var(--card)}
@@ -275,7 +306,7 @@
   <div class="wrap nav">
     <a class="logo" href="#top"><i></i>JOHN SECUYA</a>
     <nav class="links" id="links">
-      <a href="#work">Work</a><a href="#results">Results</a><a href="#more">More work</a><a href="#concept">Concept</a><a href="#process">Process</a><a href="#systems">Systems</a><a href="#about">About</a>
+      <a href="#work">Work</a><a href="#results">Results</a><a href="#more">More work</a><a href="#concept">Concept</a><a href="#process">Process</a><a href="#production">Production</a><a href="#systems">Systems</a><a href="#why">Why AI</a><a href="#about">About</a>
     </nav>
     <a class="btn btn-w" href="#contact">Work with me →</a>
     <button class="menu" id="menu" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
@@ -414,6 +445,16 @@
     </div>
   </section>
 
+  <!-- PRODUCTION -->
+  <section id="production">
+    <div class="wrap">
+      <span class="eyebrow rv">Production</span>
+      <h2 class="h rv">How every ad gets made, <em class="s">step by step.</em></h2>
+      <p class="lead rv">Nine stages, the same for every style. Nothing goes to edit until each stage is checked.</p>
+      <div class="prod"><div class="pr rv"><div class="pn"><i>01</i><span>Research</span></div><div class="pb"><h3>Brief &amp; reference teardown</h3><p>I study your product, audience and claims, then break down a winning reference ad: hook, pacing, angles and why it converts.</p><small>Output · Production brief</small></div></div><div class="pr rv"><div class="pn"><i>02</i><span>Writing</span></div><div class="pb"><h3>Script &amp; hook stack</h3><p>Angles and personas, a claims check so nothing risky is said, then the script plus 3+ hooks to test on one body.</p><small>Output · Approved script + hooks</small></div></div><div class="pr rv"><div class="pn"><i>03</i><span>Look</span></div><div class="pb"><h3>Style lock</h3><p>I pick one look up front, like cinematic drama, Pixar 3D, claymation, UGC or animated, and lock lighting, palette and lens so every shot matches.</p><small>Output · Style frame</small></div></div><div class="pr rv"><div class="pn"><i>04</i><span>Cast</span></div><div class="pb"><h3>Characters &amp; locations</h3><p>Character sheets and location plates built as references, so the same face, outfit and set carry through every scene.</p><small>Output · Character + location sheets</small></div></div><div class="pr rv"><div class="pn"><i>05</i><span>Plan</span></div><div class="pb"><h3>Shot list &amp; prompts</h3><p>A shot direction table: shot size, angle, camera move and acting for every line, plus the B-roll, all written as generation prompts.</p><small>Output · Shot list + prompt sheet</small></div></div><div class="pr rv"><div class="pn"><i>06</i><span>Make</span></div><div class="pb"><h3>Image &amp; video generation</h3><p>Keyframes first, then clips in Kling, Seedance, Higgsfield and others. Each clip is checked for faces, hands, product and continuity, and redone if it fails.</p><small>Output · Approved clips</small></div></div><div class="pr rv"><div class="pn"><i>07</i><span>Sound</span></div><div class="pb"><h3>Voice, lip-sync &amp; music</h3><p>Voiceover or dialogue, lip-sync, an original song for song ads, plus SFX and music mixed to sit under the voice.</p><small>Output · Audio tracks</small></div></div><div class="pr rv"><div class="pn"><i>08</i><span>Edit</span></div><div class="pb"><h3>Edit &amp; captions</h3><p>Assembly in CapCut Pro with cuts timed to the voice, word-accurate captions, on-screen text and the product reveal. Every hook gets its own version.</p><small>Output · Hook versions</small></div></div><div class="pr rv"><div class="pn"><i>09</i><span>Deliver</span></div><div class="pb"><h3>QA &amp; export</h3><p>A final check of sound levels, captions, sync and the product shot, then export in the formats you need for Meta, TikTok and YouTube Shorts.</p><small>Output · Launch-ready files</small></div></div></div>
+    </div>
+  </section>
+
   <!-- SYSTEMS -->
   <section id="systems">
     <div class="wrap">
@@ -449,6 +490,24 @@
           </div>
           <div class="chipline"><span>Google Drive</span><span>Frame.io</span><span>Higgsfield</span><span>Sunra</span><span>HeyGen</span><span>Canva</span><span>Notion</span></div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY -->
+  <section id="why">
+    <div class="wrap">
+      <span class="eyebrow rv">Why AI video</span>
+      <h2 class="h rv">A full production, <em class="s">without the production day.</em></h2>
+      <div class="cmp rv">
+        <div class="cr ch"><b></b><span class="o">Traditional shoot</span><span class="y">AI video with John</span></div>
+        <div class="cr"><b>Actors &amp; locations</b><span class="o">Casting, booking, travel and set days</span><span class="y">Consistent AI characters in any setting, no shoot day</span></div><div class="cr"><b>New hooks to test</b><span class="o">Reshoot or settle for what you have</span><span class="y">New hooks on the same body, fast</span></div><div class="cr"><b>Languages</b><span class="o">New talent or dubbing</span><span class="y">English and LatAm Spanish versions</span></div><div class="cr"><b>Styles</b><span class="o">Usually one look per crew</span><span class="y">10 styles, from drama to Pixar 3D to UGC</span></div><div class="cr"><b>Revisions</b><span class="o">Reschedule and reshoot</span><span class="y">Fix the scene and send V2</span></div><div class="cr"><b>Scaling winners</b><span class="o">Start over for each variation</span><span class="y">Reuse the characters, swap angles and hooks</span></div>
+      </div>
+      <div class="proof rv">
+        <div><b>$70K+</b><span>ad spend on one creative</span></div>
+        <div><b>3M+</b><span>views on another</span></div>
+        <div><b>10</b><span>video styles</span></div>
+        <div><b>2</b><span>languages: English &amp; LatAm Spanish</span></div>
       </div>
     </div>
   </section>
