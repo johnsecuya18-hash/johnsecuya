@@ -178,6 +178,20 @@
   .sc p{color:var(--muted)}
   .sc .chipline span{color:var(--fg)}
 
+  .sc.mcp{grid-column:1/-1}
+  .pipe{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:6px;counter-reset:p}
+  .ps{position:relative;border:1px solid var(--line2);border-radius:18px;padding:18px;background:rgba(255,255,255,.02);display:flex;flex-direction:column;gap:8px}
+  .ps i{font-style:normal;font-family:var(--mono);font-size:12px;color:var(--lilac);letter-spacing:.1em}
+  .ps b{font-size:17px;letter-spacing:-.01em}
+  .ps p{font-size:14px;line-height:1.5;color:var(--muted);flex:1}
+  .ps small{font-family:var(--mono);font-size:10.5px;letter-spacing:.04em;color:var(--dim);text-transform:uppercase}
+  .ps:not(:last-child)::after{content:"→";position:absolute;right:-11px;top:18px;color:var(--lilac);font-size:14px;z-index:1}
+  .why{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:4px}
+  .why div{border-left:2px solid var(--lilac);padding:4px 0 4px 14px;display:flex;flex-direction:column;gap:2px}
+  .why b{font-size:15px}.why span{font-size:13.5px;color:var(--muted)}
+  @media (max-width:1000px){.pipe{grid-template-columns:1fr 1fr}.ps::after{display:none}}
+  @media (max-width:640px){.pipe,.why{grid-template-columns:1fr}}
+
   /* ABOUT */
   .about{display:grid;grid-template-columns:.8fr 1.3fr;gap:56px;align-items:center;margin-top:10px}
   .ph-card{position:relative;border-radius:26px;overflow:hidden;border:1px solid var(--line2);aspect-ratio:4/5;background:var(--card)}
@@ -413,10 +427,27 @@
           <div class="chipline"><span>AI Drama</span><span>Claymation</span><span>Pixar 3D</span><span>Song Ads</span><span>AI UGC</span><span>Skeleton Explainers</span><span>Podcasts</span><span>VSLs</span><span>Supplement Ads</span><span>Street Interviews</span></div>
         </div>
         <div class="sc rv">
-          <span class="k">B · Claude skills</span>
-          <h3>Claude skills, ready for MCP.</h3>
-          <p>My workflows are packaged as custom Claude skills that turn a brief into scripts, scene plans and generation prompts, ready to plug into MCP-connected tools as a repeatable pipeline.</p>
-          <div class="chipline"><span>Claude skills</span><span>MCP-ready</span><span>Brief → script</span><span>Scene plans</span><span>Generation prompts</span></div>
+          <span class="k">B · Claude skills + MCP</span>
+          <h3>An AI production pipeline, not just prompts.</h3>
+          <p>I've built my own library of custom Claude skills, one for each step of making an ad. Through <b>MCP</b> (Model Context Protocol), Claude connects straight to the tools I work in. So it can read your brief, pull files from Drive, prep the generation and hand off the edit without me copying things between apps.</p>
+          <div class="chipline"><span>Custom Claude skills</span><span>MCP-connected</span><span>Brief → final edit</span><span>Repeatable</span></div>
+        </div>
+        <div class="sc mcp rv">
+          <span class="k">C · How the MCP pipeline runs</span>
+          <h3>From brief to launch-ready ad, step by step.</h3>
+          <div class="pipe">
+            <div class="ps"><i>01</i><b>Brief &amp; teardown</b><p>Claude reads your brief and breaks down a winning reference ad: hook, pacing, angles, what makes it sell.</p><small>Brief builder · Ad teardown</small></div>
+            <div class="ps"><i>02</i><b>Script &amp; hooks</b><p>Angles, a claims check so nothing risky gets said, then the script and a stack of hooks to test.</p><small>Script strategist · VSL builder</small></div>
+            <div class="ps"><i>03</i><b>Shots &amp; prompts</b><p>A shot list with camera, acting and B-roll for every line, written as generation prompts for the chosen style.</p><small>Camera angles · B-roll · Style skills</small></div>
+            <div class="ps"><i>04</i><b>Generate &amp; organize</b><p>Character sheets, scenes and clips are generated and saved straight to the project folder, so every version stays tracked.</p><small>Higgsfield · Sunra · Google Drive</small></div>
+            <div class="ps"><i>05</i><b>Edit, captions &amp; review</b><p>Edit sheet, hook versions on one body, word-accurate captions, then you review and leave notes frame by frame.</p><small>Video edit · Captions · Frame.io</small></div>
+          </div>
+          <div class="why">
+            <div><b>Faster turnaround</b><span>Less manual setup between steps.</span></div>
+            <div><b>Consistent quality</b><span>Every ad runs the same tested process.</span></div>
+            <div><b>More hooks to test</b><span>New hooks on one body in hours, not days.</span></div>
+          </div>
+          <div class="chipline"><span>Google Drive</span><span>Frame.io</span><span>Higgsfield</span><span>Sunra</span><span>HeyGen</span><span>Canva</span><span>Notion</span></div>
         </div>
       </div>
     </div>
